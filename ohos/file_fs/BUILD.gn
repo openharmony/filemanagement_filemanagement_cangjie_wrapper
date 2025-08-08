@@ -26,15 +26,15 @@ ohos_cj_library("ohos.file_fs") {
   ]
 
   cj_external_deps = [
-    "arkui_cangjie_api:ohos.base",
-    "cangjie_api:ohos.ffi",
-    "cangjie_api:ohos.labels",
-    "hiviewdfx_cangjie_api:ohos.hilog",
+    "arkui_cangjie_wrapper:ohos.base",
+    "cangjie_ark_interop:ohos.ffi",
+    "cangjie_ark_interop:ohos.labels",
+    "hiviewdfx_cangjie_wrapper:ohos.hilog",
   ]
 
   external_deps = [ "file_api:cj_file_fs_ffi" ]
 
   subsystem_name = "filemanagement"
-  part_name = "filemanagement_cangjie_api"
+  part_name = "filemanagement_cangjie_wrapper"
   lib_name = "file_fs"
 }

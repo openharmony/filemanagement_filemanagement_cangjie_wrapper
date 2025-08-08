@@ -27,7 +27,7 @@ The file management subsystem provides the file access framework, file sharing f
 ## Directory Structure
 
 ```
-foundation/filemanagement/filemanagement_cangjie_api
+foundation/filemanagement/filemanagement_cangjie_wrapper
 ├── ohos             # Cangjie File Management code
 ├── kit              # Cangjie kit code
 ├── figures          # architecture pictures
@@ -45,6 +45,6 @@ foundation/filemanagement/filemanagement_cangjie_api
 
 **File management APIs**
 
-filemanagement_cangjie_api
+filemanagement_cangjie_wrapper
 
 [filemanagement_file_api](https://gitee.com/openharmony/filemanagement_file_api)

@@ -1,16 +1,16 @@
 {
-    "name": "@ohos/filemanagement_cangjie_api",
+    "name": "@ohos/filemanagement_cangjie_wrapper",
     "description": "Provides the application with cangjie interfaces for filemanagement",
     "version": "6.0",
     "license": "Apache-2.0",
     "publishAs": "code-segment",
     "segment": {
-        "destPath": "foundation/filemanagement/filemanagement_cangjie_api"
+        "destPath": "foundation/filemanagement/filemanagement_cangjie_wrapper"
     },
     "dirs": {},
     "scripts": {},
     "component": {
-        "name": "filemanagement_cangjie_api",
+        "name": "filemanagement_cangjie_wrapper",
         "subsystem": "filemanagement",
         "syscap": [
             "SystemCapability.FileManagement.File.FileIO",
@@ -24,14 +24,14 @@
         "ram": "100000KB",
         "deps": {
             "components": [
-                "cangjie_api"
+                "cangjie_ark_interop"
             ]
         },
         "build": {
             "sub_component": [
-                "//foundation/filemanagement/filemanagement_cangjie_api/kit/CoreFileKit:kit.CoreFileKit",
-                "//foundation/filemanagement/filemanagement_cangjie_api/ohos/file_fileuri:ohos.file_fileuri",
-                "//foundation/filemanagement/filemanagement_cangjie_api/ohos/file_fs:ohos.file_fs"
+                "//foundation/filemanagement/filemanagement_cangjie_wrapper/kit/CoreFileKit:kit.CoreFileKit",
+                "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file_fileuri:ohos.file_fileuri",
+                "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file_fs:ohos.file_fs"
             ],
             "inner_kits": [
             ],

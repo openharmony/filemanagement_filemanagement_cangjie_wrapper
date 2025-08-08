@@ -27,7 +27,7 @@
 ## 目录
 
 ```
-foundation/filemanagement/filemanagement_cangjie_api
+foundation/filemanagement/filemanagement_cangjie_wrapper
 ├── ohos             # 仓颉文件管理接口实现
 ├── kit              # 仓颉kit化代码
 ├── figures          # 存放readme中的架构图
@@ -45,6 +45,6 @@ foundation/filemanagement/filemanagement_cangjie_api
 
 **文件接口**
 
-filemanagement_cangjie_api
+filemanagement_cangjie_wrapper
 
 [filemanagement_file_api](https://gitee.com/openharmony/filemanagement_file_api)

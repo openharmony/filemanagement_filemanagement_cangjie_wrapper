@@ -24,6 +24,6 @@ ohos_cj_library("kit.CoreFileKit") {
 
   kit = true
   subsystem_name = "filemanagement"
-  part_name = "filemanagement_cangjie_api"
+  part_name = "filemanagement_cangjie_wrapper"
   lib_name = "CoreFileKit"
 }
