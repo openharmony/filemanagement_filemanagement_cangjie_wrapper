@@ -1,8 +1,8 @@
-# 文件管理仓颉
+# 文件管理仓颉接口
 
 ## 简介
 
-文件管理仓颉为OpenHarmony提供一套完整的文件数据管理解决方案，提供安全、易用的文件访问能力和完善的文件存储管理能力，包括：
+文件管理仓颉接口是在 OpenHarmony 上基于文件管理子系统能力之上封装的仓颉API。文件管理子系统为OpenHarmony提供一套完整的文件数据管理解决方案，提供安全、易用的文件访问能力和完善的文件存储管理能力，包括：
 
 1. 为应用提供安全的沙箱隔离技术，保证应用数据安全基础上权限最小化；
 2. 统一的公共文件管理能力，统一公共数据访问入库，保证用户数据安全、纯净；
@@ -35,14 +35,10 @@ foundation/filemanagement/filemanagement_cangjie_wrapper
 
 ## 相关仓
 
-**公共文件管理**
-
-[filemanagement_user_file_service](https://gitee.com/openharmony/filemanagement_user_file_service)
-
 **应用文件管理**
 
-[filemanagement_app_file_service](https://gitee.com/openharmony/filemanagement_app_file_service)
+[filemanagement_app_file_service](https://gitee.com/openharmony/filemanagement_app_file_service/blob/master/README.md)
 
 **文件接口**
 
-[filemanagement_file_api](https://gitee.com/openharmony/filemanagement_file_api)
+[filemanagement_file_api](https://gitee.com/openharmony/filemanagement_file_api/blob/master/README.md)
