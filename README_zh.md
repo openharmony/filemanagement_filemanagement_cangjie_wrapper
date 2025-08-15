@@ -45,6 +45,4 @@ foundation/filemanagement/filemanagement_cangjie_wrapper
 
 **文件接口**
 
-filemanagement_cangjie_wrapper
-
 [filemanagement_file_api](https://gitee.com/openharmony/filemanagement_file_api)
