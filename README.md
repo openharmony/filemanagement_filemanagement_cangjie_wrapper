@@ -1,8 +1,8 @@
-# File Management
+# filemanagement_cangjie_wrapper
 
 ## Introduction
 
-The file management subsystem provides a complete file management solution for OpenHarmony. It provides secure and easy-to-use file access and comprehensive file management capabilities, including:
+The filemanagement_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based on the capabilities of the file management Subsystem. The file management subsystem provides a complete file management solution for OpenHarmony. It provides secure and easy-to-use file access and comprehensive file management capabilities, including:
 
 - A sandbox to ensure the least privilege as well as application data security
 - Unified management of user files and streamlined user data access and storage to ensure user data security and purity
@@ -11,7 +11,7 @@ The file management subsystem provides a complete file management solution for O
 - System storage management capabilities and basic file system capabilities
 
 **Figure 1** Architecture of the file management subsystem
-![](figures/file_management_architecture.png "file management subsystem architecture")
+![](figures/filemanagement_cangjie_wrapper_architecture_en.png "filemanagement_cangjie_wrapper architecture")
 
 The file management subsystem provides the file access framework, file sharing framework, and storage management framework for applications.
 
@@ -35,16 +35,10 @@ foundation/filemanagement/filemanagement_cangjie_wrapper
 
 ## Repositories Involved
 
-**User file management**
-
-[filemanagement_user_file_service](https://gitee.com/openharmony/filemanagement_user_file_service)
-
 **Application file management**
 
 [filemanagement_app_file_service](https://gitee.com/openharmony/filemanagement_app_file_service)
 
 **File management APIs**
-
-filemanagement_cangjie_wrapper
 
 [filemanagement_file_api](https://gitee.com/openharmony/filemanagement_file_api)
