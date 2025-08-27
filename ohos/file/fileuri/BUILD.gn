@@ -14,27 +14,19 @@
 import("//build/ohos.gni")
 import("//build/cangjie/cjc.gni")
 
-ohos_cj_library("ohos.file_fs") {
-  sources = [
-    "cj_file_fs.cj",
-    "conflict_file_exception.cj",
-    "file.cj",
-    "native.cj",
-    "random_access_file.cj",
-    "stat.cj",
-    "stream.cj",
-  ]
+ohos_cangjie_shared_library("ohos.file.fileuri") {
+  sources = [ "file_uri.cj" ]
 
   cj_external_deps = [
-    "arkui_cangjie_wrapper:ohos.base",
+    "cangjie_ark_interop:ohos.business_exception",
     "cangjie_ark_interop:ohos.ffi",
     "cangjie_ark_interop:ohos.labels",
+    "cangjie_ark_interop:ohos.uri",
     "hiviewdfx_cangjie_wrapper:ohos.hilog",
   ]
 
-  external_deps = [ "file_api:cj_file_fs_ffi" ]
+  external_deps = [ "app_file_service:cj_file_fileuri_ffi" ]
 
   subsystem_name = "filemanagement"
   part_name = "filemanagement_cangjie_wrapper"
-  lib_name = "file_fs"
 }

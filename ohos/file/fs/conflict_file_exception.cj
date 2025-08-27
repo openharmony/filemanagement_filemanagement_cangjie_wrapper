@@ -13,10 +13,9 @@
  * limitations under the License.
  */
 
-package ohos.file_fs
+package ohos.file.fs
 
-import ohos.ffi.*
-import ohos.base.*
+import ohos.business_exception.*
 import ohos.labels.*
 import std.collection.*
 
@@ -73,23 +72,5 @@ func getErrorInfo(code: Int32): String {
         return ERROR_CODE_MAP[code]
     } else {
         return "Unknown error"
-    }
-}
-
-@!APILevel[
-    21,
-    stagemodelonly: true,
-    syscap: "SystemCapability.FileManagement.File.FileIO"
-]
-public class ConflictFileException <: BusinessException {
-    @!APILevel[
-        21,
-        stagemodelonly: true,
-        syscap: "SystemCapability.FileManagement.File.FileIO"
-    ]
-    public let data: Array<ConflictFiles>
-    init(code: Int32, msg: String, data: Array<ConflictFiles>) {
-        super(code, msg)
-        this.data = data
     }
 }

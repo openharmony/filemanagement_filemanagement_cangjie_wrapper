@@ -13,16 +13,19 @@
  * limitations under the License.
  */
 
-package ohos.file_fs
+package ohos.file.fs
 
 import ohos.ffi.*
-import ohos.base.*
+import ohos.business_exception.*
 import ohos.labels.*
 
+/**
+ * File object.
+ *
+ * @relation declare interface File
+ */
 @!APILevel[
     21,
-    atomicservice: true,
-    crossplatform: true,
     stagemodelonly: true,
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
@@ -35,10 +38,13 @@ public class File <: RemoteDataLite {
         releaseFFIData(myDataId)
     }
 
+    /**
+     * FD of the file.
+     *
+     * @relation readonly fd: number
+     */
     @!APILevel[
         21,
-        atomicservice: true,
-        crossplatform: true,
         stagemodelonly: true,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
@@ -48,6 +54,11 @@ public class File <: RemoteDataLite {
         }
     }
 
+    /**
+     * Path of the file.
+     *
+     * @relation readonly path: string
+     */
     @!APILevel[
         21,
         stagemodelonly: true,
@@ -62,6 +73,11 @@ public class File <: RemoteDataLite {
         }
     }
 
+    /**
+     * Name of the file.
+     *
+     * @relation readonly name: string
+     */
     @!APILevel[
         21,
         stagemodelonly: true,
@@ -76,6 +92,17 @@ public class File <: RemoteDataLite {
         }
     }
 
+    /**
+     * Applies an exclusive lock or a shared lock on this file in non-blocking mode.
+     *
+     * @throws { BusinessException } 13900004 - Interrupted system call
+     * @throws { BusinessException } 13900008 - Bad file descriptor
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 13900034 - Operation would block
+     * @throws { BusinessException } 13900042 - Unknown error
+     * @throws { BusinessException } 13900043 - No record locks available
+     * @relation tryLock(exclusive?: boolean): void
+     */
     @!APILevel[
         21,
         stagemodelonly: true,
@@ -89,12 +116,23 @@ public class File <: RemoteDataLite {
         }
     }
 
+    /**
+     * Unlocks a file.
+     *
+     * @throws { BusinessException } 13900004 - Interrupted system call
+     * @throws { BusinessException } 13900008 - Bad file descriptor
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 13900034 - Operation would block
+     * @throws { BusinessException } 13900042 - Unknown error
+     * @throws { BusinessException } 13900043 - No record locks available
+     * @relation unlock(): void
+     */
     @!APILevel[
         21,
         stagemodelonly: true,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
-    public func unLock(): Unit {
+    public func unlock(): Unit {
         let code = unsafe { FfiOHOSFILEFsUnLock(getID()) }
         if (code != SUCCESS_CODE) {
             FS_LOG.error(getErrorInfo(code))
@@ -103,7 +141,12 @@ public class File <: RemoteDataLite {
     }
 
     /**
-     *  @brief getParent(): string
+     * Obtains the parent directory of this file object.
+     *
+     * @throws { BusinessException } 13900005 - I/O error
+     * @throws { BusinessException } 13900042 - Unknown error
+     * @throws { BusinessException } 14300002 - Invalid URI
+     * @relation getParent(): string
      */
     @!APILevel[
         21,

@@ -13,12 +13,13 @@
  * limitations under the License.
  */
 
-package ohos.file_fileuri
+package ohos.file.fileuri
 
 import ohos.ffi.*
 import ohos.hilog.*
-import ohos.base.*
+import ohos.business_exception.*
 import ohos.labels.*
+import ohos.uri.Uri
 
 foreign func FfiOHOSFILEUriCreateUri(uriOrPath: CString): Int64
 
@@ -30,24 +31,31 @@ foreign func FfiOHOSFILEUriToString(id: Int64): CString
 
 foreign func FfiOHOSFILEUriGetUriFromPath(cPath: CString): CString
 
+/**
+* FileUri represents the uri of the file.
+*
+* @relation class FileUri extends uri.URI
+*/
 @!APILevel[
     21,
-    atomicservice: true,
     stagemodelonly: true,
     syscap: "SystemCapability.FileManagement.AppFileService"
 ]
-public class FileUri <: RemoteDataLite & ToString {
+public class FileUri <: Uri {
 
     /**
      * Constructor for obtaining the instance of the FileUri class.
      *
      * @param { String } uriOrPath - Uri or Path.
-     * @since 10
-     * @brief constructor(uriOrPath: string)
+     * @throws { BusinessException } 13900005 - I/O error
+     * @throws {BusinessException} 13900011 - Out of memory
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 13900042 - Unknown error
+     * @throws { BusinessException } 14300002 - Invalid uri
+     * @relation constructor(uriOrPath: string)
      */
     @!APILevel[
         21,
-        atomicservice: true,
         stagemodelonly: true,
         syscap: "SystemCapability.FileManagement.AppFileService"
     ]
@@ -75,18 +83,13 @@ public class FileUri <: RemoteDataLite & ToString {
 
     /**
      * Obtains the file path of uri.
-     *
-     * @type { String }
-     * @readonly
-     * @brief readonly path: string
      */
     @!APILevel[
         21,
-        atomicservice: true,
         stagemodelonly: true,
         syscap: "SystemCapability.FileManagement.AppFileService"
     ]
-    public prop path: String {
+    public override prop path: String {
         get() {
             unsafe {
                 let cPath = FfiOHOSFILEUriGetPath(getID())
@@ -100,13 +103,12 @@ public class FileUri <: RemoteDataLite & ToString {
     /**
      * Obtains the file name of uri.
      *
-     * @type { String }
-     * @readonly
-     * @brief readonly name: string
+     * @throws { BusinessException } 13900005 - I/O error
+     * @throws { BusinessException } 13900042 - Unknown error
+     * @relation readonly name: string
      */
     @!APILevel[
         21,
-        atomicservice: true,
         stagemodelonly: true,
         syscap: "SystemCapability.FileManagement.AppFileService"
     ]
@@ -124,16 +126,14 @@ public class FileUri <: RemoteDataLite & ToString {
     /**
      * Get the uri string
      *
-     * @returns { string } Return the file uri string
-     * @brief toString(): string
+     * @returns { String } Return the file uri string
      */
     @!APILevel[
         21,
-        atomicservice: true,
         stagemodelonly: true,
         syscap: "SystemCapability.FileManagement.AppFileService"
     ]
-    public func toString(): String {
+    public override func toString(): String {
         unsafe {
             let cStr = FfiOHOSFILEUriToString(getID())
             let str = cStr.toString()
@@ -141,32 +141,30 @@ public class FileUri <: RemoteDataLite & ToString {
             return str
         }
     }
+}
 
-    /**
-     * Get the uri from the path of file in app sandbox
-     *
-     * @param { string } path the path of file in app sandbox
-     * @returns { string } Return the file uri
-     * @brief getUriFromPath(path: string): string
-     */
-    @!APILevel[
-        21,
-        atomicservice: true,
-        stagemodelonly: true,
-        syscap: "SystemCapability.FileManagement.AppFileService"
-    ]
-    public static func getUriFromPath(path: String): String {
-        if (path == "") {
-            Hilog.error(0xD003900, "File-FileUir", "The input parameter is invalid")
-            throw BusinessException(ERR_PARAMETER_ERROR, "The input parameter is invalid")
-        }
-        unsafe {
-            let cPath = LibC.mallocCString(path)
-            let cUri = FfiOHOSFILEUriGetUriFromPath(cPath)
-            LibC.free(cPath)
-            let str = cUri.toString()
-            LibC.free(cUri)
-            return str
-        }
+/**
+* Get the uri from the path of file in app sandbox
+*
+* @throws { BusinessException } 401 - The input parameter is invalid.
+* @relation function getUriFromPath(path: string): string
+*/
+@!APILevel[
+    21,
+    stagemodelonly: true,
+    syscap: "SystemCapability.FileManagement.AppFileService"
+]
+public func getUriFromPath(path: String): String {
+    if (path == "") {
+        Hilog.error(0xD003900, "File-FileUir", "The input parameter is invalid")
+        throw BusinessException(ERR_PARAMETER_ERROR, "The input parameter is invalid")
+    }
+    unsafe {
+        let cPath = LibC.mallocCString(path)
+        let cUri = FfiOHOSFILEUriGetUriFromPath(cPath)
+        LibC.free(cPath)
+        let str = cUri.toString()
+        LibC.free(cUri)
+        return str
     }
 }
