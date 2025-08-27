@@ -14,12 +14,9 @@
 import("//build/ohos.gni")
 import("//build/cangjie/cjc.gni")
 
-ohos_cangjie_shared_library("kit.CoreFileKit") {
-  sources = [ "index.cj" ]
-
-  cj_deps = [
-    "../../ohos/file/fs:ohos.file.fs",
-    "../../ohos/file/fileuri:ohos.file.fileuri",
+ohos_cangjie_shared_library("ohos.file") {
+  sources = [
+    "file_package.cj",
   ]
 
   subsystem_name = "filemanagement"

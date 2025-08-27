@@ -13,10 +13,9 @@
  * limitations under the License.
  */
 
-package ohos.file_fs
+package ohos.file.fs
 
 import ohos.ffi.*
-import ohos.base.*
 
 foreign {
     // Copy
@@ -124,7 +123,7 @@ foreign {
 
     func FfiOHOSFileFsUnlink(path: CString): Int32
 
-    func FfiOHOSFileFsAccess(path: CString): RetDataBool
+    func FfiOHOSFileFsAccessExt(path: CString, mode: Int32, flag: Int32): RetDataBool
 
     func FfiOHOSFileFsRead(fd: Int32, buffer: CPointer<Byte>, size: Int64, length: UIntNative, offset: Int64): RetDataI64
 

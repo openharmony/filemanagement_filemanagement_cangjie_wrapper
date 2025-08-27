@@ -13,14 +13,19 @@
  * limitations under the License.
  */
 
-package ohos.file_fs
+package ohos.file.fs
 
 import ohos.hilog.*
 import ohos.ffi.*
-import ohos.base.*
+import ohos.business_exception.*
 import ohos.labels.*
-import std.collection.*
 
+/**
+ * Provides API for stream operations. Before calling any API of Stream,
+ * you need to create a Stream instance by using createStream or fdopenStream.
+ *
+ * @relation declare interface Stream
+ */
 @!APILevel[
     21,
     stagemodelonly: true,
@@ -36,7 +41,15 @@ public class Stream <: RemoteDataLite {
     }
 
     /**
-     *  @brief closeSync(file: number | File): void
+     * Close stream.
+     *
+     * @throws { BusinessException } 13900004 - Interrupted system call
+     * @throws { BusinessException } 13900005 - I/O error
+     * @throws { BusinessException } 13900008 - Bad file descriptor
+     * @throws { BusinessException } 13900025 - No space left on device
+     * @throws { BusinessException } 13900041 - Quota exceeded
+     * @throws { BusinessException } 13900042 - Unknown error
+     * @relation closeSync(): void
      */
     @!APILevel[
         21,
@@ -54,7 +67,21 @@ public class Stream <: RemoteDataLite {
     }
 
     /**
-     *  @brief flushSync(): void
+     * Flushes this stream.
+     *
+     * @throws { BusinessException } 13900001 - Operation not permitted
+     * @throws { BusinessException } 13900004 - Interrupted system call
+     * @throws { BusinessException } 13900005 - I/O error
+     * @throws { BusinessException } 13900008 - Bad file descriptor
+     * @throws { BusinessException } 13900010 - Try again
+     * @throws { BusinessException } 13900013 - Bad address
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 13900024 - File too large
+     * @throws { BusinessException } 13900025 - No space left on device
+     * @throws { BusinessException } 13900034 - Operation would block
+     * @throws { BusinessException } 13900041 - Quota exceeded
+     * @throws { BusinessException } 13900042 - Unknown error
+     * @relation flushSync(): void
      */
     @!APILevel[
         21,
@@ -71,13 +98,24 @@ public class Stream <: RemoteDataLite {
     }
 
     /**
-     *  @brief writeSync(fd: number, buffer: ArrayBuffer | string,
-     *                   options?: { offset?: number; length?: number; encoding?: string; }): number
+     * Writes data to this stream.
+     *
+     * @throws { BusinessException } 13900001 - Operation not permitted
+     * @throws { BusinessException } 13900004 - Interrupted system call
+     * @throws { BusinessException } 13900005 - I/O error
+     * @throws { BusinessException } 13900008 - Bad file descriptor
+     * @throws { BusinessException } 13900010 - Try again
+     * @throws { BusinessException } 13900013 - Bad address
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 13900024 - File too large
+     * @throws { BusinessException } 13900025 - No space left on device
+     * @throws { BusinessException } 13900034 - Operation would block
+     * @throws { BusinessException } 13900041 - Quota exceeded
+     * @throws { BusinessException } 13900042 - Unknown error
+     * @relation writeSync(buffer: ArrayBuffer | string, options?: WriteOptions): number
      */
     @!APILevel[
         21,
-        atomicservice: true,
-        crossplatform: true,
         stagemodelonly: true,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
@@ -109,6 +147,23 @@ public class Stream <: RemoteDataLite {
         return writeBytes
     }
 
+    /**
+     * Writes data to this stream.
+     *
+     * @throws { BusinessException } 13900001 - Operation not permitted
+     * @throws { BusinessException } 13900004 - Interrupted system call
+     * @throws { BusinessException } 13900005 - I/O error
+     * @throws { BusinessException } 13900008 - Bad file descriptor
+     * @throws { BusinessException } 13900010 - Try again
+     * @throws { BusinessException } 13900013 - Bad address
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 13900024 - File too large
+     * @throws { BusinessException } 13900025 - No space left on device
+     * @throws { BusinessException } 13900034 - Operation would block
+     * @throws { BusinessException } 13900041 - Quota exceeded
+     * @throws { BusinessException } 13900042 - Unknown error
+     * @relation writeSync(buffer: ArrayBuffer | string, options?: WriteOptions): number
+     */
     @!APILevel[
         21,
         stagemodelonly: true,
@@ -142,30 +197,42 @@ public class Stream <: RemoteDataLite {
     }
 
     /**
-     *  @brief readSync(buffer: ArrayBuffer, options?: { offset?: number; length?: number; }): number
+     * Reads data from this stream.
+     *
+     * @throws { BusinessException } 13900004 - Interrupted system call
+     * @throws { BusinessException } 13900005 - I/O error
+     * @throws { BusinessException } 13900008 - Bad file descriptor
+     * @throws { BusinessException } 13900010 - Try again
+     * @throws { BusinessException } 13900013 - Bad address
+     * @throws { BusinessException } 13900019 - Is a directory
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 13900034 - Operation would block
+     * @throws { BusinessException } 13900042 - Unknown error
+     * @throws { BusinessException } 13900044 - Network is unreachable
+     * @relation readSync(buffer: ArrayBuffer, options?: ReadOptions): number
      */
     @!APILevel[
         21,
         stagemodelonly: true,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
-    public func read(arrayBuffer: Array<Byte>, options!: ReadOptions = ReadOptions()): Int64 {
-        if (arrayBuffer.size == 0) {
+    public func read(buffer: Array<Byte>, options!: ReadOptions = ReadOptions()): Int64 {
+        if (buffer.size == 0) {
             return 0
         }
         unsafe {
-            let buffer = safeMalloc<UInt8>(count: arrayBuffer.size)
-            let length = options.length ?? UIntNative(arrayBuffer.size)
+            let resultBuffer = safeMalloc<UInt8>(count: buffer.size)
+            let length = options.length ?? UIntNative(buffer.size)
 
             let cValue = if (options.offset.isNone()) {
-                FfiOHOSStreamReadCur(getID(), buffer, arrayBuffer.size, Int64(length))
+                FfiOHOSStreamReadCur(getID(), resultBuffer, buffer.size, Int64(length))
             } else {
-                FfiOHOSStreamRead(getID(), buffer, arrayBuffer.size, Int64(length), options.offset.getOrThrow())
+                FfiOHOSStreamRead(getID(), resultBuffer, buffer.size, Int64(length), options.offset.getOrThrow())
             }
             for (i in 0..cValue.data) {
-                arrayBuffer[i] = buffer.read(i)
+                buffer[i] = resultBuffer.read(i)
             }
-            LibC.free(buffer)
+            LibC.free(resultBuffer)
             if (cValue.code != SUCCESS_CODE) {
                 Hilog.error(0xD003900, "File-Fs", getErrorInfo(cValue.code))
                 throw BusinessException(cValue.code, getErrorInfo(cValue.code))
