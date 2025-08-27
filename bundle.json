@@ -30,8 +30,9 @@
         "build": {
             "sub_component": [
                 "//foundation/filemanagement/filemanagement_cangjie_wrapper/kit/CoreFileKit:kit.CoreFileKit",
-                "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file_fileuri:ohos.file_fileuri",
-                "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file_fs:ohos.file_fs"
+                "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file:ohos.file",
+                "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file/fileuri:ohos.file.fileuri",
+                "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file/fs:ohos.file.fs"
             ],
             "inner_kits": [
             ],
