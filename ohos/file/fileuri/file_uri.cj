@@ -19,7 +19,6 @@ import ohos.ffi.*
 import ohos.hilog.*
 import ohos.business_exception.*
 import ohos.labels.*
-import ohos.uri.Uri
 
 foreign func FfiOHOSFILEUriCreateUri(uriOrPath: CString): Int64
 
@@ -30,6 +29,57 @@ foreign func FfiOHOSFILEUriGetName(id: Int64): CString
 foreign func FfiOHOSFILEUriToString(id: Int64): CString
 
 foreign func FfiOHOSFILEUriGetUriFromPath(cPath: CString): CString
+
+class UriImpl {
+    init() {}
+}
+
+/**
+ * URI Represents a Uniform Resource Identifier (URI) reference.
+ *
+ * @relation class URI
+ */
+@!APILevel[
+    21,
+    stagemodelonly: true,
+    syscap: "SystemCapability.FileManagement.AppFileService"
+]
+public open class Uri <: RemoteDataLite & ToString {
+    private let impl_: UriImpl = UriImpl()
+    protected init(id: Int64) {
+        super(id)
+    }
+
+    /**
+     * Gets/Sets the path portion of the URI.
+     *
+     * @relation path: string
+     */
+    @!APILevel[
+        21,
+        stagemodelonly: true,
+        syscap: "SystemCapability.FileManagement.AppFileService"
+    ]
+    public open prop path: String {
+        get() {
+            throw IllegalArgumentException("The prop is not supported.")
+        }
+    }
+
+    /**
+     * Converts this URI into an encoded string.
+     *
+     * @relation toString(): string
+     */
+    @!APILevel[
+        21,
+        stagemodelonly: true,
+        syscap: "SystemCapability.FileManagement.AppFileService"
+    ]
+    public open func toString(): String {
+        throw IllegalArgumentException("The function is not supported.")
+    }
+}
 
 /**
 * FileUri represents the uri of the file.
