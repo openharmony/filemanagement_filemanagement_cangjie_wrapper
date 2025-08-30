@@ -1,8 +1,8 @@
 {
     "name": "@ohos/filemanagement_cangjie_wrapper",
-    "description": "Provides the application with cangjie interfaces for filemanagement",
+    "description": "The filemanagement_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based on the capabilities of the file management Subsystem.",
     "version": "6.0",
-    "license": "Apache-2.0",
+    "license": "Apache License 2.0",
     "publishAs": "code-segment",
     "segment": {
         "destPath": "foundation/filemanagement/filemanagement_cangjie_wrapper"
