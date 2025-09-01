@@ -25,8 +25,9 @@ foundation/filemanagement/filemanagement_cangjie_wrapper
 ├── figures               # architecture pictures
 ├── kit                   # Cangjie File Management kit code
 │   └── CoreFileKit       # Cangjie CoreFileKit code implementation
-└── ohos                  # Cangjie File Management code
-    └── file              # Cangjie File code implementation
+├── ohos                  # Cangjie File Management code
+│   └── file              # Cangjie File code implementation
+└── test                  # Cangjie test code
 ```
 
 ## Constraints
