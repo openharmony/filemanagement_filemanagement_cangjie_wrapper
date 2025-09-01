@@ -25,8 +25,9 @@ foundation/filemanagement/filemanagement_cangjie_wrapper
 ├── figures               # 存放README中的架构图
 ├── kit                   # 仓颉文件管理kit化代码
 │   └── CoreFileKit       # 仓颉CoreFileKit实现
-└── ohos                  # 仓颉文件管理接口实现
-    └── file              # 仓颉文件接口实现
+├── ohos                  # 仓颉文件管理接口实现
+│   └── file              # 仓颉文件接口实现
+└── test                  # 仓颉测试代码
 ```
 
 ## 约束
