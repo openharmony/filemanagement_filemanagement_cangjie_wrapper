@@ -9,14 +9,14 @@ The filemanagement_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony 
 **Figure 1** Architecture of the file management subsystem
 ![filemanagement_cangjie_wrapper architecture](figures/filemanagement_cangjie_wrapper_architecture_en.png)
 
-- 文件IO接口：provide file creation, access and random read-write interface;
-- 文件流接口：provide the capability interface for reading and writing files in a streaming manner;
-- 文件锁接口：provide file blocking and non-blocking interfaces for applying shared lock or exclusive lock and unlocking;
-- 文件信息接口：provide basic statistical information interface including file size, access permission and modification time;
-- 应用文件URI接口：provides the URI interface for obtaining the application itself;
-- 仓颉文件管理FFI接口定义：responsible for defining the C interoperable Changjie interface, which is used to implement the Changjie file management capability;
-- 应用文件：provide secure sandbox quarantine technology for applications to ensure minimized permissions on the basis of application data security;
-- 基础文件：Provides the ability to create, modify, and access files.
+- FileIO Interface：provide file creation, access and random read-write interface.
+- File Stream Interface：provide the capability interface for reading and writing files in a streaming manner.
+- File Lock Interface：provide file blocking and non-blocking interfaces for applying shared lock or exclusive lock and unlocking.
+- File Info Interface：provide basic statistical information interface including file size, access permission and modification time.
+- Application File URI Interface：provides the URI interface for obtaining the application itself.
+- Cangjie file management FFI interface definition：responsible for defining the C interoperable Changjie interface, which is used to implement the Changjie file management capability.
+- Application File：provide secure sandbox quarantine technology for applications to ensure minimized permissions on the basis of application data security.
+- Basic File Management：Provides the ability to create, modify, and access files.
 
 ## Directory Structure
 
@@ -40,17 +40,17 @@ Constraints on local I/O APIs:
 
 The current distributed soft bus Cangjie interface provides the following functions:
 
-- basic file access capability;
-- document information acquisition capability;
+- basic file access capability.
+- document information acquisition capability.
 
 Compared with ArkTS, the following functions are not supported at the moment:
 
-- Storage management functions;
-- Common file function;
-- Distributed capabilities;
+- Storage management functions.
+- Common file function.
+- Distributed capabilities.
 - Application file sharing capabilities.
 
-For filemanagement-related APIs, please refer to :
+For filemanagement-related APIs, please refer to:
 
 -   [ohos.file.fs (File Management)](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/CoreFileKit/cj-apis-file_fs.md)
 -   [ohos.file.fileuri (File URI)](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/CoreFileKit/cj-apis-file_fileuri.md)
