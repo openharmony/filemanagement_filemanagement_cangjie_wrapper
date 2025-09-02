@@ -66,7 +66,3 @@ Developers are welcome to contribute code, documentation, etc. For specific cont
 [filemanagement_app_file_service](https://gitee.com/openharmony/filemanagement_app_file_service)
 
 [filemanagement_file_api](https://gitee.com/openharmony/filemanagement_file_api)
-
-[cangjie_ark_interop](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/README.md)
-
-[hiviewdfx_cangjie_wrapper](https://gitcode.com/openharmony-sig/hiviewdfx_hiviewdfx_cangjie_wrapper/blob/master/README.md)

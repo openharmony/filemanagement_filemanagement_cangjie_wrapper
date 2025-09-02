@@ -66,7 +66,3 @@ foundation/filemanagement/filemanagement_cangjie_wrapper
 [filemanagement_app_file_service](https://gitee.com/openharmony/filemanagement_app_file_service/blob/master/README_ZH.md)
 
 [filemanagement_file_api](https://gitee.com/openharmony/filemanagement_file_api/blob/master/README_zh.md)
-
-[cangjie_ark_interop](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/README_zh.md)
-
-[hiviewdfx_cangjie_wrapper](https://gitcode.com/openharmony-sig/hiviewdfx_hiviewdfx_cangjie_wrapper/blob/master/README_zh.md)
