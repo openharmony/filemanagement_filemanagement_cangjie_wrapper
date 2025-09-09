@@ -46,7 +46,7 @@ class UriImpl {
 ]
 public open class Uri <: RemoteDataLite & ToString {
     private let impl_: UriImpl = UriImpl()
-    protected init(id: Int64) {
+    init(id: Int64) {
         super(id)
     }
 
