@@ -1637,25 +1637,25 @@ public class FileIo {
      * The source directory is moved to the destination directory, and the content of the moved directory is the
      * same as that of the source directory. If the destination directory contains a directory with the same name
      * as the source directory, all original files in the directory will be deleted.
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900001 - Operation not permitted
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900002 - No such file or directory
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900008 - Bad file descriptor
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900011 - Out of memory
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900012 - Permission denied
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900013 - Bad address
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900014 - Device or resource busy
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900015 - File exists
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900016 - Cross-device link
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900018 - Not a directory
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900019 - Is a directory
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900020 - Invalid argument
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900025 - No space left on device
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900027 - Read-only file system
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900028 - Too many links
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900032 - Directory not empty
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900033 - Too many symbolic links encountered
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900041 - Quota exceeded
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900042 - Unknown error
+     * @throws { BusinessException } 13900001 - Operation not permitted
+     * @throws { BusinessException } 13900002 - No such file or directory
+     * @throws { BusinessException } 13900008 - Bad file descriptor
+     * @throws { BusinessException } 13900011 - Out of memory
+     * @throws { BusinessException } 13900012 - Permission denied
+     * @throws { BusinessException } 13900013 - Bad address
+     * @throws { BusinessException } 13900014 - Device or resource busy
+     * @throws { BusinessException } 13900015 - File exists
+     * @throws { BusinessException } 13900016 - Cross-device link
+     * @throws { BusinessException } 13900018 - Not a directory
+     * @throws { BusinessException } 13900019 - Is a directory
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 13900025 - No space left on device
+     * @throws { BusinessException } 13900027 - Read-only file system
+     * @throws { BusinessException } 13900028 - Too many links
+     * @throws { BusinessException } 13900032 - Directory not empty
+     * @throws { BusinessException } 13900033 - Too many symbolic links encountered
+     * @throws { BusinessException } 13900041 - Quota exceeded
+     * @throws { BusinessException } 13900042 - Unknown error
      * @relation declare function moveDirSync(src: string, dest: string, mode?: number): void
      */
     @!APILevel[
@@ -1676,7 +1676,7 @@ public class FileIo {
                 }
                 if (ret.code != SUCCESS_CODE) {
                     FS_LOG.error(getErrorInfo(ret.code))
-                    throw BusinessError(conflictFiles, ret.code, getErrorInfo(ret.code))
+                    throw BusinessException(ret.code, getErrorInfo(ret.code), data: conflictFiles)
                 }
             }
         }
@@ -1887,25 +1887,25 @@ public class FileIo {
      * When the destination directory contains a directory with the same name as the source directory,
      * the files with the same names in the destination directory are overwritten forcibly;
      * the files without conflicts in the destination directory are retained.
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900002 - No such file or directory
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900004 - Interrupted system call
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900005 - I/O error
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900008 - Bad file descriptor
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900010 - Try again
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900011 - Out of memory
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900012 - Permission denied
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900013 - Bad address
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900015 - File exists
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900018 - Not a directory
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900019 - Is a directory
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900020 - Invalid argument
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900030 - File name too long
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900031 - Function not implemented
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900033 - Too many symbolic links encountered
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900034 - Operation would block
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900038 - Value too large for defined data type
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900042 - Unknown error
-     * @throws { BusinessError<Array<ConflictFiles>> } 13900044 - Network is unreachable
+     * @throws { BusinessException } 13900002 - No such file or directory
+     * @throws { BusinessException } 13900004 - Interrupted system call
+     * @throws { BusinessException } 13900005 - I/O error
+     * @throws { BusinessException } 13900008 - Bad file descriptor
+     * @throws { BusinessException } 13900010 - Try again
+     * @throws { BusinessException } 13900011 - Out of memory
+     * @throws { BusinessException } 13900012 - Permission denied
+     * @throws { BusinessException } 13900013 - Bad address
+     * @throws { BusinessException } 13900015 - File exists
+     * @throws { BusinessException } 13900018 - Not a directory
+     * @throws { BusinessException } 13900019 - Is a directory
+     * @throws { BusinessException } 13900020 - Invalid argument
+     * @throws { BusinessException } 13900030 - File name too long
+     * @throws { BusinessException } 13900031 - Function not implemented
+     * @throws { BusinessException } 13900033 - Too many symbolic links encountered
+     * @throws { BusinessException } 13900034 - Operation would block
+     * @throws { BusinessException } 13900038 - Value too large for defined data type
+     * @throws { BusinessException } 13900042 - Unknown error
+     * @throws { BusinessException } 13900044 - Network is unreachable
      * @relation declare function copyDirSync(src: string, dest: string, mode?: number): void
      */
     @!APILevel[
@@ -1937,7 +1937,7 @@ public class FileIo {
                 }
                 if (ret.code != SUCCESS_CODE) {
                     FS_LOG.error(getErrorInfo(ret.code))
-                    throw BusinessError(conflictFiles, ret.code, getErrorInfo(ret.code))
+                    throw BusinessException(ret.code, getErrorInfo(ret.code), data: conflictFiles)
                 }
             }
         }
