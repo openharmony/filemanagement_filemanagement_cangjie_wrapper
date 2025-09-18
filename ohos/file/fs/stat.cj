@@ -25,8 +25,7 @@ import ohos.labels.*
  * @relation declare interface Stat
  */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class Stat <: RemoteDataLite {
@@ -44,8 +43,7 @@ public class Stat <: RemoteDataLite {
      * @relation readonly ino: bigint
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop ino: Int64 {
@@ -70,8 +68,7 @@ public class Stat <: RemoteDataLite {
      * @relation readonly mode: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop mode: Int64 {
@@ -86,8 +83,7 @@ public class Stat <: RemoteDataLite {
      * @relation readonly uid: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop uid: Int64 {
@@ -102,8 +98,7 @@ public class Stat <: RemoteDataLite {
      * @relation readonly gid: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop gid: Int64 {
@@ -118,8 +113,7 @@ public class Stat <: RemoteDataLite {
      * @relation readonly size: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop size: Int64 {
@@ -135,8 +129,7 @@ public class Stat <: RemoteDataLite {
      * @relation readonly atime: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop atime: Int64 {
@@ -152,8 +145,7 @@ public class Stat <: RemoteDataLite {
      * @relation readonly mtime: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop mtime: Int64 {
@@ -169,8 +161,7 @@ public class Stat <: RemoteDataLite {
      * @relation readonly ctime: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop ctime: Int64 {
@@ -185,8 +176,7 @@ public class Stat <: RemoteDataLite {
      * @relation isBlockDevice(): boolean
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func isBlockDevice(): Bool {
@@ -199,8 +189,7 @@ public class Stat <: RemoteDataLite {
      * @relation isCharacterDevice(): boolean
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func isCharacterDevice(): Bool {
@@ -213,8 +202,7 @@ public class Stat <: RemoteDataLite {
      * @relation isDirectory(): boolean
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func isDirectory(): Bool {
@@ -227,8 +215,7 @@ public class Stat <: RemoteDataLite {
      * @relation isFIFO(): boolean
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func isFIFO(): Bool {
@@ -241,8 +228,7 @@ public class Stat <: RemoteDataLite {
      * @relation isFile(): boolean
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func isFile(): Bool {
@@ -255,8 +241,7 @@ public class Stat <: RemoteDataLite {
      * @relation isSocket(): boolean
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func isSocket(): Bool {
@@ -269,8 +254,7 @@ public class Stat <: RemoteDataLite {
      * @relation isSymbolicLink(): boolean
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func isSymbolicLink(): Bool {

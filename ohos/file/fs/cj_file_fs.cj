@@ -36,8 +36,7 @@ class ReadOptionsImpl {
  * @relation export interface RandomAccessFileOptions
  */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class RandomAccessFileOptions {
@@ -47,8 +46,7 @@ public class RandomAccessFileOptions {
      * @relation start?: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var start: Option<Int64>
@@ -58,8 +56,7 @@ public class RandomAccessFileOptions {
      * @relation end?: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var end: Option<Int64>
@@ -67,8 +64,7 @@ public class RandomAccessFileOptions {
      * RandomAccessFileOptions constructor.
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public init(
@@ -86,8 +82,7 @@ public class RandomAccessFileOptions {
  * @relation namespace OpenMode
  */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class OpenMode {
@@ -99,8 +94,7 @@ public class OpenMode {
      * @relation const READ_ONLY = 0o0
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static const READ_ONLY: Int64 = 0o0
@@ -111,8 +105,7 @@ public class OpenMode {
      * @relation const WRITE_ONLY = 0o1
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static const WRITE_ONLY: Int64 = 0o1
@@ -123,8 +116,7 @@ public class OpenMode {
      * @relation const READ_WRITE = 0o2
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static const READ_WRITE: Int64 = 0o2
@@ -135,8 +127,7 @@ public class OpenMode {
      * @relation const CREATE = 0o100
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static const CREATE: Int64 = 0o100
@@ -147,8 +138,7 @@ public class OpenMode {
      * @relation const TRUNC = 0o1000
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static const TRUNC: Int64 = 0o1000
@@ -159,8 +149,7 @@ public class OpenMode {
      * @relation const APPEND = 0o2000
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static const APPEND: Int64 = 0o2000
@@ -171,8 +160,7 @@ public class OpenMode {
      * @relation const NONBLOCK = 0o4000
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static const NONBLOCK: Int64 = 0o4000
@@ -183,8 +171,7 @@ public class OpenMode {
      * @relation const DIR = 0o200000
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static const DIR: Int64 = 0o200000
@@ -195,8 +182,7 @@ public class OpenMode {
      * @relation const NOFOLLOW = 0o400000
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static const NOFOLLOW: Int64 = 0o400000
@@ -207,8 +193,7 @@ public class OpenMode {
      * @relation const SYNC = 0o4010000
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static const SYNC: Int64 = 0o4010000
@@ -220,8 +205,7 @@ public class OpenMode {
  * @relation export interface Options
  */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public open class Options {
@@ -231,8 +215,7 @@ public open class Options {
      * @relation encoding?: string
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var encoding: String
@@ -242,8 +225,7 @@ public open class Options {
      * Options constructor.
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public init(
@@ -259,8 +241,7 @@ public open class Options {
  * @relation declare interface ReaderIterator
  */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class ReaderIterator <: RemoteDataLite {
@@ -281,8 +262,7 @@ public class ReaderIterator <: RemoteDataLite {
      * @relation next(): ReaderIteratorResult
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func next(): ReaderIteratorResult {
@@ -303,8 +283,7 @@ public class ReaderIterator <: RemoteDataLite {
  * @relation export interface ReaderIteratorResult
  */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class ReaderIteratorResult {
@@ -315,8 +294,7 @@ public class ReaderIteratorResult {
      * @relation done: boolean
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var done: Bool
@@ -326,8 +304,7 @@ public class ReaderIteratorResult {
      * @relation value: string
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var value: String
@@ -356,8 +333,7 @@ struct RetReaderIteratorResult {
  * @relation export interface WriteOptions extends Options
  */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class WriteOptions <: Options {
@@ -367,8 +343,7 @@ public class WriteOptions <: Options {
      * @relation length?: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var length: Option<UIntNative>
@@ -378,8 +353,7 @@ public class WriteOptions <: Options {
      * @relation offset?: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var offset: Option<Int64>
@@ -388,8 +362,7 @@ public class WriteOptions <: Options {
      * WriteOptions constructor.
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public init(
@@ -409,8 +382,7 @@ public class WriteOptions <: Options {
  * @relation export interface ReadOptions
  */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public open class ReadOptions {
@@ -420,8 +392,7 @@ public open class ReadOptions {
      * @relation offset?: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var offset: Option<Int64>
@@ -431,8 +402,7 @@ public open class ReadOptions {
      * @relation length?: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var length: Option<UIntNative>
@@ -441,8 +411,7 @@ public open class ReadOptions {
      * ReadOptions constructor.
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public init(
@@ -460,8 +429,7 @@ public open class ReadOptions {
  * @relation export interface ReadTextOptions extends ReadOptions
  */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class ReadTextOptions <: ReadOptions {
@@ -471,8 +439,7 @@ public class ReadTextOptions <: ReadOptions {
      * @relation encoding?: string
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var encoding: String
@@ -481,8 +448,7 @@ public class ReadTextOptions <: ReadOptions {
      * ReadTextOptions constructor.
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public init(
@@ -501,8 +467,7 @@ public class ReadTextOptions <: ReadOptions {
  * @relation declare enum AccessModeType
  */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public enum AccessModeType {
@@ -512,8 +477,7 @@ public enum AccessModeType {
      * @relation EXIST = 0
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     Exist
@@ -524,8 +488,7 @@ public enum AccessModeType {
      * @relation WRITE = 2
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     Write
@@ -536,8 +499,7 @@ public enum AccessModeType {
      * @relation READ = 4
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     Read
@@ -548,8 +510,7 @@ public enum AccessModeType {
      * @relation READ_WRITE = 6
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     ReadWrite
@@ -572,8 +533,7 @@ public enum AccessModeType {
  * @relation declare enum AccessFlagType
  */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public enum AccessFlagType {
@@ -583,8 +543,7 @@ public enum AccessFlagType {
      * @relation LOCAL = 0
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     Local | ...
@@ -603,8 +562,7 @@ public enum AccessFlagType {
  * @relation declare enum WhenceType
  */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public enum WhenceType {
@@ -614,8 +572,7 @@ public enum WhenceType {
      * @relation SEEK_SET = 0
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     SeekSet
@@ -626,8 +583,7 @@ public enum WhenceType {
      * @relation SEEK_CUR = 1
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     SeekCur
@@ -638,8 +594,7 @@ public enum WhenceType {
      * @relation SEEK_END = 2
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     SeekEnd
@@ -663,8 +618,7 @@ public enum WhenceType {
  * @relation export interface ConflictFiles
  */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class ConflictFiles {
@@ -674,8 +628,7 @@ public class ConflictFiles {
      * @relation srcFile: string
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var srcFile: String
@@ -685,8 +638,7 @@ public class ConflictFiles {
      * @relation destFile: string
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var destFile: String
@@ -765,8 +717,7 @@ struct RetDataCArrStringN {
  * @relation export interface Filter
  */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class Filter {
@@ -776,8 +727,7 @@ public class Filter {
      * @relation suffix?: Array<string>
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var suffix: Array<String>
@@ -788,8 +738,7 @@ public class Filter {
      * @relation displayName?: Array<string>
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var displayName: Array<String>
@@ -799,8 +748,7 @@ public class Filter {
      * @relation mimeType?: Array<string>
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var mimeType: Array<String>
@@ -810,8 +758,7 @@ public class Filter {
      * @relation fileSizeOver?: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var fileSizeOver: ?Int64
@@ -821,8 +768,7 @@ public class Filter {
      * @relation lastModifiedAfter?: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var lastModifiedAfter: ?Float64
@@ -833,8 +779,7 @@ public class Filter {
      * @relation excludeMedia?: boolean
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var excludeMedia: Bool
@@ -845,8 +790,7 @@ public class Filter {
      * @throws { BusinessException } 13900020 - Invalid argument
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public init(
@@ -919,8 +863,7 @@ struct CFilter {
  * @relation export interface ListFileOptions
  */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class ListFileOptions {
@@ -933,8 +876,7 @@ public class ListFileOptions {
      * @relation recursion?: boolean
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var recursion: Bool
@@ -944,8 +886,7 @@ public class ListFileOptions {
      * @relation listNum?: number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var listNum: Int32
@@ -955,8 +896,7 @@ public class ListFileOptions {
      * @relation filter?: Filter
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var filter: Filter
@@ -965,8 +905,7 @@ public class ListFileOptions {
      * ListFileOptions constructor.
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public init(
@@ -1020,8 +959,7 @@ unsafe func getArrStringAndFree(cArr: CArrString): Array<String> {
  * @relation declare namespace fileIo
  */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class FileIo {
@@ -1046,8 +984,7 @@ public class FileIo {
      * @relation declare function statSync(file: string | number): Stat
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func stat(file: Int32): Stat {
@@ -1081,8 +1018,7 @@ public class FileIo {
      * @relation declare function statSync(file: string | number): Stat
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func stat(file: String): Stat {
@@ -1138,8 +1074,7 @@ public class FileIo {
      * @relation declare function createStreamSync(path: string, mode: string): Stream
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func createStream(path: String, mode: String): Stream {
@@ -1201,8 +1136,7 @@ public class FileIo {
      * @relation declare function fdopenStreamSync(fd: number, mode: string): Stream
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func fdopenStream(fd: Int32, mode: String): Stream {
@@ -1236,8 +1170,7 @@ public class FileIo {
      * @relation declare function lstatSync(path: string): Stat
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func lstat(path: String): Stat {
@@ -1273,8 +1206,7 @@ public class FileIo {
      * @relation declare function accessSync(path: string, mode: AccessModeType, flag: AccessFlagType): boolean
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func access(path: String, mode!: AccessModeType = AccessModeType.Exist,
@@ -1325,8 +1257,7 @@ public class FileIo {
      * @relation declare function openSync(path: string, mode?: number): File
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func open(path: String, mode!: Int64 = OpenMode.READ_ONLY): File {
@@ -1355,8 +1286,7 @@ public class FileIo {
      * @relation declare function dup(fd: number): File
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func dup(fd: Int32): File {
@@ -1386,8 +1316,7 @@ public class FileIo {
      * @relation declare function readSync(fd: number, buffer: ArrayBuffer, options?: ReadOptions): number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func read(fd: Int32, buffer: Array<Byte>, options!: ReadOptions = ReadOptions()): Int64 {
@@ -1434,8 +1363,7 @@ public class FileIo {
      * @relation declare function writeSync(fd: number, buffer: ArrayBuffer | string, options?: WriteOptions): number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func write(fd: Int32, buffer: Array<Byte>, options!: WriteOptions = WriteOptions()): Int64 {
@@ -1482,8 +1410,7 @@ public class FileIo {
      * @relation declare function writeSync(fd: number, buffer: ArrayBuffer | string, options?: WriteOptions): number;
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func write(fd: Int32, buffer: String, options!: WriteOptions = WriteOptions()): Int64 {
@@ -1534,8 +1461,7 @@ public class FileIo {
      * @relation declare function mkdirSync(path: string): void
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func mkdir(path: String): Unit {
@@ -1570,8 +1496,7 @@ public class FileIo {
      * @relation declare function mkdirSync(path: string, recursion: boolean): void
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func mkdir(path: String, recursion: Bool): Unit {
@@ -1603,8 +1528,7 @@ public class FileIo {
      * @relation declare function rmdirSync(path: string): void
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func rmdir(path: String): Unit {
@@ -1659,8 +1583,7 @@ public class FileIo {
      * @relation declare function moveDirSync(src: string, dest: string, mode?: number): void
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func moveDir(src: String, dest: String, mode!: Int32 = 0): Unit {
@@ -1707,8 +1630,7 @@ public class FileIo {
      * @relation declare function renameSync(oldPath: string, newPath: string): void
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func rename(oldPath: String, newPath: String): Unit {
@@ -1747,8 +1669,7 @@ public class FileIo {
      * @relation declare function unlinkSync(path: string): void
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func unlink(path: String): Unit {
@@ -1795,8 +1716,7 @@ public class FileIo {
      * @relation declare function createRandomAccessFileSync(file: string | File, mode?: number, options?: RandomAccessFileOptions): RandomAccessFile
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func createRandomAccessFile(file: String, mode!: Int64 = OpenMode.READ_ONLY,
@@ -1852,8 +1772,7 @@ public class FileIo {
      * @relation declare function createRandomAccessFileSync(file: string | File, mode?: number, options?: RandomAccessFileOptions): RandomAccessFile
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func createRandomAccessFile(file: File, mode!: Int64 = OpenMode.READ_ONLY,
@@ -1909,8 +1828,7 @@ public class FileIo {
      * @relation declare function copyDirSync(src: string, dest: string, mode?: number): void
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func copyDir(src: String, dest: String, mode!: Int32 = 0): Unit {
@@ -1970,8 +1888,7 @@ public class FileIo {
      * @relation declare function copyFileSync(src: string | number, dest: string | number, mode?: number): void
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func copyFile(src: String, dest: String, mode!: Int32 = 0): Unit {
@@ -2016,8 +1933,7 @@ public class FileIo {
      * @relation declare function copyFileSync(src: string | number, dest: string | number, mode?: number): void
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func copyFile(src: String, dest: Int32, mode!: Int32 = 0): Unit {
@@ -2060,8 +1976,7 @@ public class FileIo {
      * @relation declare function copyFileSync(src: string | number, dest: string | number, mode?: number): void
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func copyFile(src: Int32, dest: String, mode!: Int32 = 0): Unit {
@@ -2104,8 +2019,7 @@ public class FileIo {
      * @relation declare function copyFileSync(src: string | number, dest: string | number, mode?: number): void
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func copyFile(src: Int32, dest: Int32, mode!: Int32 = 0): Unit {
@@ -2147,8 +2061,7 @@ public class FileIo {
      * @relation declare function moveFileSync(src: string, dest: string, mode?: number): void
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func moveFile(src: String, dest: String, mode!: Int32 = 0): Unit {
@@ -2198,8 +2111,7 @@ public class FileIo {
      * @relation declare function mkdtempSync(prefix: string): string
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func mkdtemp(prefix: String): String {
@@ -2241,8 +2153,7 @@ public class FileIo {
      * @relation declare function truncateSync(file: string | number, len?: number): void
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func truncate(file: String, len!: Int64 = 0): Unit {
@@ -2282,8 +2193,7 @@ public class FileIo {
      * @relation declare function truncateSync(file: string | number, len?: number): void
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func truncate(file: Int32, len!: Int64 = 0): Unit {
@@ -2307,8 +2217,7 @@ public class FileIo {
      * @relation declare function closeSync(file: number | File): void
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func close(file: Int32): Unit {
@@ -2332,8 +2241,7 @@ public class FileIo {
      * @relation declare function closeSync(file: number | File): void
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func close(file: File): Unit {
@@ -2374,8 +2282,7 @@ public class FileIo {
      * @relation declare function readLinesSync(filePath: string, options?: Options): ReaderIterator
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func readLines(filePath: String, options!: Options = Options()): ReaderIterator {
@@ -2407,8 +2314,7 @@ public class FileIo {
      * @relation declare function lseek(fd: number, offset: number, whence?: WhenceType): number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func lseek(fd: Int32, offset: Int64, whence!: WhenceType = SeekSet): Int64 {
@@ -2436,8 +2342,7 @@ public class FileIo {
      * @relation declare function fdatasyncSync(fd: number): void
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func fdatasync(fd: Int32): Unit {
@@ -2464,8 +2369,7 @@ public class FileIo {
      * @relation declare function fsyncSync(fd: number): void
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func fsync(fd: Int32): Unit {
@@ -2491,8 +2395,7 @@ public class FileIo {
      * @relation declare function listFileSync(path: string, options?: ListFileOptions): string[]
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func listFile(path: String, options!: ListFileOptions = ListFileOptions()): Array<String> {
@@ -2532,8 +2435,7 @@ public class FileIo {
      * @relation function readTextSync(filePath: string, options?: ReadTextOptions): string
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func readText(filePath: String, options!: ReadTextOptions = ReadTextOptions()): String {
@@ -2578,8 +2480,7 @@ public class FileIo {
      * @relation declare function utimes(path: string, mtime: number): void
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func utimes(path: String, mtime: Float64): Unit {
