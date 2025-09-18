@@ -27,8 +27,7 @@ import ohos.labels.*
  * @relation declare interface Stream
  */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class Stream <: RemoteDataLite {
@@ -52,8 +51,7 @@ public class Stream <: RemoteDataLite {
      * @relation closeSync(): void
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func close(): Unit {
@@ -84,8 +82,7 @@ public class Stream <: RemoteDataLite {
      * @relation flushSync(): void
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func flush(): Unit {
@@ -115,8 +112,7 @@ public class Stream <: RemoteDataLite {
      * @relation writeSync(buffer: ArrayBuffer | string, options?: WriteOptions): number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func write(buffer: String, options!: WriteOptions = WriteOptions()): Int64 {
@@ -165,8 +161,7 @@ public class Stream <: RemoteDataLite {
      * @relation writeSync(buffer: ArrayBuffer | string, options?: WriteOptions): number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func write(buffer: Array<Byte>, options!: WriteOptions = WriteOptions()): Int64 {
@@ -212,8 +207,7 @@ public class Stream <: RemoteDataLite {
      * @relation readSync(buffer: ArrayBuffer, options?: ReadOptions): number
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func read(buffer: Array<Byte>, options!: ReadOptions = ReadOptions()): Int64 {

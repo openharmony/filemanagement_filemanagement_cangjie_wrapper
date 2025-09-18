@@ -40,8 +40,7 @@ class UriImpl {
  * @relation class URI
  */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.AppFileService"
 ]
 public open class Uri <: RemoteDataLite & ToString {
@@ -56,8 +55,7 @@ public open class Uri <: RemoteDataLite & ToString {
      * @relation path: string
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.AppFileService"
     ]
     public open prop path: String {
@@ -72,8 +70,7 @@ public open class Uri <: RemoteDataLite & ToString {
      * @relation toString(): string
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.AppFileService"
     ]
     public open func toString(): String {
@@ -87,8 +84,7 @@ public open class Uri <: RemoteDataLite & ToString {
 * @relation class FileUri extends uri.URI
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.AppFileService"
 ]
 public class FileUri <: Uri {
@@ -105,8 +101,7 @@ public class FileUri <: Uri {
      * @relation constructor(uriOrPath: string)
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.AppFileService"
     ]
     public init(uriOrPath: String) {
@@ -135,8 +130,7 @@ public class FileUri <: Uri {
      * Obtains the file path of uri.
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.AppFileService"
     ]
     public override prop path: String {
@@ -158,8 +152,7 @@ public class FileUri <: Uri {
      * @relation readonly name: string
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.AppFileService"
     ]
     public prop name: String {
@@ -179,8 +172,7 @@ public class FileUri <: Uri {
      * @returns { String } Return the file uri string
      */
     @!APILevel[
-        21,
-        stagemodelonly: true,
+        22,
         syscap: "SystemCapability.FileManagement.AppFileService"
     ]
     public override func toString(): String {
@@ -200,8 +192,7 @@ public class FileUri <: Uri {
 * @relation function getUriFromPath(path: string): string
 */
 @!APILevel[
-    21,
-    stagemodelonly: true,
+    22,
     syscap: "SystemCapability.FileManagement.AppFileService"
 ]
 public func getUriFromPath(path: String): String {
