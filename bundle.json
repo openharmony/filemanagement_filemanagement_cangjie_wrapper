@@ -37,10 +37,8 @@
                 "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file/fileuri:ohos.file.fileuri",
                 "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file/fs:ohos.file.fs"
             ],
-            "inner_kits": [
-            ],
-            "test": [
-            ]
+            "inner_kits": [],
+            "test": []
         }
     }
 }

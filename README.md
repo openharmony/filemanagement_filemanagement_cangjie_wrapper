@@ -2,32 +2,34 @@
 
 ## Introduction
 
-The filemanagement_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based on the capabilities of the file management Subsystem. The file management subsystem provides a complete file management solution for OpenHarmony. It provides secure and easy-to-use file access and comprehensive file management capabilities. The currently open Graphic Cangjie api only supports standard devices.
+The filemanagement_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based on the capabilities of the file management Subsystem. The file management subsystem provides a complete file management solution for OpenHarmony. It provides secure and easy-to-use file access and comprehensive file management capabilities. The currently open file management Cangjie api only supports standard devices.
 
 ## System Architecture
 
 **Figure 1** Architecture of the file management subsystem
 ![filemanagement_cangjie_wrapper architecture](figures/filemanagement_cangjie_wrapper_architecture_en.png)
 
-- FileIO Interface：provide file creation, access and random read-write interface.
-- File Stream Interface：provide the capability interface for reading and writing files in a streaming manner.
-- File Lock Interface：provide file blocking and non-blocking interfaces for applying shared lock or exclusive lock and unlocking.
-- File Info Interface：provide basic statistical information interface including file size, access permission and modification time.
-- Application File URI Interface：provides the URI interface for obtaining the application itself.
-- Cangjie file management FFI interface definition：responsible for defining the C interoperable Changjie interface, which is used to implement the Changjie file management capability.
-- Application File：provide secure sandbox quarantine technology for applications to ensure minimized permissions on the basis of application data security.
-- Basic File Management：Provides the ability to create, modify, and access files.
+- Basic File Management Wrapper: Provides file access capabilities, such as creating files, deleting files, modifying files, obtaining file information, and retrieving file lists.
+- File URI Wrapper: Provides an interface for obtaining the application's own URI.
+- Cangjie File Management FFI Interface Definition: Responsible for defining the C language interoperation interface with Cangjie, which is used to implement Cangjie's file management capabilities.
 
 ## Directory Structure
 
 ```
 foundation/filemanagement/filemanagement_cangjie_wrapper
-├── figures               # architecture pictures
-├── kit                   # Cangjie File Management kit code
-│   └── CoreFileKit       # Cangjie CoreFileKit code implementation
-├── ohos                  # Cangjie File Management code
-│   └── file              # Cangjie File code implementation
-└── test                  # Cangjie test code
+├── figures                           # architecture pictures
+├── kit                               # Cangjie File Management kit code
+│   └── CoreFileKit                   # Cangjie CoreFileKit implementation
+├── ohos                              # Cangjie File Management code
+│   └── file                          # Cangjie File implementation
+│       ├── fileuri                   # File URI module
+│       └── fs                        # Basic file management module
+└── test                              # Cangjie test code
+    └── APILevel22                    # API Level 22 test code
+        ├── filemanagement            # File management tests
+        │   └── test                  # File management test project
+        └── file_uri                  # File URI tests
+            └── test                  # File URI test project
 ```
 
 ## Constraints
@@ -39,12 +41,12 @@ Constraints on local I/O APIs:
 
 ## Usage
 
-The current distributed soft bus Cangjie interface provides the following functions:
+The current file management Cangjie interface provides the following functions:
 
-- basic file access capability.
-- document information acquisition capability.
+- Basic file access capability.
+- File information acquisition capability.
 
-Compared with ArkTS, the following functions are not supported at the moment:
+Compared with the API capabilities provided by ArkTS, the following functions are not supported at the moment:
 
 - Storage management functions.
 - Common file function.
@@ -53,10 +55,10 @@ Compared with ArkTS, the following functions are not supported at the moment:
 
 For filemanagement-related APIs, please refer to:
 
--   [ohos.file.fs (File Management)](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/CoreFileKit/cj-apis-file_fs.md)
--   [ohos.file.fileuri (File URI)](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/CoreFileKit/cj-apis-file_fileuri.md)
+-   [File Management](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/CoreFileKit/cj-apis-file_fs.md)
+-   [File URI](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/CoreFileKit/cj-apis-file_fileuri.md)
 
-For relevant guidance, please refer to [Introduction to Core File Kit](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/Dev_Guide/source_en/file-management/cj-core-file-kit-intro.md).
+For relevant guidance, please refer to [File Management Usage Guide](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/Dev_Guide/source_en/file-management/cj-core-file-kit-intro.md).
 
 ## Code Contribution
 
@@ -64,6 +66,10 @@ Developers are welcome to contribute code, documentation, etc. For specific cont
 
 ## Repositories Involved
 
-[filemanagement_app_file_service](https://gitee.com/openharmony/filemanagement_app_file_service)
+[filemanagement_app_file_service](https://gitcode.com/openharmony/filemanagement_app_file_service/blob/master/README.md)
 
-[filemanagement_file_api](https://gitee.com/openharmony/filemanagement_file_api)
+[filemanagement_file_api](https://gitcode.com/openharmony/filemanagement_file_api/blob/master/README.md)
+
+[arkcompiler_cangjie_ark_interop](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/README.md)
+
+[hiviewdfx_hiviewdfx_cangjie_wrapper](https://gitcode.com/openharmony-sig/hiviewdfx_hiviewdfx_cangjie_wrapper/blob/master/README.md)
