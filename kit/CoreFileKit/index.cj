@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package kit.CoreFileKit
+package CoreFileKit
 
 public import ohos.file.fs.*
 public import ohos.file.fileuri.*
