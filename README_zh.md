@@ -9,25 +9,27 @@
 **图 1**  文件管理仓颉架构图
 ![文件管理仓颉架构图](figures/filemanagement_cangjie_wrapper_architecture_zh.png)
 
-- 文件IO接口：提供文件创建、访问和随机读写接口。
-- 文件流接口：提供流式读写文件的能力接口。
-- 文件锁接口：提供文件阻塞式、非阻塞式施加共享锁或独占锁，及解锁的能力接口。
-- 文件信息接口：提供包括文件大小、访问权限、修改时间在内的基本统计信息接口。
-- 应用文件URI接口：提供获取应用自己的URI接口。
-- 仓颉文件管理FFI接口定义：负责定义C互操作仓颉接口，用于实现仓颉文件管理能力。
-- 应用文件：为应用提供安全的沙箱隔离技术，保证应用数据安全基础上权限最小化。
-- 基础文件：提供创建、修改及访问文件的能力。
+- 基本文件管理封装：提供文件访问能力，如创建文件、删除文件、修改文件、获取文件信息、获取文件列表等。
+- 文件URI封装：提供获取应用自己的URI接口。
+- 仓颉文件管理FFI接口定义：负责定义被Cangjie语言调用的C语言互操作接口，用于实现仓颉文件管理能力。
 
 ## 目录
 
 ```
 foundation/filemanagement/filemanagement_cangjie_wrapper
-├── figures               # 存放README中的架构图
-├── kit                   # 仓颉文件管理kit化代码
-│   └── CoreFileKit       # 仓颉CoreFileKit实现
-├── ohos                  # 仓颉文件管理接口实现
-│   └── file              # 仓颉文件接口实现
-└── test                  # 仓颉测试代码
+├── figures                           # 存放README中的架构图
+├── kit                               # 仓颉文件管理kit化代码
+│   └── CoreFileKit                   # 仓颉CoreFileKit实现
+├── ohos                              # 仓颉文件管理接口实现
+│   └── file                          # 仓颉文件接口实现
+│       ├── fileuri                   # 文件URI模块
+│       └── fs                        # 基本文件管理模块
+└── test                              # 仓颉测试代码
+    └── APILevel22                    # API Level 22测试代码
+        ├── filemanagement            # 文件管理测试
+        │   └── test                  # 文件管理测试工程
+        └── file_uri                  # 文件URI测试
+            └── test                  # 文件URI测试工程
 ```
 
 ## 约束
@@ -44,7 +46,7 @@ foundation/filemanagement/filemanagement_cangjie_wrapper
 - 基础文件访问能力。
 - 文件信息获取能力。
 
-与ArkTS相比，暂不支持以下功能：
+与ArkTS提供的API能力相比，暂不支持以下功能：
 
 - 存储管理功能。
 - 公共文件功能。
@@ -53,10 +55,10 @@ foundation/filemanagement/filemanagement_cangjie_wrapper
 
 文件管理相关API请参见：
 
--   [ohos.file.fs（文件管理）](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_zh_cn/apis/CoreFileKit/cj-apis-file_fs.md)
--   [ohos.file.fileuri](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_zh_cn/apis/CoreFileKit/cj-apis-file_fileuri.md)
+-   [文件管理](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_zh_cn/apis/CoreFileKit/cj-apis-file_fs.md)
+-   [文件URI](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_zh_cn/apis/CoreFileKit/cj-apis-file_fileuri.md)
 
-相关指导请参见[Core File Kit简介](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/Dev_Guide/source_zh_cn/file-management/cj-core-file-kit-intro.md)。
+相关指导请参见[文件管理使用指导](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/Dev_Guide/source_zh_cn/file-management/cj-core-file-kit-intro.md)。
 
 ## 参与贡献
 
@@ -64,6 +66,10 @@ foundation/filemanagement/filemanagement_cangjie_wrapper
 
 ## 相关仓
 
-[filemanagement_app_file_service](https://gitee.com/openharmony/filemanagement_app_file_service/blob/master/README_ZH.md)
+[filemanagement_app_file_service](https://gitcode.com/openharmony/filemanagement_app_file_service/blob/master/README_ZH.md)
 
-[filemanagement_file_api](https://gitee.com/openharmony/filemanagement_file_api/blob/master/README_zh.md)
+[filemanagement_file_api](https://gitcode.com/openharmony/filemanagement_file_api/blob/master/README_zh.md)
+
+[arkcompiler_cangjie_ark_interop](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/README_zh.md)
+
+[hiviewdfx_hiviewdfx_cangjie_wrapper](https://gitcode.com/openharmony-sig/hiviewdfx_hiviewdfx_cangjie_wrapper/blob/master/README_zh.md)
