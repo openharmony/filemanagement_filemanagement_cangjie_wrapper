@@ -25,7 +25,7 @@ import ohos.labels.*
  * @relation declare interface File
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class File <: RemoteDataLite {
@@ -43,7 +43,7 @@ public class File <: RemoteDataLite {
      * @relation readonly fd: number
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop fd: Int32 {
@@ -58,7 +58,7 @@ public class File <: RemoteDataLite {
      * @relation readonly path: string
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop path: String {
@@ -76,7 +76,7 @@ public class File <: RemoteDataLite {
      * @relation readonly name: string
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop name: String {
@@ -100,7 +100,7 @@ public class File <: RemoteDataLite {
      * @relation tryLock(exclusive?: boolean): void
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func tryLock(exclusive!: Bool = false): Unit {
@@ -123,7 +123,7 @@ public class File <: RemoteDataLite {
      * @relation unlock(): void
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func unlock(): Unit {
@@ -143,7 +143,7 @@ public class File <: RemoteDataLite {
      * @relation getParent(): string
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func getParent(): String {

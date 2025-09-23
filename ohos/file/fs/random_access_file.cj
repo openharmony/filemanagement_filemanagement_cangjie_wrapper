@@ -26,7 +26,7 @@ import ohos.labels.*
  * @relation declare interface RandomAccessFile
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class RandomAccessFile <: RemoteDataLite {
@@ -44,7 +44,7 @@ public class RandomAccessFile <: RemoteDataLite {
      * @relation readonly fd: number
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop fd: Int32 {
@@ -59,7 +59,7 @@ public class RandomAccessFile <: RemoteDataLite {
      * @relation readonly filePointer: number
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop filePointer: Int64 {
@@ -74,7 +74,7 @@ public class RandomAccessFile <: RemoteDataLite {
      * @relation setFilePointer(filePointer: number): void
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func setFilePointer(filePointer: Int64): Unit {
@@ -88,7 +88,7 @@ public class RandomAccessFile <: RemoteDataLite {
      * @relation close(): void
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func close(): Unit {
@@ -114,7 +114,7 @@ public class RandomAccessFile <: RemoteDataLite {
      * @relation writeSync(buffer: ArrayBuffer | string, options?: WriteOptions): number
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func write(buffer: String, options!: WriteOptions = WriteOptions()): Int64 {
@@ -140,7 +140,7 @@ public class RandomAccessFile <: RemoteDataLite {
      * @relation writeSync(buffer: ArrayBuffer | string, options?: WriteOptions): number
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func write(buffer: Array<Byte>, options!: WriteOptions = WriteOptions()): Int64 {
@@ -178,7 +178,7 @@ public class RandomAccessFile <: RemoteDataLite {
      * @relation readSync(buffer: ArrayBuffer, options?: ReadOptions): number
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func read(buffer: Array<Byte>, options!: ReadOptions = ReadOptions()): Int64 {
