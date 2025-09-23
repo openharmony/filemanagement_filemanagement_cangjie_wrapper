@@ -12,6 +12,10 @@
 - 基本文件管理封装：提供文件访问能力，如创建文件、删除文件、修改文件、获取文件信息、获取文件列表等。
 - 文件URI封装：提供获取应用自己的URI接口。
 - 仓颉文件管理FFI接口定义：负责定义被Cangjie语言调用的C语言互操作接口，用于实现仓颉文件管理能力。
+- 仓颉互操作：封装C语言互操作公共接口，并提供仓颉标签类实现用于对仓颉API进行标注，以及提供抛向用户的BusinessException异常类定义。
+- 文件访问：提供用于管理文件的基本文件，管理目录的基本文件，流式读取文件能力的C语言接口。
+- 公共文件访问服务：提供文件分享和管理服务能力的C语言接口。
+- 仓颉DFX：负责提供日志接口，用于在关键路径处打印日志。
 
 ## 目录
 
@@ -25,11 +29,10 @@ foundation/filemanagement/filemanagement_cangjie_wrapper
 │       ├── fileuri                   # 文件URI模块
 │       └── fs                        # 基本文件管理模块
 └── test                              # 仓颉测试代码
-    └── APILevel22                    # API Level 22测试代码
-        ├── filemanagement            # 文件管理测试
-        │   └── test                  # 文件管理测试工程
-        └── file_uri                  # 文件URI测试
-            └── test                  # 文件URI测试工程
+    ├── filemanagement                # 文件管理测试
+    │   └── test                      # 文件管理测试工程
+    └── file_uri                      # 文件URI测试
+        └── test                      # 文件URI测试工程
 ```
 
 ## 约束
