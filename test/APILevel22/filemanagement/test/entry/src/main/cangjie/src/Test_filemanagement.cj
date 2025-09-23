@@ -45,7 +45,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_stat() {
         let dirPath = "/data/storage/el2/base/haps/entry/files"
         @Assert(FileIo.access(dirPath))
@@ -111,7 +111,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lstat() {
         let dirPath = "/data/storage/el2/base/haps/entry/files"
         let dirStat = FileIo.lstat(dirPath)
@@ -131,7 +131,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_access() {
         let filePath = "/data/storage/el2/base/test_access.txt"
         try {
@@ -164,7 +164,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_open() {
         let filePath = "/data/storage/el2/base/test_access.txt"
         try {
@@ -189,7 +189,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_copyFile() {
         try {
             FileIo.copyFile("", "")
@@ -236,7 +236,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_copyDir_01() {
         // exception branch
         try {
@@ -335,7 +335,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_copyDirConflict() {
         let src1Path = "/data/storage/el2/base/haps/cpsrc1"
         let filePath = "/data/storage/el2/base/haps/cpsrc1/testcpConflict"
@@ -373,7 +373,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_dup() {
         try {
             let readTextOption = ReadTextOptions(length: 2)
@@ -409,7 +409,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_read() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_read"
         let f = FileIo.open(
@@ -443,7 +443,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_readLines() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_readLines"
         let f = FileIo.open(
@@ -476,7 +476,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_write() {
         let str = "hello, world"
         let arr = str.toArray()
@@ -512,7 +512,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_truncate() {
         try {
             FileIo.truncate("", len: 0)
@@ -559,7 +559,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_fsync() {
         try {
             FileIo.fsync(-1)
@@ -579,7 +579,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_listFile() {
         try {
             FileIo.listFile("")
@@ -614,7 +614,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lseek() {
         try {
             FileIo.lseek(-1, 7, whence: WhenceType.SeekCur)
@@ -640,7 +640,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_moveDir() {
         let srcPath = "/data/storage/el2/base/haps/src"
         let destPath = "/data/storage/el2/base/haps/dest"
@@ -695,7 +695,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_moveFile() {
         try {
             FileIo.moveFile("", "", mode: 0)
@@ -719,7 +719,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_mkdtemp() {
         try {
             FileIo.mkdtemp("")
@@ -734,7 +734,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_utimes() {
         try {
             FileIo.utimes("", 0.0)
@@ -755,7 +755,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_randomAccessFile() {
         try {
             FileIo.fdatasync(-1)
@@ -848,7 +848,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_file() {
         let filePath = "/data/storage/el2/base/test_file.txt"
         let file = FileIo.open(
@@ -861,7 +861,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_createStreamException() {
         try {
             let stream = FileIo.createStream("1212", "w+")
@@ -871,7 +871,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_fdopenStream() {
         let filePath = "/data/storage/el2/base/test_fdopenStream.txt"
         try {
@@ -887,7 +887,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_tryLock() {
         let filePath = "/data/storage/el2/base/test_tryLock.txt"
         try {
@@ -913,7 +913,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_unLock() {
         let filePath = "/data/storage/el2/base/haps/entry/files/text_unLock.txt"
         try {
@@ -939,7 +939,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getParent() {
         let filePath = "/data/storage/el2/base/haps/entry/files/text_unLock.txt"
         try {
@@ -958,7 +958,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_mkdir() {
         let dirPath = "/data/storage/el2/base/mkdirtest"
         let dirPath2 = "/data/storage/el2/base/test_mkdir"
@@ -996,7 +996,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_rename() {
         let dirPath = "/data/storage/el2/base/renameTest"
         let srcPath = dirPath + "src.txt"
@@ -1016,7 +1016,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_stream_write_read() {
         let path = "/data/storage/el2/base/haps/entry/files/text.txt"
         let writeStream = FileIo.createStream("/data/storage/el2/base/haps/entry/files/text.txt", "w+")
@@ -1050,7 +1050,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_OpenMode() {
         @Expect(OpenMode.READ_ONLY, 0o0)
         @Expect(OpenMode.WRITE_ONLY, 0o1)
@@ -1065,7 +1065,7 @@ class Test_filemanagement {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Filter() {
         try {
             Filter(fileSizeOver: -1)
