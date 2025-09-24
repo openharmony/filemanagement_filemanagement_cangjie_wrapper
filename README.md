@@ -12,6 +12,10 @@ The filemanagement_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony 
 - Basic File Management Wrapper: Provides file access capabilities, such as creating files, deleting files, modifying files, obtaining file information, and retrieving file lists.
 - File URI Wrapper: Provides an interface for obtaining the application's own URI.
 - Cangjie File Management FFI Interface Definition: Responsible for defining the C language interoperation interface with Cangjie, which is used to implement Cangjie's file management capabilities.
+- Cangjie ark interop: Encapsulates public interfaces for C language interoperation, and provides Cangjie tag class implementation for annotating Cangjie APIs, as well as providing BusinessException exception class definitions thrown to users.
+- File Access: Provides C language interfaces for basic files for managing files, basic files for managing directories, and streaming file reading capabilities.
+- Public File Access Services: Provides C language interfaces for file sharing and management service capabilities.
+- Cangjie DFX: Responsible for providing log interfaces for printing logs at critical paths.
 
 ## Directory Structure
 
@@ -25,11 +29,10 @@ foundation/filemanagement/filemanagement_cangjie_wrapper
 │       ├── fileuri                   # File URI module
 │       └── fs                        # Basic file management module
 └── test                              # Cangjie test code
-    └── APILevel22                    # API Level 22 test code
-        ├── filemanagement            # File management tests
-        │   └── test                  # File management test project
-        └── file_uri                  # File URI tests
-            └── test                  # File URI test project
+    ├── filemanagement                # File management tests
+    │   └── test                      # File management test project
+    └── file_uri                      # File URI tests
+        └── test                      # File URI test project
 ```
 
 ## Constraints
