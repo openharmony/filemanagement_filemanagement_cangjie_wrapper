@@ -20,7 +20,7 @@
         "adapted_system_type": [
             "standard"
         ],
-        "rom": "1000KB",
+        "rom": "467KB",
         "ram": "412KB",
         "deps": {
             "components": [
