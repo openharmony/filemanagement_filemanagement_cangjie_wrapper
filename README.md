@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The filemanagement_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based on file access interfaces and public file access framework capabilities. The file management subsystem provides a complete file management solution for OpenHarmony. It provides secure and easy-to-use file access and comprehensive file management capabilities. The currently open file management Cangjie api only supports standard devices.
+The filemanagement_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony for application developers to provide a complete file data management solution. It provides secure and easy-to-use file access capabilities and comprehensive file storage management capabilities. The currently open file management Cangjie api only supports standard devices.
 
 ## System Architecture
 
@@ -13,20 +13,19 @@ As shown in the architecture diagram:
 
 Interface layer description:
 
-- Basic File Management API: Cangjie public interfaces based on basic file management encapsulation exposed to users.
-- File URI API: Cangjie public interfaces based on file URI encapsulation exposed to users.
+- Basic File Management API: Cangjie public interfaces based on basic file management encapsulation exposed to developers.
+- File URI API: Cangjie public interfaces based on file URI encapsulation exposed to developers.
 
 Framework layer description:
 
-- Basic File Management Wrapper: Provides file access capabilities, such as creating files, deleting files, modifying files, obtaining file information, and retrieving file lists.
-- File URI Wrapper: Provides an interface for obtaining the application's own URI.
-- Cangjie File Management FFI Interface Definition: Responsible for defining the C language interoperation interface with Cangjie, which is used to implement Cangjie's file management capabilities.
+- Basic File Management Wrapper: Basic file management provides file access capabilities, such as creating files, deleting files, modifying files, obtaining file information, and retrieving file lists. This encapsulation layer is a Cangjie encapsulation implementation of file management functionality based on the file access interface.
+- File URI Wrapper: File URI provides the ability to obtain the application's own URI. This encapsulation layer is a Cangjie encapsulation implementation of the file URI functionality based on the public file access service.
 
 Cangjie File Management Service Dependencies:
 
-- Cangjie ark interop: Encapsulates public interfaces for C language interoperation, and provides Cangjie tag class implementation for annotating Cangjie APIs, as well as providing BusinessException exception class definitions thrown to users.
-- File Api: Provides C language interfaces that can be called by the file management Cangjie interface for basic files for managing files, basic files for managing directories, and streaming file reading capabilities.
-- User File Service: Provides C language interfaces that can be called by the file management Cangjie interface for file sharing and management service capabilities.
+- File Access Interface: Provides capabilities for managing basic files, managing basic directories, and streaming file reading that can be called by the file management Cangjie interface.
+- Public File Access Service: Provides file sharing and management service capabilities that can be called by the file management Cangjie interface.
+- cangjie_ark_interop: Encapsulates public interfaces for C language interoperation, and provides Cangjie tag class implementation for annotating Cangjie APIs, as well as providing BusinessException exception class definitions thrown to users.
 - Cangjie DFX: Responsible for providing log interfaces, providing Cangjie interfaces that can be called by the file management Cangjie interface to print logs at critical paths.
 
 ## Directory Structure
@@ -42,37 +41,28 @@ foundation/filemanagement/filemanagement_cangjie_wrapper
 │       └── fs                        # Basic file management module
 └── test                              # Cangjie test code
     ├── filemanagement                # File management tests
-    │   └── test                      # File management test project
     └── file_uri                      # File URI tests
-        └── test                      # File URI test project
 ```
 
 ## Usage
 
 The current file management Cangjie interface provides the following functions:
 
-- Basic file access capability.
-- File information acquisition capability.
-
-For filemanagement-related APIs, please refer to:
-
--   [File Management](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/CoreFileKit/cj-apis-file_fs.md)
--   [File URI](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/CoreFileKit/cj-apis-file_fileuri.md)
+- Basic file access capability, including basic file operations such as creating, deleting, and moving files, file information acquisition, and file information setting functions. For details, please refer to [Basic File Management API](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/CoreFileKit/cj-apis-file_fs.md)
+- File access capability. For details on file access capability, please refer to [File URI API](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/CoreFileKit/cj-apis-file_fileuri.md).
 
 For relevant guidance, please refer to [File Management Usage Guide](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/Dev_Guide/source_en/file-management/cj-core-file-kit-intro.md).
 
 ## Constraints
 
-Constraints on local I/O APIs:
+-   Basic file management interface currently only supports UTF-8/16 encoding.
+-   File URI currently does not support external storage directories.
 
--   Only UTF-8/16 encoding is supported.
--   The URIs cannot include external storage directories.
-
-Compared with the API capabilities provided by ArkTS, the following functions are not supported at the moment:
+Compared with the API capabilities provided by ArkTS, the following functions are not supported:
 
 - Storage management functions.
 - Common file function.
-- Distributed capabilities.
+- Distributed file management capabilities.
 - Application file sharing capabilities.
 
 ## Code Contribution
