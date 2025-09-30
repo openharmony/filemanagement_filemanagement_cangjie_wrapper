@@ -19,11 +19,11 @@
 package ohos_app_cangjie_entry
 
 internal import ohos.base.*
-internal import BasicServicesKit.SystemDateTime
+internal import kit.BasicServicesKit.SystemDateTime
 internal import std.sync.*
 internal import std.time.*
 import std.unittest.testmacro.*
-import CoreFileKit.*
+import kit.CoreFileKit.*
 import std.runtime.GC
 import std.unittest.testmacro.*
 import std.unittest.*
