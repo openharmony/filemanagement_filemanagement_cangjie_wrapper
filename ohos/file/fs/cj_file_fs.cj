@@ -34,8 +34,6 @@ class ReadOptionsImpl {
 
 /**
  * Defines the options used in createRandomAccessFile().
- *
- * @relation export interface RandomAccessFileOptions
  */
 @!APILevel[
     22,
@@ -44,8 +42,6 @@ class ReadOptionsImpl {
 public class RandomAccessFileOptions {
     /**
      * Start position to read the data, in bytes. This parameter is optional. By default, data is read from the current position.
-     *
-     * @relation start?: number
      */
     @!APILevel[
         22,
@@ -54,8 +50,6 @@ public class RandomAccessFileOptions {
     public var start: Option<Int64>
     /**
      * End position to read the data, in bytes. This parameter is optional. The default value is the end of the file.
-     *
-     * @relation end?: number
      */
     @!APILevel[
         22,
@@ -80,8 +74,6 @@ public class RandomAccessFileOptions {
 
 /**
  * Mode Indicates the open flags.
- *
- * @relation namespace OpenMode
  */
 @!APILevel[
     22,
@@ -92,8 +84,6 @@ public class OpenMode {
 
     /**
      * Read only Permission.
-     *
-     * @relation const READ_ONLY = 0o0
      */
     @!APILevel[
         22,
@@ -103,8 +93,6 @@ public class OpenMode {
 
     /**
      * Write only Permission.
-     *
-     * @relation const WRITE_ONLY = 0o1
      */
     @!APILevel[
         22,
@@ -114,8 +102,6 @@ public class OpenMode {
 
     /**
      * Write and Read Permission.
-     *
-     * @relation const READ_WRITE = 0o2
      */
     @!APILevel[
         22,
@@ -125,8 +111,6 @@ public class OpenMode {
 
     /**
      * If not exist, create file.
-     *
-     * @relation const CREATE = 0o100
      */
     @!APILevel[
         22,
@@ -136,8 +120,6 @@ public class OpenMode {
 
     /**
      * File truncate len 0.
-     *
-     * @relation const TRUNC = 0o1000
      */
     @!APILevel[
         22,
@@ -147,8 +129,6 @@ public class OpenMode {
 
     /**
      * File append write.
-     *
-     * @relation const APPEND = 0o2000
      */
     @!APILevel[
         22,
@@ -158,8 +138,6 @@ public class OpenMode {
 
     /**
      * File open in nonblocking mode.
-     *
-     * @relation const NONBLOCK = 0o4000
      */
     @!APILevel[
         22,
@@ -169,8 +147,6 @@ public class OpenMode {
 
     /**
      * File is Dir.
-     *
-     * @relation const DIR = 0o200000
      */
     @!APILevel[
         22,
@@ -180,8 +156,6 @@ public class OpenMode {
 
     /**
      * File is not symbolic link.
-     *
-     * @relation const NOFOLLOW = 0o400000
      */
     @!APILevel[
         22,
@@ -191,8 +165,6 @@ public class OpenMode {
 
     /**
      * SYNC IO.
-     *
-     * @relation const SYNC = 0o4010000
      */
     @!APILevel[
         22,
@@ -203,8 +175,6 @@ public class OpenMode {
 
 /**
  * Defines the options used in readLines().
- *
- * @relation export interface Options
  */
 @!APILevel[
     22,
@@ -213,8 +183,6 @@ public class OpenMode {
 public open class Options {
     /**
      * File encoding format.
-     *
-     * @relation encoding?: string
      */
     @!APILevel[
         22,
@@ -239,8 +207,6 @@ public open class Options {
 
 /**
  * Provides a ReaderIterator object.
- *
- * @relation declare interface ReaderIterator
  */
 @!APILevel[
     22,
@@ -261,7 +227,6 @@ public class ReaderIterator <: RemoteDataLite {
      * @throws { BusinessException } 13900005 - I/O error
      * @throws { BusinessException } 13900037 - No data available
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation next(): ReaderIteratorResult
      */
     @!APILevel[
         22,
@@ -281,8 +246,6 @@ public class ReaderIterator <: RemoteDataLite {
 
 /**
  * Represents the information obtained by the ReaderIterator object.
- *
- * @relation export interface ReaderIteratorResult
  */
 @!APILevel[
     22,
@@ -292,8 +255,6 @@ public class ReaderIteratorResult {
     /**
      * Whether the iteration is complete.
      * The value true means the iteration is complete; the value false means the iteration is not complete.
-     *
-     * @relation done: boolean
      */
     @!APILevel[
         22,
@@ -302,8 +263,6 @@ public class ReaderIteratorResult {
     public var done: Bool
     /**
      * File text content read line by line.
-     *
-     * @relation value: string
      */
     @!APILevel[
         22,
@@ -331,8 +290,6 @@ struct RetReaderIteratorResult {
 
 /**
  * Defines the options use din write().
- *
- * @relation export interface WriteOptions extends Options
  */
 @!APILevel[
     22,
@@ -341,8 +298,6 @@ struct RetReaderIteratorResult {
 public class WriteOptions <: Options {
     /**
      * Length of the data to write, in bytes.
-     *
-     * @relation length?: number
      */
     @!APILevel[
         22,
@@ -351,8 +306,6 @@ public class WriteOptions <: Options {
     public var length: Option<UIntNative>
     /**
      * Start position of the file to write (current filePointer plus offset), in bytes.
-     *
-     * @relation offset?: number
      */
     @!APILevel[
         22,
@@ -380,8 +333,6 @@ public class WriteOptions <: Options {
 
 /**
  * Defines the options used in read().
- *
- * @relation export interface ReadOptions
  */
 @!APILevel[
     22,
@@ -390,8 +341,6 @@ public class WriteOptions <: Options {
 public open class ReadOptions {
     /**
      * Start position of the file to read (current filePointer plus offset), in bytes.
-     *
-     * @relation offset?: number
      */
     @!APILevel[
         22,
@@ -400,8 +349,6 @@ public open class ReadOptions {
     public var offset: Option<Int64>
     /**
      * Length of the data to read, in bytes.
-     *
-     * @relation length?: number
      */
     @!APILevel[
         22,
@@ -427,8 +374,6 @@ public open class ReadOptions {
 
 /**
  * Defines the options used in readText().
- *
- * @relation export interface ReadTextOptions extends ReadOptions
  */
 @!APILevel[
     22,
@@ -437,8 +382,6 @@ public open class ReadOptions {
 public class ReadTextOptions <: ReadOptions {
     /**
      * File encoding format.
-     *
-     * @relation encoding?: string
      */
     @!APILevel[
         22,
@@ -465,8 +408,6 @@ public class ReadTextOptions <: ReadOptions {
 
 /**
  * Enumerates the access modes to verify. If this parameter is left blank, the system checks whether the file exists.
- *
- * @relation declare enum AccessModeType
  */
 @!APILevel[
     22,
@@ -475,8 +416,6 @@ public class ReadTextOptions <: ReadOptions {
 public enum AccessModeType {
     /**
      * Whether the file exists.
-     *
-     * @relation EXIST = 0
      */
     @!APILevel[
         22,
@@ -486,8 +425,6 @@ public enum AccessModeType {
     | 
     /**
      * Verify the write permission on the file.
-     *
-     * @relation WRITE = 2
      */
     @!APILevel[
         22,
@@ -497,8 +434,6 @@ public enum AccessModeType {
     | 
     /**
      * Verify the read permission on the file.
-     *
-     * @relation READ = 4
      */
     @!APILevel[
         22,
@@ -508,8 +443,6 @@ public enum AccessModeType {
     | 
     /**
      * Verify the read/write permission on the file.
-     *
-     * @relation READ_WRITE = 6
      */
     @!APILevel[
         22,
@@ -531,8 +464,6 @@ public enum AccessModeType {
 
 /**
  * Enumerates the locations of the file to verify.
- *
- * @relation declare enum AccessFlagType
  */
 @!APILevel[
     22,
@@ -541,8 +472,6 @@ public enum AccessModeType {
 public enum AccessFlagType {
     /**
      * The file is stored locally.
-     *
-     * @relation LOCAL = 0
      */
     @!APILevel[
         22,
@@ -560,8 +489,6 @@ public enum AccessFlagType {
 
 /**
  * Enumerates the types of the relative offset position used in lseek().
- *
- * @relation declare enum WhenceType
  */
 @!APILevel[
     22,
@@ -570,8 +497,6 @@ public enum AccessFlagType {
 public enum WhenceType {
     /**
      * Starting position of the file offset.
-     *
-     * @relation SEEK_SET = 0
      */
     @!APILevel[
         22,
@@ -581,8 +506,6 @@ public enum WhenceType {
     | 
     /**
      * Current position of the file offset.
-     *
-     * @relation SEEK_CUR = 1
      */
     @!APILevel[
         22,
@@ -592,8 +515,6 @@ public enum WhenceType {
     | 
     /**
      * Ending position of the file offset.
-     *
-     * @relation SEEK_END = 2
      */
     @!APILevel[
         22,
@@ -616,8 +537,6 @@ public enum WhenceType {
 
 /**
  * EDefines conflicting file information used in copyDir() or moveDir().
- *
- * @relation export interface ConflictFiles
  */
 @!APILevel[
     22,
@@ -626,8 +545,6 @@ public enum WhenceType {
 public class ConflictFiles {
     /**
      * The path of the source file.
-     *
-     * @relation srcFile: string
      */
     @!APILevel[
         22,
@@ -636,8 +553,6 @@ public class ConflictFiles {
     public var srcFile: String
     /**
      * The path of the destination file.
-     *
-     * @relation destFile: string
      */
     @!APILevel[
         22,
@@ -715,8 +630,6 @@ struct RetDataCArrStringN {
 
 /**
  * Defines the file filtering configuration used by listFile().
- *
- * @relation export interface Filter
  */
 @!APILevel[
     22,
@@ -725,8 +638,6 @@ struct RetDataCArrStringN {
 public class Filter {
     /**
      * Locate files that fully match the specified file name extensions, which are of the OR relationship.
-     *
-     * @relation suffix?: Array<string>
      */
     @!APILevel[
         22,
@@ -736,8 +647,6 @@ public class Filter {
     /**
      * Locate files that fuzzy match the specified file names, which are of the OR relationship.
      * Currently, only the wildcard * is supported.
-     *
-     * @relation displayName?: Array<string>
      */
     @!APILevel[
         22,
@@ -746,8 +655,6 @@ public class Filter {
     public var displayName: Array<String>
     /**
      * Locate files that fully match the specified MIME types, which are of the OR relationship.
-     *
-     * @relation mimeType?: Array<string>
      */
     @!APILevel[
         22,
@@ -756,8 +663,6 @@ public class Filter {
     public var mimeType: Array<String>
     /**
      * Locate files that are greater than or equal to the specified size.
-     *
-     * @relation fileSizeOver?: number
      */
     @!APILevel[
         22,
@@ -766,8 +671,6 @@ public class Filter {
     public var fileSizeOver: ?Int64
     /**
      * Locate files whose last modification time is the same or later than the specified time.
-     *
-     * @relation lastModifiedAfter?: number
      */
     @!APILevel[
         22,
@@ -777,8 +680,6 @@ public class Filter {
     /**
      * Whether to exclude the files already in Media. The value true means to exclude the files already in Media;
      * the value false means not to exclude the files already in Media.
-     *
-     * @relation excludeMedia?: boolean
      */
     @!APILevel[
         22,
@@ -861,8 +762,6 @@ struct CFilter {
 
 /**
  * ListFileOptions type
- *
- * @relation export interface ListFileOptions
  */
 @!APILevel[
     22,
@@ -874,8 +773,6 @@ public class ListFileOptions {
      * The default value is false. If recursion is false, the names of files and directories that meet the filtering
      * requirements in the current directory are returned. If recursion is true, relative paths (starting with /)
      * of all files that meet the specified conditions in the current directory are returned.
-     *
-     * @relation recursion?: boolean
      */
     @!APILevel[
         22,
@@ -884,8 +781,6 @@ public class ListFileOptions {
     public var recursion: Bool
     /**
      * Number of file names to list. This parameter is optional. The default value is 0, which means to list all files.
-     *
-     * @relation listNum?: number
      */
     @!APILevel[
         22,
@@ -894,8 +789,6 @@ public class ListFileOptions {
     public var listNum: Int32
     /**
      * File filtering configuration. This parameter is optional. It specifies the file filtering conditions.
-     *
-     * @relation filter?: Filter
      */
     @!APILevel[
         22,
@@ -957,8 +850,6 @@ unsafe func getArrStringAndFree(cArr: CArrString): Array<String> {
 
 /**
  * FileIo
- *
- * @relation declare namespace fileIo
  */
 @!APILevel[
     22,
@@ -983,7 +874,6 @@ public class FileIo {
      * @throws { BusinessException } 13900033 - Too many symbolic links encountered
      * @throws { BusinessException } 13900038 - Value too large for defined data type
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function statSync(file: string | number): Stat
      */
     @!APILevel[
         22,
@@ -1017,7 +907,6 @@ public class FileIo {
      * @throws { BusinessException } 13900033 - Too many symbolic links encountered
      * @throws { BusinessException } 13900038 - Value too large for defined data type
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function statSync(file: string | number): Stat
      */
     @!APILevel[
         22,
@@ -1073,7 +962,6 @@ public class FileIo {
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 13900042 - Network is unreachable
-     * @relation declare function createStreamSync(path: string, mode: string): Stream
      */
     @!APILevel[
         22,
@@ -1135,7 +1023,6 @@ public class FileIo {
      * @throws { BusinessException } 13900038 - Value too large for defined data type
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function fdopenStreamSync(fd: number, mode: string): Stream
      */
     @!APILevel[
         22,
@@ -1169,7 +1056,6 @@ public class FileIo {
      * @throws { BusinessException } 13900033 - Too many symbolic links encountered
      * @throws { BusinessException } 13900038 - Value too large for defined data type
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function lstatSync(path: string): Stat
      */
     @!APILevel[
         22,
@@ -1205,7 +1091,6 @@ public class FileIo {
      * @throws { BusinessException } 13900030 - File name too long
      * @throws { BusinessException } 13900033 - Too many symbolic links encountered
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function accessSync(path: string, mode: AccessModeType, flag: AccessFlagType): boolean
      */
     @!APILevel[
         22,
@@ -1256,7 +1141,6 @@ public class FileIo {
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 13900044 - Network is unreachable
-     * @relation declare function openSync(path: string, mode?: number): File
      */
     @!APILevel[
         22,
@@ -1285,7 +1169,6 @@ public class FileIo {
      * @throws { BusinessException } 13900020 - Invalid argument
      * @throws { BusinessException } 13900022 - Too many open files
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function dup(fd: number): File
      */
     @!APILevel[
         22,
@@ -1315,7 +1198,6 @@ public class FileIo {
      * @throws { BusinessException } 13900034 - Operation would block
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 13900044 - Network is unreachable
-     * @relation declare function readSync(fd: number, buffer: ArrayBuffer, options?: ReadOptions): number
      */
     @!APILevel[
         22,
@@ -1362,7 +1244,6 @@ public class FileIo {
      * @throws { BusinessException } 13900034 - Operation would block
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function writeSync(fd: number, buffer: ArrayBuffer | string, options?: WriteOptions): number
      */
     @!APILevel[
         22,
@@ -1409,7 +1290,6 @@ public class FileIo {
      * @throws { BusinessException } 13900034 - Operation would block
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function writeSync(fd: number, buffer: ArrayBuffer | string, options?: WriteOptions): number;
      */
     @!APILevel[
         22,
@@ -1460,7 +1340,6 @@ public class FileIo {
      * @throws { BusinessException } 13900033 - Too many symbolic links encountered
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function mkdirSync(path: string): void
      */
     @!APILevel[
         22,
@@ -1495,7 +1374,6 @@ public class FileIo {
      * @throws { BusinessException } 13900033 - Too many symbolic links encountered
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function mkdirSync(path: string, recursion: boolean): void
      */
     @!APILevel[
         22,
@@ -1527,7 +1405,6 @@ public class FileIo {
      * @throws { BusinessException } 13900030 - File name too long
      * @throws { BusinessException } 13900032 - Directory not empty
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function rmdirSync(path: string): void
      */
     @!APILevel[
         22,
@@ -1582,7 +1459,6 @@ public class FileIo {
      * @throws { BusinessException } 13900033 - Too many symbolic links encountered
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function moveDirSync(src: string, dest: string, mode?: number): void
      */
     @!APILevel[
         22,
@@ -1629,7 +1505,6 @@ public class FileIo {
      * @throws { BusinessException } 13900033 - Too many symbolic links encountered
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function renameSync(oldPath: string, newPath: string): void
      */
     @!APILevel[
         22,
@@ -1668,7 +1543,6 @@ public class FileIo {
      * @throws { BusinessException } 13900030 - File name too long
      * @throws { BusinessException } 13900033 - Too many symbolic links encountered
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function unlinkSync(path: string): void
      */
     @!APILevel[
         22,
@@ -1715,7 +1589,6 @@ public class FileIo {
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 13900044 - Network is unreachable
-     * @relation declare function createRandomAccessFileSync(file: string | File, mode?: number, options?: RandomAccessFileOptions): RandomAccessFile
      */
     @!APILevel[
         22,
@@ -1771,7 +1644,6 @@ public class FileIo {
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 13900044 - Network is unreachable
-     * @relation declare function createRandomAccessFileSync(file: string | File, mode?: number, options?: RandomAccessFileOptions): RandomAccessFile
      */
     @!APILevel[
         22,
@@ -1827,7 +1699,6 @@ public class FileIo {
      * @throws { BusinessException } 13900038 - Value too large for defined data type
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 13900044 - Network is unreachable
-     * @relation declare function copyDirSync(src: string, dest: string, mode?: number): void
      */
     @!APILevel[
         22,
@@ -1887,7 +1758,6 @@ public class FileIo {
      * @throws { BusinessException } 13900038 - Value too large for defined data type
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 13900044 - Network is unreachable
-     * @relation declare function copyFileSync(src: string | number, dest: string | number, mode?: number): void
      */
     @!APILevel[
         22,
@@ -1932,7 +1802,6 @@ public class FileIo {
      * @throws { BusinessException } 13900038 - Value too large for defined data type
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 13900044 - Network is unreachable
-     * @relation declare function copyFileSync(src: string | number, dest: string | number, mode?: number): void
      */
     @!APILevel[
         22,
@@ -1975,7 +1844,6 @@ public class FileIo {
      * @throws { BusinessException } 13900038 - Value too large for defined data type
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 13900044 - Network is unreachable
-     * @relation declare function copyFileSync(src: string | number, dest: string | number, mode?: number): void
      */
     @!APILevel[
         22,
@@ -2018,7 +1886,6 @@ public class FileIo {
      * @throws { BusinessException } 13900038 - Value too large for defined data type
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 13900044 - Network is unreachable
-     * @relation declare function copyFileSync(src: string | number, dest: string | number, mode?: number): void
      */
     @!APILevel[
         22,
@@ -2060,7 +1927,6 @@ public class FileIo {
      * @throws { BusinessException } 13900033 - Too many symbolic links encountered
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function moveFileSync(src: string, dest: string, mode?: number): void
      */
     @!APILevel[
         22,
@@ -2110,7 +1976,6 @@ public class FileIo {
      * @throws { BusinessException } 13900033 - Too many symbolic links encountered
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function mkdtempSync(prefix: string): string
      */
     @!APILevel[
         22,
@@ -2152,7 +2017,6 @@ public class FileIo {
      * @throws { BusinessException } 13900030 - File name too long
      * @throws { BusinessException } 13900033 - Too many symbolic links encountered
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function truncateSync(file: string | number, len?: number): void
      */
     @!APILevel[
         22,
@@ -2192,7 +2056,6 @@ public class FileIo {
      * @throws { BusinessException } 13900030 - File name too long
      * @throws { BusinessException } 13900033 - Too many symbolic links encountered
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function truncateSync(file: string | number, len?: number): void
      */
     @!APILevel[
         22,
@@ -2216,7 +2079,6 @@ public class FileIo {
      * @throws { BusinessException } 13900025 - No space left on device
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function closeSync(file: number | File): void
      */
     @!APILevel[
         22,
@@ -2240,7 +2102,6 @@ public class FileIo {
      * @throws { BusinessException } 13900025 - No space left on device
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function closeSync(file: number | File): void
      */
     @!APILevel[
         22,
@@ -2281,7 +2142,6 @@ public class FileIo {
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 13900044 - Network is unreachable
-     * @relation declare function readLinesSync(filePath: string, options?: Options): ReaderIterator
      */
     @!APILevel[
         22,
@@ -2313,7 +2173,6 @@ public class FileIo {
      * @throws { BusinessException } 13900026 - Illegal seek
      * @throws { BusinessException } 13900038 - Value too large for defined data type
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function lseek(fd: number, offset: number, whence?: WhenceType): number
      */
     @!APILevel[
         22,
@@ -2341,7 +2200,6 @@ public class FileIo {
      * @throws { BusinessException } 13900027 - Read-only file system
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function fdatasyncSync(fd: number): void
      */
     @!APILevel[
         22,
@@ -2368,7 +2226,6 @@ public class FileIo {
      * @throws { BusinessException } 13900027 - Read-only file system
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function fsyncSync(fd: number): void
      */
     @!APILevel[
         22,
@@ -2394,7 +2251,6 @@ public class FileIo {
      * @throws { BusinessException } 13900011 - Out of memory
      * @throws { BusinessException } 13900018 - Not a directory
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function listFileSync(path: string, options?: ListFileOptions): string[]
      */
     @!APILevel[
         22,
@@ -2434,7 +2290,6 @@ public class FileIo {
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 13900044 - Network is unreachable
-     * @relation function readTextSync(filePath: string, options?: ReadTextOptions): string
      */
     @!APILevel[
         22,
@@ -2479,7 +2334,6 @@ public class FileIo {
      * @throws { BusinessException } 13900020 - Invalid argument
      * @throws { BusinessException } 13900027 - Read-only file system
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation declare function utimes(path: string, mtime: number): void
      */
     @!APILevel[
         22,

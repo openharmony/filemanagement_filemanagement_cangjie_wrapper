@@ -24,8 +24,6 @@ import ohos.labels.*
 /**
  * Provides APIs for randomly reading and writing a stream. Before invoking any API of RandomAccessFile,
  * you need to use createRandomAccessFile() to create a RandomAccessFile instance.
- *
- * @relation declare interface RandomAccessFile
  */
 @!APILevel[
     22,
@@ -42,8 +40,6 @@ public class RandomAccessFile <: RemoteDataLite {
 
     /**
      * FD of the file.
-     *
-     * @relation readonly fd: number
      */
     @!APILevel[
         22,
@@ -57,8 +53,6 @@ public class RandomAccessFile <: RemoteDataLite {
 
     /**
      * Offset pointer to the RandomAccessFile instance.
-     *
-     * @relation readonly filePointer: number
      */
     @!APILevel[
         22,
@@ -72,8 +66,6 @@ public class RandomAccessFile <: RemoteDataLite {
 
     /**
      * Sets the file offset pointer.
-     *
-     * @relation setFilePointer(filePointer: number): void
      */
     @!APILevel[
         22,
@@ -86,8 +78,6 @@ public class RandomAccessFile <: RemoteDataLite {
 
     /**
      * Closes this RandomAccessFile instance.
-     *
-     * @relation close(): void
      */
     @!APILevel[
         22,
@@ -113,7 +103,6 @@ public class RandomAccessFile <: RemoteDataLite {
      * @throws { BusinessException } 13900034 - Operation would block
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation writeSync(buffer: ArrayBuffer | string, options?: WriteOptions): number
      */
     @!APILevel[
         22,
@@ -139,7 +128,6 @@ public class RandomAccessFile <: RemoteDataLite {
      * @throws { BusinessException } 13900034 - Operation would block
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation writeSync(buffer: ArrayBuffer | string, options?: WriteOptions): number
      */
     @!APILevel[
         22,
@@ -177,7 +165,6 @@ public class RandomAccessFile <: RemoteDataLite {
      * @throws { BusinessException } 13900034 - Operation would block
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 13900044 - Network is unreachable
-     * @relation readSync(buffer: ArrayBuffer, options?: ReadOptions): number
      */
     @!APILevel[
         22,

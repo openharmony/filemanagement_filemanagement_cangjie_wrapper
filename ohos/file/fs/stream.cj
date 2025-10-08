@@ -25,8 +25,6 @@ import ohos.labels.*
 /**
  * Provides API for stream operations. Before calling any API of Stream,
  * you need to create a Stream instance by using createStream or fdopenStream.
- *
- * @relation declare interface Stream
  */
 @!APILevel[
     22,
@@ -50,7 +48,6 @@ public class Stream <: RemoteDataLite {
      * @throws { BusinessException } 13900025 - No space left on device
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation closeSync(): void
      */
     @!APILevel[
         22,
@@ -81,7 +78,6 @@ public class Stream <: RemoteDataLite {
      * @throws { BusinessException } 13900034 - Operation would block
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation flushSync(): void
      */
     @!APILevel[
         22,
@@ -111,7 +107,6 @@ public class Stream <: RemoteDataLite {
      * @throws { BusinessException } 13900034 - Operation would block
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation writeSync(buffer: ArrayBuffer | string, options?: WriteOptions): number
      */
     @!APILevel[
         22,
@@ -160,7 +155,6 @@ public class Stream <: RemoteDataLite {
      * @throws { BusinessException } 13900034 - Operation would block
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation writeSync(buffer: ArrayBuffer | string, options?: WriteOptions): number
      */
     @!APILevel[
         22,
@@ -206,7 +200,6 @@ public class Stream <: RemoteDataLite {
      * @throws { BusinessException } 13900034 - Operation would block
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 13900044 - Network is unreachable
-     * @relation readSync(buffer: ArrayBuffer, options?: ReadOptions): number
      */
     @!APILevel[
         22,
