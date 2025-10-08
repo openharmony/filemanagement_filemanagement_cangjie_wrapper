@@ -38,8 +38,6 @@ class UriImpl {
 
 /**
  * URI Represents a Uniform Resource Identifier (URI) reference.
- *
- * @relation class URI
  */
 @!APILevel[
     22,
@@ -53,8 +51,6 @@ public open class Uri <: RemoteDataLite & ToString {
 
     /**
      * Gets/Sets the path portion of the URI.
-     *
-     * @relation path: string
      */
     @!APILevel[
         22,
@@ -68,8 +64,6 @@ public open class Uri <: RemoteDataLite & ToString {
 
     /**
      * Converts this URI into an encoded string.
-     *
-     * @relation toString(): string
      */
     @!APILevel[
         22,
@@ -82,8 +76,6 @@ public open class Uri <: RemoteDataLite & ToString {
 
 /**
 * FileUri represents the uri of the file.
-*
-* @relation class FileUri extends uri.URI
 */
 @!APILevel[
     22,
@@ -100,7 +92,6 @@ public class FileUri <: Uri {
      * @throws { BusinessException } 13900020 - Invalid argument
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 14300002 - Invalid uri
-     * @relation constructor(uriOrPath: string)
      */
     @!APILevel[
         22,
@@ -151,7 +142,6 @@ public class FileUri <: Uri {
      *
      * @throws { BusinessException } 13900005 - I/O error
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation readonly name: string
      */
     @!APILevel[
         22,
@@ -191,7 +181,6 @@ public class FileUri <: Uri {
 * Get the uri from the path of file in app sandbox
 *
 * @throws { BusinessException } 401 - The input parameter is invalid.
-* @relation function getUriFromPath(path: string): string
 */
 @!APILevel[
     22,

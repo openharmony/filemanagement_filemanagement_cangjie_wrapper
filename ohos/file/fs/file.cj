@@ -23,8 +23,6 @@ import ohos.labels.*
 
 /**
  * File object.
- *
- * @relation declare interface File
  */
 @!APILevel[
     22,
@@ -41,8 +39,6 @@ public class File <: RemoteDataLite {
 
     /**
      * FD of the file.
-     *
-     * @relation readonly fd: number
      */
     @!APILevel[
         22,
@@ -56,8 +52,6 @@ public class File <: RemoteDataLite {
 
     /**
      * Path of the file.
-     *
-     * @relation readonly path: string
      */
     @!APILevel[
         22,
@@ -74,8 +68,6 @@ public class File <: RemoteDataLite {
 
     /**
      * Name of the file.
-     *
-     * @relation readonly name: string
      */
     @!APILevel[
         22,
@@ -99,7 +91,6 @@ public class File <: RemoteDataLite {
      * @throws { BusinessException } 13900034 - Operation would block
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 13900043 - No record locks available
-     * @relation tryLock(exclusive?: boolean): void
      */
     @!APILevel[
         22,
@@ -122,7 +113,6 @@ public class File <: RemoteDataLite {
      * @throws { BusinessException } 13900034 - Operation would block
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 13900043 - No record locks available
-     * @relation unlock(): void
      */
     @!APILevel[
         22,
@@ -142,7 +132,6 @@ public class File <: RemoteDataLite {
      * @throws { BusinessException } 13900005 - I/O error
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 14300002 - Invalid URI
-     * @relation getParent(): string
      */
     @!APILevel[
         22,
