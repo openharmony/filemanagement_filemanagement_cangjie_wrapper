@@ -41,7 +41,8 @@ class ReadOptionsImpl {
 ]
 public class RandomAccessFileOptions {
     /**
-     * Start position to read the data, in bytes. This parameter is optional. By default, data is read from the current position.
+     * Start position to read the data, in bytes. This parameter is optional. By default, data is read from the current
+     * position.
      */
     @!APILevel[
         22,
@@ -929,7 +930,8 @@ public class FileIo {
      * @param { String } mode - r: Open a file for reading. The file must exist.
      * r+: Open a file for both reading and writing. The file must exist.
      * w: Open a file for writing. If the file exists, clear its content. If the file does not exist, create a file.
-     * w+: Open a file for both reading and writing. If the file exists, clear its content. If the file does not exist, create a file.
+     * w+: Open a file for both reading and writing. If the file exists, clear its content. If the file does not exist,
+     * create a file.
      * a: Open a file in append mode for writing at the end of the file. If the file does not exist, create a file.
      * If the file exists, write data to the end of the file (the original content of the file is reserved).
      * a+: Open a file in append mode for reading or updating at the end of the file.
@@ -991,11 +993,13 @@ public class FileIo {
      * @param { String } mode - r: Open a file for reading. The file must exist.
      * r+: Open a file for both reading and writing. The file must exist.
      * w: Open a file for writing. If the file exists, clear its content. If the file does not exist, create a file.
-     * w+: Open a file for both reading and writing. If the file exists, clear its content. If the file does not exist, create a file.
+     * w+: Open a file for both reading and writing. If the file exists, clear its content. If the file does not exist,
+     * create a file.
      * a: Open a file in append mode for writing at the end of the file. If the file does not exist, create a file.
      * If the file exists, write data to the end of the file (the original content of the file is reserved).
      * a+: Open a file in append mode for reading or updating at the end of the file. If the file does not exist,
-     * create a file. If the file exists, write data to the end of the file (the original content of the file is reserved).
+     * create a file. If the file exists, write data to the end of the file (the original content of the file
+     * is reserved).
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900002 - No such file or directory
      * @throws { BusinessException } 13900004 - Interrupted system call
@@ -1426,12 +1430,14 @@ public class FileIo {
      *
      * @param { Int32 } [mode!: Int32 = 0] - Move mode. The default value is 0.
      * 0: Throw an exception if a directory conflict occurs.
-     * An exception will be thrown if the destination directory contains a non-empty directory with the same name as the source directory.
+     * An exception will be thrown if the destination directory contains a non-empty directory with the same name as
+     * the source directory.
      * 1: Throw an exception if a file conflict occurs.
-     * An exception will be thrown if the destination directory contains a directory with the same name as the source directory,
-     * and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory
-     * will be moved to the destination directory, and the non-conflicting files in the destination directory will be retained.
-     * The data attribute in the error returned provides information about the conflicting files in the Array<ConflictFiles> format.
+     * An exception will be thrown if the destination directory contains a directory with the same name as the source
+     * directory, and a file with the same name exists in the conflict directory.
+     * All the non-conflicting files in the source directory will be moved to the destination directory, and the
+     * non-conflicting files in the destination directory will be retained. The data attribute in the error returned
+     * provides information about the conflicting files in the Array<ConflictFiles> format.
      * 2: Forcibly overwrite the conflicting files in the destination directory.
      * When the destination directory contains a directory with the same name as the source directory,
      * the files with the same names in the destination directory are overwritten forcibly;
@@ -1672,10 +1678,12 @@ public class FileIo {
      *
      * @param { Int32 } [mode!: Int32 = 0] - Copy mode. The default value is 0.
      * 0: Throw an exception if a file conflict occurs.
-     * An exception will be thrown if the destination directory contains a directory with the same name as the source directory,
-     * and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory will be moved
-     * to the destination directory, and the non-conflicting files in the destination directory will be retained.
-     * The data attribute in the error returned provides information about the conflicting files in the Array<ConflictFiles> format.
+     * An exception will be thrown if the destination directory contains a directory with the same name as the source
+     * directory,and a file with the same name exists in the conflict directory. All the non-conflicting files in the
+     * source directory will be moved to the destination directory,
+     * and the non-conflicting files in the destination directory will be retained.
+     * The data attribute in the error returned provides information about the conflicting files
+     * in the Array<ConflictFiles> format.
      * 1: Forcibly overwrite the files with the same name in the destination directory.
      * When the destination directory contains a directory with the same name as the source directory,
      * the files with the same names in the destination directory are overwritten forcibly;
@@ -2327,7 +2335,8 @@ public class FileIo {
     /**
      *  Updates the latest access timestamp of a file.
      *
-     * @param { number } mtime - New timestamp. The value is the number of milliseconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970)
+     * @param { number } mtime - New timestamp. The value is the number of milliseconds elapsed since the Epoch
+     * time (00:00:00 UTC on January 1, 1970)
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900002 - No such file or directory
      * @throws { BusinessException } 13900012 - Permission denied
