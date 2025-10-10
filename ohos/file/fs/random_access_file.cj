@@ -13,6 +13,8 @@
  * limitations under the License.
  */
 
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
+
 package ohos.file.fs
 
 import ohos.ffi.*
@@ -22,8 +24,6 @@ import ohos.labels.*
 /**
  * Provides APIs for randomly reading and writing a stream. Before invoking any API of RandomAccessFile,
  * you need to use createRandomAccessFile() to create a RandomAccessFile instance.
- *
- * @relation declare interface RandomAccessFile
  */
 @!APILevel[
     since: "22",
@@ -40,8 +40,6 @@ public class RandomAccessFile <: RemoteDataLite {
 
     /**
      * FD of the file.
-     *
-     * @relation readonly fd: number
      */
     @!APILevel[
         since: "22",
@@ -55,8 +53,6 @@ public class RandomAccessFile <: RemoteDataLite {
 
     /**
      * Offset pointer to the RandomAccessFile instance.
-     *
-     * @relation readonly filePointer: number
      */
     @!APILevel[
         since: "22",
@@ -70,8 +66,6 @@ public class RandomAccessFile <: RemoteDataLite {
 
     /**
      * Sets the file offset pointer.
-     *
-     * @relation setFilePointer(filePointer: number): void
      */
     @!APILevel[
         since: "22",
@@ -84,8 +78,6 @@ public class RandomAccessFile <: RemoteDataLite {
 
     /**
      * Closes this RandomAccessFile instance.
-     *
-     * @relation close(): void
      */
     @!APILevel[
         since: "22",
@@ -111,7 +103,6 @@ public class RandomAccessFile <: RemoteDataLite {
      * @throws { BusinessException } 13900034 - Operation would block
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation writeSync(buffer: ArrayBuffer | string, options?: WriteOptions): number
      */
     @!APILevel[
         since: "22",
@@ -137,7 +128,6 @@ public class RandomAccessFile <: RemoteDataLite {
      * @throws { BusinessException } 13900034 - Operation would block
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
-     * @relation writeSync(buffer: ArrayBuffer | string, options?: WriteOptions): number
      */
     @!APILevel[
         since: "22",
@@ -175,7 +165,6 @@ public class RandomAccessFile <: RemoteDataLite {
      * @throws { BusinessException } 13900034 - Operation would block
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 13900044 - Network is unreachable
-     * @relation readSync(buffer: ArrayBuffer, options?: ReadOptions): number
      */
     @!APILevel[
         since: "22",

@@ -13,6 +13,8 @@
  * limitations under the License.
  */
 
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
+
 package ohos.file.fs
 
 import ohos.ffi.*
@@ -21,8 +23,6 @@ import ohos.labels.*
 
 /**
  * File object.
- *
- * @relation declare interface File
  */
 @!APILevel[
     since: "22",
@@ -39,8 +39,6 @@ public class File <: RemoteDataLite {
 
     /**
      * FD of the file.
-     *
-     * @relation readonly fd: number
      */
     @!APILevel[
         since: "22",
@@ -54,8 +52,6 @@ public class File <: RemoteDataLite {
 
     /**
      * Path of the file.
-     *
-     * @relation readonly path: string
      */
     @!APILevel[
         since: "22",
@@ -72,8 +68,6 @@ public class File <: RemoteDataLite {
 
     /**
      * Name of the file.
-     *
-     * @relation readonly name: string
      */
     @!APILevel[
         since: "22",
@@ -97,7 +91,6 @@ public class File <: RemoteDataLite {
      * @throws { BusinessException } 13900034 - Operation would block
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 13900043 - No record locks available
-     * @relation tryLock(exclusive?: boolean): void
      */
     @!APILevel[
         since: "22",
@@ -120,7 +113,6 @@ public class File <: RemoteDataLite {
      * @throws { BusinessException } 13900034 - Operation would block
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 13900043 - No record locks available
-     * @relation unlock(): void
      */
     @!APILevel[
         since: "22",
@@ -140,7 +132,6 @@ public class File <: RemoteDataLite {
      * @throws { BusinessException } 13900005 - I/O error
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 14300002 - Invalid URI
-     * @relation getParent(): string
      */
     @!APILevel[
         since: "22",

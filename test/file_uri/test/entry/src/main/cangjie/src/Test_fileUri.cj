@@ -16,7 +16,7 @@
 package ohos_app_cangjie_entry
 
 internal import ohos.base.*
-import CoreFileKit.*
+import kit.CoreFileKit.*
 import std.runtime.GC
 import std.unittest.testmacro.*
 import std.unittest.*

@@ -13,7 +13,9 @@
  * limitations under the License.
  */
 
-package CoreFileKit
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
+
+package kit.CoreFileKit
 
 public import ohos.file.fs.*
 public import ohos.file.fileuri.*
