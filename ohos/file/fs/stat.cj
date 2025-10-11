@@ -52,13 +52,15 @@ public class Stat <: RemoteDataLite {
 
     /**
      * File permissions. The meaning of each bit is as follows:
-     * The following values are in octal format. The return values are in decimal format. You need to convert the values.
+     * The following values are in octal format. The return values are in decimal format. You need to convert the
+     * values.
      * 0o400: The user has the read permission on a regular file or a directory entry.
      * 0o200: The user has the permission to write a regular file or create and delete a directory entry.
      * 0o100: The user has the permission to execute a regular file or search for the specified path in a directory.
      * 0o040: The user group has the read permission on a regular file or a directory entry.
      * 0o020: The user group has the permission to write a regular file or create and delete a directory entry.
-     * 0o010: The user group has the permission to execute a regular file or search for the specified path in a directory.
+     * 0o010: The user group has the permission to execute a regular file or search for the specified path in a
+     * directory.
      * 0o004: Other users have the permission to read a regular file or read a directory entry.
      * 0o002: Other users have the permission to write a regular file or create and delete a directory entry.
      * 0o001: Other users have the permission to execute a regular file or search for the specified path in a directory.
@@ -113,7 +115,8 @@ public class Stat <: RemoteDataLite {
     }
 
     /**
-     * Time when the file was last accessed. The value is the number of seconds elapsed since 00:00:00 on January 1, 1970.
+     * Time when the file was last accessed. The value is the number of seconds elapsed since 00:00:00 on January 1,
+     * 1970.
      * NOTE: Currently, user data partitions are mounted in noatime mode by default, and atime update is disabled.
      */
     @!APILevel[
@@ -155,7 +158,8 @@ public class Stat <: RemoteDataLite {
     }
 
     /**
-     * Checks whether this file is a block special file. A block special file supports access by block only, and it is cached when accessed.
+     * Checks whether this file is a block special file. A block special file supports access by block only, and it is
+     * cached when accessed.
      */
     @!APILevel[
         22,
@@ -166,7 +170,8 @@ public class Stat <: RemoteDataLite {
     }
 
     /**
-     * Checks whether this file is a character special file. A character special device supports random access, and it is not cached when accessed.
+     * Checks whether this file is a character special file. A character special device supports random access, and it
+     * is not cached when accessed.
      */
     @!APILevel[
         22,
