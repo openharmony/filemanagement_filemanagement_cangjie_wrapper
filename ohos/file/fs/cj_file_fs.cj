@@ -34,6 +34,7 @@ class ReadOptionsImpl {
 
 /**
  * Defines the options used in createRandomAccessFile().
+ *
  */
 @!APILevel[
     since: "22",
@@ -41,7 +42,9 @@ class ReadOptionsImpl {
 ]
 public class RandomAccessFileOptions {
     /**
-     * Start position to read the data, in bytes. This parameter is optional. By default, data is read from the current position.
+     * Start position to read the data, in bytes. This parameter is optional. By default, data is read from the current
+     * position.
+     *
      */
     @!APILevel[
         since: "22",
@@ -50,6 +53,7 @@ public class RandomAccessFileOptions {
     public var start: Option<Int64>
     /**
      * End position to read the data, in bytes. This parameter is optional. The default value is the end of the file.
+     *
      */
     @!APILevel[
         since: "22",
@@ -74,6 +78,7 @@ public class RandomAccessFileOptions {
 
 /**
  * Mode Indicates the open flags.
+ *
  */
 @!APILevel[
     since: "22",
@@ -84,6 +89,7 @@ public class OpenMode {
 
     /**
      * Read only Permission.
+     *
      */
     @!APILevel[
         since: "22",
@@ -93,6 +99,7 @@ public class OpenMode {
 
     /**
      * Write only Permission.
+     *
      */
     @!APILevel[
         since: "22",
@@ -102,6 +109,7 @@ public class OpenMode {
 
     /**
      * Write and Read Permission.
+     *
      */
     @!APILevel[
         since: "22",
@@ -111,6 +119,7 @@ public class OpenMode {
 
     /**
      * If not exist, create file.
+     *
      */
     @!APILevel[
         since: "22",
@@ -120,6 +129,7 @@ public class OpenMode {
 
     /**
      * File truncate len 0.
+     *
      */
     @!APILevel[
         since: "22",
@@ -129,6 +139,7 @@ public class OpenMode {
 
     /**
      * File append write.
+     *
      */
     @!APILevel[
         since: "22",
@@ -138,6 +149,7 @@ public class OpenMode {
 
     /**
      * File open in nonblocking mode.
+     *
      */
     @!APILevel[
         since: "22",
@@ -147,6 +159,7 @@ public class OpenMode {
 
     /**
      * File is Dir.
+     *
      */
     @!APILevel[
         since: "22",
@@ -156,6 +169,7 @@ public class OpenMode {
 
     /**
      * File is not symbolic link.
+     *
      */
     @!APILevel[
         since: "22",
@@ -165,6 +179,7 @@ public class OpenMode {
 
     /**
      * SYNC IO.
+     *
      */
     @!APILevel[
         since: "22",
@@ -175,6 +190,7 @@ public class OpenMode {
 
 /**
  * Defines the options used in readLines().
+ *
  */
 @!APILevel[
     since: "22",
@@ -183,6 +199,7 @@ public class OpenMode {
 public open class Options {
     /**
      * File encoding format.
+     *
      */
     @!APILevel[
         since: "22",
@@ -207,6 +224,7 @@ public open class Options {
 
 /**
  * Provides a ReaderIterator object.
+ *
  */
 @!APILevel[
     since: "22",
@@ -224,6 +242,7 @@ public class ReaderIterator <: RemoteDataLite {
     /**
      * Obtains the ReaderIterator result.
      *
+     * @returns { ReaderIteratorResult } Returns the ReaderIteratorResult object.
      * @throws { BusinessException } 13900005 - I/O error
      * @throws { BusinessException } 13900037 - No data available
      * @throws { BusinessException } 13900042 - Unknown error
@@ -246,6 +265,7 @@ public class ReaderIterator <: RemoteDataLite {
 
 /**
  * Represents the information obtained by the ReaderIterator object.
+ *
  */
 @!APILevel[
     since: "22",
@@ -255,6 +275,7 @@ public class ReaderIteratorResult {
     /**
      * Whether the iteration is complete.
      * The value true means the iteration is complete; the value false means the iteration is not complete.
+     *
      */
     @!APILevel[
         since: "22",
@@ -263,6 +284,7 @@ public class ReaderIteratorResult {
     public var done: Bool
     /**
      * File text content read line by line.
+     *
      */
     @!APILevel[
         since: "22",
@@ -290,6 +312,7 @@ struct RetReaderIteratorResult {
 
 /**
  * Defines the options use din write().
+ *
  */
 @!APILevel[
     since: "22",
@@ -298,6 +321,7 @@ struct RetReaderIteratorResult {
 public class WriteOptions <: Options {
     /**
      * Length of the data to write, in bytes.
+     *
      */
     @!APILevel[
         since: "22",
@@ -306,6 +330,7 @@ public class WriteOptions <: Options {
     public var length: Option<UIntNative>
     /**
      * Start position of the file to write (current filePointer plus offset), in bytes.
+     *
      */
     @!APILevel[
         since: "22",
@@ -333,6 +358,7 @@ public class WriteOptions <: Options {
 
 /**
  * Defines the options used in read().
+ *
  */
 @!APILevel[
     since: "22",
@@ -341,6 +367,7 @@ public class WriteOptions <: Options {
 public open class ReadOptions {
     /**
      * Start position of the file to read (current filePointer plus offset), in bytes.
+     *
      */
     @!APILevel[
         since: "22",
@@ -349,6 +376,7 @@ public open class ReadOptions {
     public var offset: Option<Int64>
     /**
      * Length of the data to read, in bytes.
+     *
      */
     @!APILevel[
         since: "22",
@@ -374,6 +402,7 @@ public open class ReadOptions {
 
 /**
  * Defines the options used in readText().
+ *
  */
 @!APILevel[
     since: "22",
@@ -382,6 +411,7 @@ public open class ReadOptions {
 public class ReadTextOptions <: ReadOptions {
     /**
      * File encoding format.
+     *
      */
     @!APILevel[
         since: "22",
@@ -408,6 +438,7 @@ public class ReadTextOptions <: ReadOptions {
 
 /**
  * Enumerates the access modes to verify. If this parameter is left blank, the system checks whether the file exists.
+ *
  */
 @!APILevel[
     since: "22",
@@ -416,6 +447,7 @@ public class ReadTextOptions <: ReadOptions {
 public enum AccessModeType {
     /**
      * Whether the file exists.
+     *
      */
     @!APILevel[
         since: "22",
@@ -425,6 +457,7 @@ public enum AccessModeType {
     | 
     /**
      * Verify the write permission on the file.
+     *
      */
     @!APILevel[
         since: "22",
@@ -434,6 +467,7 @@ public enum AccessModeType {
     | 
     /**
      * Verify the read permission on the file.
+     *
      */
     @!APILevel[
         since: "22",
@@ -443,6 +477,7 @@ public enum AccessModeType {
     | 
     /**
      * Verify the read/write permission on the file.
+     *
      */
     @!APILevel[
         since: "22",
@@ -457,13 +492,14 @@ public enum AccessModeType {
             case Write => 2
             case Read => 4
             case ReadWrite => 6
-            case _ => throw IllegalArgumentException("The type is not supported.")
+            case _ => throw BusinessException(13900020, "Invalid argument")
         }
     }
 }
 
 /**
  * Enumerates the locations of the file to verify.
+ *
  */
 @!APILevel[
     since: "22",
@@ -472,6 +508,7 @@ public enum AccessModeType {
 public enum AccessFlagType {
     /**
      * The file is stored locally.
+     *
      */
     @!APILevel[
         since: "22",
@@ -482,13 +519,14 @@ public enum AccessFlagType {
     protected func getValue(): Int32 {
         match (this) {
             case Local => 0
-            case _ => throw IllegalArgumentException("The type is not supported.")
+            case _ => throw BusinessException(13900020, "Invalid argument")
         }
     }
 }
 
 /**
  * Enumerates the types of the relative offset position used in lseek().
+ *
  */
 @!APILevel[
     since: "22",
@@ -497,6 +535,7 @@ public enum AccessFlagType {
 public enum WhenceType {
     /**
      * Starting position of the file offset.
+     *
      */
     @!APILevel[
         since: "22",
@@ -506,6 +545,7 @@ public enum WhenceType {
     | 
     /**
      * Current position of the file offset.
+     *
      */
     @!APILevel[
         since: "22",
@@ -515,6 +555,7 @@ public enum WhenceType {
     | 
     /**
      * Ending position of the file offset.
+     *
      */
     @!APILevel[
         since: "22",
@@ -529,7 +570,7 @@ public enum WhenceType {
                 case SeekSet => 0
                 case SeekCur => 1
                 case SeekEnd => 2
-                case _ => throw IllegalArgumentException("The type is not supported yet.")
+                case _ => throw BusinessException(13900020, "Invalid argument")
             }
         }
     }
@@ -537,6 +578,7 @@ public enum WhenceType {
 
 /**
  * EDefines conflicting file information used in copyDir() or moveDir().
+ *
  */
 @!APILevel[
     since: "22",
@@ -545,6 +587,7 @@ public enum WhenceType {
 public class ConflictFiles {
     /**
      * The path of the source file.
+     *
      */
     @!APILevel[
         since: "22",
@@ -553,6 +596,7 @@ public class ConflictFiles {
     public var srcFile: String
     /**
      * The path of the destination file.
+     *
      */
     @!APILevel[
         since: "22",
@@ -630,6 +674,7 @@ struct RetDataCArrStringN {
 
 /**
  * Defines the file filtering configuration used by listFile().
+ *
  */
 @!APILevel[
     since: "22",
@@ -638,6 +683,7 @@ struct RetDataCArrStringN {
 public class Filter {
     /**
      * Locate files that fully match the specified file name extensions, which are of the OR relationship.
+     *
      */
     @!APILevel[
         since: "22",
@@ -647,6 +693,7 @@ public class Filter {
     /**
      * Locate files that fuzzy match the specified file names, which are of the OR relationship.
      * Currently, only the wildcard * is supported.
+     *
      */
     @!APILevel[
         since: "22",
@@ -655,6 +702,7 @@ public class Filter {
     public var displayName: Array<String>
     /**
      * Locate files that fully match the specified MIME types, which are of the OR relationship.
+     *
      */
     @!APILevel[
         since: "22",
@@ -663,6 +711,7 @@ public class Filter {
     public var mimeType: Array<String>
     /**
      * Locate files that are greater than or equal to the specified size.
+     *
      */
     @!APILevel[
         since: "22",
@@ -671,6 +720,7 @@ public class Filter {
     public var fileSizeOver: ?Int64
     /**
      * Locate files whose last modification time is the same or later than the specified time.
+     *
      */
     @!APILevel[
         since: "22",
@@ -680,6 +730,7 @@ public class Filter {
     /**
      * Whether to exclude the files already in Media. The value true means to exclude the files already in Media;
      * the value false means not to exclude the files already in Media.
+     *
      */
     @!APILevel[
         since: "22",
@@ -762,6 +813,7 @@ struct CFilter {
 
 /**
  * ListFileOptions type
+ *
  */
 @!APILevel[
     since: "22",
@@ -773,6 +825,7 @@ public class ListFileOptions {
      * The default value is false. If recursion is false, the names of files and directories that meet the filtering
      * requirements in the current directory are returned. If recursion is true, relative paths (starting with /)
      * of all files that meet the specified conditions in the current directory are returned.
+     *
      */
     @!APILevel[
         since: "22",
@@ -781,6 +834,7 @@ public class ListFileOptions {
     public var recursion: Bool
     /**
      * Number of file names to list. This parameter is optional. The default value is 0, which means to list all files.
+     *
      */
     @!APILevel[
         since: "22",
@@ -789,6 +843,7 @@ public class ListFileOptions {
     public var listNum: Int32
     /**
      * File filtering configuration. This parameter is optional. It specifies the file filtering conditions.
+     *
      */
     @!APILevel[
         since: "22",
@@ -850,6 +905,7 @@ unsafe func getArrStringAndFree(cArr: CArrString): Array<String> {
 
 /**
  * FileIo
+ *
  */
 @!APILevel[
     since: "22",
@@ -859,8 +915,10 @@ public class FileIo {
     protected init() {}
 
     /**
-     *  Obtains detailed attribute information of a file or directory.
+     * Obtains detailed attribute information of a file or directory.
      *
+     * @param { Int32 } file - File descriptor of the file or directory.
+     * @returns { Stat } Returns the Stat object containing detailed attribute information.
      * @throws { BusinessException } 13900002 - No such file or directory
      * @throws { BusinessException } 13900004 - Interrupted system call
      * @throws { BusinessException } 13900005 - I/O error
@@ -892,8 +950,10 @@ public class FileIo {
     }
 
     /**
-     *  Obtains detailed attribute information of a file or directory.
+     * Obtains detailed attribute information of a file or directory.
      *
+     * @param { String } file - Application sandbox path of the file or directory.
+     * @returns { Stat } Returns the Stat object containing detailed attribute information.
      * @throws { BusinessException } 13900002 - No such file or directory
      * @throws { BusinessException } 13900004 - Interrupted system call
      * @throws { BusinessException } 13900005 - I/O error
@@ -924,17 +984,20 @@ public class FileIo {
     }
 
     /**
-     *  Creates a stream based on a file path.
+     * Creates a stream based on a file path.
      *
+     * @param { String } path - Application sandbox path of the file.
      * @param { String } mode - r: Open a file for reading. The file must exist.
      * r+: Open a file for both reading and writing. The file must exist.
      * w: Open a file for writing. If the file exists, clear its content. If the file does not exist, create a file.
-     * w+: Open a file for both reading and writing. If the file exists, clear its content. If the file does not exist, create a file.
+     * w+: Open a file for both reading and writing. If the file exists, clear its content. If the file does not exist,
+     * create a file.
      * a: Open a file in append mode for writing at the end of the file. If the file does not exist, create a file.
      * If the file exists, write data to the end of the file (the original content of the file is reserved).
      * a+: Open a file in append mode for reading or updating at the end of the file.
      * If the file does not exist, create a file.
      * If the file exists, write data to the end of the file (the original content of the file is reserved).
+     * @returns { Stream } Returns the Stream object.
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900002 - No such file or directory
      * @throws { BusinessException } 13900004 - Interrupted system call
@@ -961,7 +1024,6 @@ public class FileIo {
      * @throws { BusinessException } 13900038 - Value too large for defined data type
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
-     * @throws { BusinessException } 13900042 - Network is unreachable
      */
     @!APILevel[
         since: "22",
@@ -988,14 +1050,18 @@ public class FileIo {
     /**
      *  Opens a stream based on an FD.
      *
+     * @param { Int32 } fd - File descriptor.
      * @param { String } mode - r: Open a file for reading. The file must exist.
      * r+: Open a file for both reading and writing. The file must exist.
      * w: Open a file for writing. If the file exists, clear its content. If the file does not exist, create a file.
-     * w+: Open a file for both reading and writing. If the file exists, clear its content. If the file does not exist, create a file.
+     * w+: Open a file for both reading and writing. If the file exists, clear its content. If the file does not exist,
+     * create a file.
      * a: Open a file in append mode for writing at the end of the file. If the file does not exist, create a file.
      * If the file exists, write data to the end of the file (the original content of the file is reserved).
      * a+: Open a file in append mode for reading or updating at the end of the file. If the file does not exist,
-     * create a file. If the file exists, write data to the end of the file (the original content of the file is reserved).
+     * create a file. If the file exists, write data to the end of the file (the original content of the file
+     * is reserved).
+     * @returns { Stream } Returns the Stream object.
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900002 - No such file or directory
      * @throws { BusinessException } 13900004 - Interrupted system call
@@ -1044,8 +1110,10 @@ public class FileIo {
     }
 
     /**
-     *  Obtains information about a symbolic link that is used to refer to a file or directory.
+     * Obtains information about a symbolic link that is used to refer to a file or directory.
      *
+     * @param { String } path - Application sandbox path of the symbolic link.
+     * @returns { Stat } Returns the Stat object containing information about the symbolic link.
      * @throws { BusinessException } 13900002 - No such file or directory
      * @throws { BusinessException } 13900008 - Bad file descriptor
      * @throws { BusinessException } 13900011 - Out of memory
@@ -1077,8 +1145,13 @@ public class FileIo {
     }
 
     /**
-     *  Checks whether a file or directory exists or has the operation permission.
+     * Checks whether a file or directory exists or has the operation permission.
      *
+     * @param { String } path - Application sandbox path of the file or directory.
+     * @param { AccessModeType } mode - Permission to verify. The default value is AccessModeType.Exist.
+     * @param { AccessFlagType } flag - Location type of the file. The default value is AccessFlagType.Local.
+     * @returns { Bool } Returns true if the file or directory exists or has the specified permission; returns false
+     * otherwise.
      * @throws { BusinessException } 13900002 - No such file or directory
      * @throws { BusinessException } 13900005 - I/O error
      * @throws { BusinessException } 13900008 - Bad file descriptor
@@ -1114,6 +1187,9 @@ public class FileIo {
     /**
      *  Opens a file or directory.
      *
+     * @param { String } path - Application sandbox path of the file or directory.
+     * @param { Int64 } mode - Open mode. The default value is OpenMode.READ_ONLY.
+     * @returns { File } Returns the File object.
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900002 - No such file or directory
      * @throws { BusinessException } 13900004 - Interrupted system call
@@ -1162,6 +1238,8 @@ public class FileIo {
     /**
      *  Opens a File object based on an FD.
      *
+     * @param { Int32 } fd - File descriptor.
+     * @returns { File } Returns the File object.
      * @throws { BusinessException } 13900004 - Interrupted system call
      * @throws { BusinessException } 13900005 - I/O error
      * @throws { BusinessException } 13900008 - Bad file descriptor
@@ -1188,6 +1266,10 @@ public class FileIo {
     /**
      *  Reads data from a file.
      *
+     * @param { Int32 } fd - File descriptor.
+     * @param { Array<Byte> } buffer - Buffer for storing the data read.
+     * @param { ReadOptions } options - The options for reading data. The default value is ReadOptions().
+     * @returns { Int64 } Returns the number of bytes read.
      * @throws { BusinessException } 13900004 - Interrupted system call
      * @throws { BusinessException } 13900005 - I/O error
      * @throws { BusinessException } 13900008 - Bad file descriptor
@@ -1232,6 +1314,10 @@ public class FileIo {
     /**
      *  Writes data to a file.
      *
+     * @param { Int32 } fd - File descriptor.
+     * @param { Array<Byte> } buffer - Buffer containing the data to write.
+     * @param { WriteOptions } options - The options for writing data. The default value is WriteOptions().
+     * @returns { Int64 } Returns the number of bytes written.
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900004 - Interrupted system call
      * @throws { BusinessException } 13900005 - I/O error
@@ -1278,6 +1364,10 @@ public class FileIo {
     /**
      *  Writes data to a file.
      *
+     * @param { Int32 } fd - File descriptor.
+     * @param { String } buffer - String data to write.
+     * @param { WriteOptions } options - The options for writing data. The default value is WriteOptions().
+     * @returns { Int64 } Returns the number of bytes written.
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900004 - Interrupted system call
      * @throws { BusinessException } 13900005 - I/O error
@@ -1323,8 +1413,9 @@ public class FileIo {
     }
 
     /**
-     *  Creates a directory.
+     * Creates a directory.
      *
+     * @param { String } path - Application sandbox path of the directory.
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900002 - No such file or directory
      * @throws { BusinessException } 13900008 - Bad file descriptor
@@ -1357,8 +1448,10 @@ public class FileIo {
     }
 
     /**
-     *  Creates a directory.
+     * Creates a directory.
      *
+     * @param { String } path - Application sandbox path of the directory.
+     * @param { Bool } recursion - Whether to recursively create the directory.
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900002 - No such file or directory
      * @throws { BusinessException } 13900008 - Bad file descriptor
@@ -1391,8 +1484,9 @@ public class FileIo {
     }
 
     /**
-     *  Removes a directory.
+     * Removes a directory.
      *
+     * @param { String } path - Application sandbox path of the directory.
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900002 - No such file or directory
      * @throws { BusinessException } 13900011 - Out of memory
@@ -1422,16 +1516,20 @@ public class FileIo {
     }
 
     /**
-     *  Moves the source directory to the destination directory.
+     * Moves the source directory to the destination directory.
      *
-     * @param { Int32 } [mode!: Int32 = 0] - Move mode. The default value is 0.
+     * @param { String } src - Application sandbox path of the source directory.
+     * @param { String } dest - Application sandbox path of the destination directory.
+     * @param { Int32 } mode - Move mode. The default value is 0.
      * 0: Throw an exception if a directory conflict occurs.
-     * An exception will be thrown if the destination directory contains a non-empty directory with the same name as the source directory.
+     * An exception will be thrown if the destination directory contains a non-empty directory with the same name as
+     * the source directory.
      * 1: Throw an exception if a file conflict occurs.
-     * An exception will be thrown if the destination directory contains a directory with the same name as the source directory,
-     * and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory
-     * will be moved to the destination directory, and the non-conflicting files in the destination directory will be retained.
-     * The data attribute in the error returned provides information about the conflicting files in the Array<ConflictFiles> format.
+     * An exception will be thrown if the destination directory contains a directory with the same name as the source
+     * directory, and a file with the same name exists in the conflict directory.
+     * All the non-conflicting files in the source directory will be moved to the destination directory, and the
+     * non-conflicting files in the destination directory will be retained. The data attribute in the error returned
+     * provides information about the conflicting files in the Array<ConflictFiles> format.
      * 2: Forcibly overwrite the conflicting files in the destination directory.
      * When the destination directory contains a directory with the same name as the source directory,
      * the files with the same names in the destination directory are overwritten forcibly;
@@ -1486,6 +1584,8 @@ public class FileIo {
     /**
      *  Renames a file or directory.
      *
+     * @param { String } oldPath - Current application sandbox path of the file or directory.
+     * @param { String } newPath - New application sandbox path of the file or directory.
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900002 - No such file or directory
      * @throws { BusinessException } 13900008 - Bad file descriptor
@@ -1528,6 +1628,7 @@ public class FileIo {
     /**
      *  Deletes a file.
      *
+     * @param { String } path - Application sandbox path of the file.
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900002 - No such file or directory
      * @throws { BusinessException } 13900005 - I/O error
@@ -1560,8 +1661,13 @@ public class FileIo {
     }
 
     /**
-     *  Creates a RandomAccessFile instance based on a file path or file object.
+     * Creates a RandomAccessFile instance based on a file path or file object.
      *
+     * @param { String } file - Application sandbox path of the file.
+     * @param { Int64 } mode - File open mode. The default value is OpenMode.READ_ONLY.
+     * @param { RandomAccessFileOptions } options - The options for creating RandomAccessFile. The default value is
+     * RandomAccessFileOptions().
+     * @returns { RandomAccessFile } Returns the RandomAccessFile object.
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900002 - No such file or directory
      * @throws { BusinessException } 13900004 - Interrupted system call
@@ -1615,8 +1721,13 @@ public class FileIo {
     }
 
     /**
-     *  Creates a RandomAccessFile instance based on a file path or file object.
+     * Creates a RandomAccessFile instance based on a file path or file object.
      *
+     * @param { File } file - File object to create RandomAccessFile from.
+     * @param { Int64 } mode - File open mode. The default value is OpenMode.READ_ONLY.
+     * @param { RandomAccessFileOptions } options - The options for creating RandomAccessFile. The default value is
+     * RandomAccessFileOptions().
+     * @returns { RandomAccessFile } Returns the RandomAccessFile object.
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900002 - No such file or directory
      * @throws { BusinessException } 13900004 - Interrupted system call
@@ -1668,14 +1779,18 @@ public class FileIo {
     }
 
     /**
-     *  Copies the source directory to the destination directory.
+     * Copies the source directory to the destination directory.
      *
-     * @param { Int32 } [mode!: Int32 = 0] - Copy mode. The default value is 0.
+     * @param { String } src - Application sandbox path of the source directory.
+     * @param { String } dest - Application sandbox path of the destination directory.
+     * @param { Int32 } mode - Copy mode. The default value is 0.
      * 0: Throw an exception if a file conflict occurs.
-     * An exception will be thrown if the destination directory contains a directory with the same name as the source directory,
-     * and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory will be moved
-     * to the destination directory, and the non-conflicting files in the destination directory will be retained.
-     * The data attribute in the error returned provides information about the conflicting files in the Array<ConflictFiles> format.
+     * An exception will be thrown if the destination directory contains a directory with the same name as the source
+     * directory,and a file with the same name exists in the conflict directory. All the non-conflicting files in the
+     * source directory will be moved to the destination directory,
+     * and the non-conflicting files in the destination directory will be retained.
+     * The data attribute in the error returned provides information about the conflicting files
+     * in the Array<ConflictFiles> format.
      * 1: Forcibly overwrite the files with the same name in the destination directory.
      * When the destination directory contains a directory with the same name as the source directory,
      * the files with the same names in the destination directory are overwritten forcibly;
@@ -1735,9 +1850,11 @@ public class FileIo {
     }
 
     /**
-     *  Copies a file.
+     * Copies a file.
      *
-     * @param { number } [mode = 0] - Whether to overwrite the file with the same name in the destination directory.
+     * @param { String } src - Application sandbox path of the source file.
+     * @param { String } dest - Application sandbox path of the destination file.
+     * @param { Int32 } mode - Whether to overwrite the file with the same name in the destination directory.
      * The default value is 0, which is the only value supported.
      * 0: overwrite the file with the same name and truncate the part that is not overwritten.
      * @throws { BusinessException } 13900002 - No such file or directory
@@ -1779,9 +1896,11 @@ public class FileIo {
     }
 
     /**
-     *  Copies a file.
+     * Copies a file.
      *
-     * @param { number } [mode = 0] - Whether to overwrite the file with the same name in the destination directory.
+     * @param { String } src - Application sandbox path of the source file.
+     * @param { Int32 } dest - File descriptor of the destination file.
+     * @param { Int32 } mode - Whether to overwrite the file with the same name in the destination directory.
      * The default value is 0, which is the only value supported.
      * 0: overwrite the file with the same name and truncate the part that is not overwritten.
      * @throws { BusinessException } 13900002 - No such file or directory
@@ -1821,9 +1940,11 @@ public class FileIo {
     }
 
     /**
-     *  Copies a file.
+     * Copies a file.
      *
-     * @param { number } [mode = 0] - Whether to overwrite the file with the same name in the destination directory.
+     * @param { Int32 } src - File descriptor of the source file.
+     * @param { String } dest - Application sandbox path of the destination file.
+     * @param { Int32 } mode - Whether to overwrite the file with the same name in the destination directory.
      * The default value is 0, which is the only value supported.
      * 0: overwrite the file with the same name and truncate the part that is not overwritten.
      * @throws { BusinessException } 13900002 - No such file or directory
@@ -1865,7 +1986,9 @@ public class FileIo {
     /**
      *  Copies a file.
      *
-     * @param { number } [mode = 0] - Whether to overwrite the file with the same name in the destination directory.
+     * @param { Int32 } src - File descriptor of the source file.
+     * @param { Int32 } dest - File descriptor of the destination file.
+     * @param { Int32 } mode - Whether to overwrite the file with the same name in the destination directory.
      * The default value is 0, which is the only value supported.
      * 0: overwrite the file with the same name and truncate the part that is not overwritten.
      * @throws { BusinessException } 13900002 - No such file or directory
@@ -1905,7 +2028,9 @@ public class FileIo {
     /**
      *  Moves a file.
      *
-     * @param { Int32 } [mode!: Int32 = 0] - Move mode.
+     * @param { String } src - Application sandbox path of the source file.
+     * @param { String } dest - Application sandbox path of the destination file.
+     * @param { Int32 } mode - Move mode.
      * The value 0 means to overwrite the file with the same name in the destination directory;
      * the value 1 means to throw an exception. The default value is 0.
      * @throws { BusinessException } 13900001 - Operation not permitted
@@ -1961,6 +2086,8 @@ public class FileIo {
     /**
      *  Creates a temporary directory.
      *
+     * @param { String } prefix - Path prefix of the temporary directory.
+     * @returns { String } Returns the application sandbox path of the created temporary directory.
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900002 - No such file or directory
      * @throws { BusinessException } 13900008 - Bad file descriptor
@@ -2000,7 +2127,8 @@ public class FileIo {
     /**
      *  Creates a stream based on a file path.
      *
-     * @param { Int64 } [len!: Int64 = 0] - File length, in bytes, after truncation. The default value is 0.
+     * @param { String } file - Application sandbox path of the file.
+     * @param { Int64 } len - File length, in bytes, after truncation. The default value is 0.
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900002 - No such file or directory
      * @throws { BusinessException } 13900004 - Interrupted system call
@@ -2039,7 +2167,8 @@ public class FileIo {
     /**
      *  Creates a stream based on a file path.
      *
-     * @param { Int64 } [len!: Int64 = 0] - File length, in bytes, after truncation. The default value is 0.
+     * @param { Int32 } file - File descriptor.
+     * @param { Int64 } len - File length, in bytes, after truncation. The default value is 0.
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900002 - No such file or directory
      * @throws { BusinessException } 13900004 - Interrupted system call
@@ -2073,6 +2202,7 @@ public class FileIo {
     /**
      *  Closes a file or directory.
      *
+     * @param { Int32 } file - File descriptor of the file or directory.
      * @throws { BusinessException } 13900004 - Interrupted system call
      * @throws { BusinessException } 13900005 - I/O error
      * @throws { BusinessException } 13900008 - Bad file descriptor
@@ -2096,6 +2226,7 @@ public class FileIo {
     /**
      *  Closes a file or directory.
      *
+     * @param { File } file - File object to close.
      * @throws { BusinessException } 13900004 - Interrupted system call
      * @throws { BusinessException } 13900005 - I/O error
      * @throws { BusinessException } 13900008 - Bad file descriptor
@@ -2129,6 +2260,9 @@ public class FileIo {
     /**
      *  Reads the text content of a file line by line.
      *
+     * @param { String } filePath - Application sandbox path of the file.
+     * @param { Options } options - The options for reading lines. The default value is Options().
+     * @returns { ReaderIterator } Returns the ReaderIterator object.
      * @throws { BusinessException } 13900002 - No such file or directory
      * @throws { BusinessException } 13900012 - Permission denied
      * @throws { BusinessException } 13900015 - File exists
@@ -2168,6 +2302,10 @@ public class FileIo {
     /**
      *  Adjusts the position of the file offset pointer.
      *
+     * @param { Int32 } fd - File descriptor.
+     * @param { Int64 } offset - Offset to seek to.
+     * @param { WhenceType } whence - The base position for the offset. The default value is SeekSet.
+     * @returns { Int64 } Returns the new file offset position.
      * @throws { BusinessException } 13900008 - Bad file descriptor
      * @throws { BusinessException } 13900020 - Invalid argument
      * @throws { BusinessException } 13900026 - Illegal seek
@@ -2193,6 +2331,7 @@ public class FileIo {
     /**
      *  Synchronizes the data of a file.
      *
+     * @param { Int32 } fd - File descriptor.
      * @throws { BusinessException } 13900005 - I/O error
      * @throws { BusinessException } 13900008 - Bad file descriptor
      * @throws { BusinessException } 13900020 - Invalid argument
@@ -2219,6 +2358,7 @@ public class FileIo {
     /**
      *  Synchronizes the cached data of a file to storage.
      *
+     * @param { Int32 } fd - File descriptor.
      * @throws { BusinessException } 13900005 - I/O error
      * @throws { BusinessException } 13900008 - Bad file descriptor
      * @throws { BusinessException } 13900020 - Invalid argument
@@ -2246,6 +2386,8 @@ public class FileIo {
      *  Lists all file names in a directory.
      *
      * @param { String } path - Application sandbox path of the directory.
+     * @param { ListFileOptions } options - The options for listing files. The default value is ListFileOptions().
+     * @returns { Array<String> } Returns an array of file names.
      * @throws { BusinessException } 13900002 - No such file or directory
      * @throws { BusinessException } 13900008 - Bad file descriptor
      * @throws { BusinessException } 13900011 - Out of memory
@@ -2276,6 +2418,9 @@ public class FileIo {
     /**
      *  Reads the text of a file.
      *
+     * @param { String } filePath - Application sandbox path of the file.
+     * @param { ReadTextOptions } options - The options for reading text. The default value is ReadTextOptions().
+     * @returns { String } Returns the text content of the file.
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900004 - Interrupted system call
      * @throws { BusinessException } 13900005 - I/O error
@@ -2327,7 +2472,9 @@ public class FileIo {
     /**
      *  Updates the latest access timestamp of a file.
      *
-     * @param { number } mtime - New timestamp. The value is the number of milliseconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970)
+     * @param { String } path - Application sandbox path of the file.
+     * @param { Float64 } mtime - New timestamp. The value is the number of milliseconds elapsed since the Epoch
+     * time (00:00:00 UTC on January 1, 1970)
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900002 - No such file or directory
      * @throws { BusinessException } 13900012 - Permission denied

@@ -23,6 +23,7 @@ import ohos.labels.*
 /**
  * Represents detailed file information. Before calling any API of the Stat() class,
  * use stat() to create a Stat instance.
+ *
  */
 @!APILevel[
     since: "22",
@@ -39,6 +40,7 @@ public class Stat <: RemoteDataLite {
 
     /**
      * File identifier, which varies with files on the same device.
+     *
      */
     @!APILevel[
         since: "22",
@@ -52,16 +54,19 @@ public class Stat <: RemoteDataLite {
 
     /**
      * File permissions. The meaning of each bit is as follows:
-     * The following values are in octal format. The return values are in decimal format. You need to convert the values.
+     * The following values are in octal format. The return values are in decimal format. You need to convert the
+     * values.
      * 0o400: The user has the read permission on a regular file or a directory entry.
      * 0o200: The user has the permission to write a regular file or create and delete a directory entry.
      * 0o100: The user has the permission to execute a regular file or search for the specified path in a directory.
      * 0o040: The user group has the read permission on a regular file or a directory entry.
      * 0o020: The user group has the permission to write a regular file or create and delete a directory entry.
-     * 0o010: The user group has the permission to execute a regular file or search for the specified path in a directory.
+     * 0o010: The user group has the permission to execute a regular file or search for the specified path in a
+     * directory.
      * 0o004: Other users have the permission to read a regular file or read a directory entry.
      * 0o002: Other users have the permission to write a regular file or create and delete a directory entry.
      * 0o001: Other users have the permission to execute a regular file or search for the specified path in a directory.
+     *
      */
     @!APILevel[
         since: "22",
@@ -75,6 +80,7 @@ public class Stat <: RemoteDataLite {
 
     /**
      * ID of the file owner.
+     *
      */
     @!APILevel[
         since: "22",
@@ -88,6 +94,7 @@ public class Stat <: RemoteDataLite {
 
     /**
      * ID of the user group of the file.
+     *
      */
     @!APILevel[
         since: "22",
@@ -101,6 +108,7 @@ public class Stat <: RemoteDataLite {
 
     /**
      * File size, in bytes. This parameter is valid only for regular files.
+     *
      */
     @!APILevel[
         since: "22",
@@ -113,8 +121,10 @@ public class Stat <: RemoteDataLite {
     }
 
     /**
-     * Time when the file was last accessed. The value is the number of seconds elapsed since 00:00:00 on January 1, 1970.
+     * Time when the file was last accessed. The value is the number of seconds elapsed since 00:00:00 on January 1,
+     * 1970.
      * NOTE: Currently, user data partitions are mounted in noatime mode by default, and atime update is disabled.
+     *
      */
     @!APILevel[
         since: "22",
@@ -129,6 +139,7 @@ public class Stat <: RemoteDataLite {
     /**
      * Time when the file content was last modified. The value is the number of seconds elapsed
      * since 00:00:00 on January 1, 1970.
+     *
      */
     @!APILevel[
         since: "22",
@@ -143,6 +154,7 @@ public class Stat <: RemoteDataLite {
     /**
      * Time when the file metadata was last modified. The value is the number of seconds elapsed
      * since 00:00:00 on January 1, 1970.
+     *
      */
     @!APILevel[
         since: "22",
@@ -155,7 +167,10 @@ public class Stat <: RemoteDataLite {
     }
 
     /**
-     * Checks whether this file is a block special file. A block special file supports access by block only, and it is cached when accessed.
+     * Checks whether this file is a block special file. A block special file supports access by block only, and it is
+     * cached when accessed.
+     *
+     * @returns { Bool } Returns true if the file is a block special file; returns false otherwise.
      */
     @!APILevel[
         since: "22",
@@ -166,7 +181,10 @@ public class Stat <: RemoteDataLite {
     }
 
     /**
-     * Checks whether this file is a character special file. A character special device supports random access, and it is not cached when accessed.
+     * Checks whether this file is a character special file. A character special device supports random access, and it
+     * is not cached when accessed.
+     *
+     * @returns { Bool } Returns true if the file is a character special file; returns false otherwise.
      */
     @!APILevel[
         since: "22",
@@ -178,6 +196,8 @@ public class Stat <: RemoteDataLite {
 
     /**
      * Checks whether this file is a directory.
+     *
+     * @returns { Bool } Returns true if the file is a directory; returns false otherwise.
      */
     @!APILevel[
         since: "22",
@@ -189,6 +209,8 @@ public class Stat <: RemoteDataLite {
 
     /**
      * Checks whether this file is a named pipe (or FIFO). Named pipes are used for inter-process communication.
+     *
+     * @returns { Bool } Returns true if the file is a named pipe; returns false otherwise.
      */
     @!APILevel[
         since: "22",
@@ -200,6 +222,8 @@ public class Stat <: RemoteDataLite {
 
     /**
      * Checks whether this file is a regular file.
+     *
+     * @returns { Bool } Returns true if the file is a regular file; returns false otherwise.
      */
     @!APILevel[
         since: "22",
@@ -211,6 +235,8 @@ public class Stat <: RemoteDataLite {
 
     /**
      * Checks whether this file is a socket.
+     *
+     * @returns { Bool } Returns true if the file is a socket; returns false otherwise.
      */
     @!APILevel[
         since: "22",
@@ -222,6 +248,8 @@ public class Stat <: RemoteDataLite {
 
     /**
      * Checks whether this file is a symbolic link.
+     *
+     * @returns { Bool } Returns true if the file is a symbolic link; returns false otherwise.
      */
     @!APILevel[
         since: "22",

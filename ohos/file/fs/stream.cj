@@ -25,6 +25,7 @@ import ohos.labels.*
 /**
  * Provides API for stream operations. Before calling any API of Stream,
  * you need to create a Stream instance by using createStream or fdopenStream.
+ *
  */
 @!APILevel[
     since: "22",
@@ -95,6 +96,9 @@ public class Stream <: RemoteDataLite {
     /**
      * Writes data to this stream.
      *
+     * @param { String } buffer - The data to write.
+     * @param { WriteOptions } options - The write options.
+     * @returns { Int64 } Returns the number of bytes written.
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900004 - Interrupted system call
      * @throws { BusinessException } 13900005 - I/O error
@@ -143,6 +147,9 @@ public class Stream <: RemoteDataLite {
     /**
      * Writes data to this stream.
      *
+     * @param { Array<Byte> } buffer - The data to write.
+     * @param { WriteOptions } options - The write options.
+     * @returns { Int64 } Returns the number of bytes written.
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900004 - Interrupted system call
      * @throws { BusinessException } 13900005 - I/O error
@@ -190,6 +197,9 @@ public class Stream <: RemoteDataLite {
     /**
      * Reads data from this stream.
      *
+     * @param { Array<Byte> } buffer - The buffer to store the read data.
+     * @param { ReadOptions } options - The read options.
+     * @returns { Int64 } Returns the number of bytes read.
      * @throws { BusinessException } 13900004 - Interrupted system call
      * @throws { BusinessException } 13900005 - I/O error
      * @throws { BusinessException } 13900008 - Bad file descriptor

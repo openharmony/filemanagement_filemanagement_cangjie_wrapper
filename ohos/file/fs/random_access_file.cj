@@ -24,6 +24,7 @@ import ohos.labels.*
 /**
  * Provides APIs for randomly reading and writing a stream. Before invoking any API of RandomAccessFile,
  * you need to use createRandomAccessFile() to create a RandomAccessFile instance.
+ *
  */
 @!APILevel[
     since: "22",
@@ -40,6 +41,7 @@ public class RandomAccessFile <: RemoteDataLite {
 
     /**
      * FD of the file.
+     *
      */
     @!APILevel[
         since: "22",
@@ -53,6 +55,7 @@ public class RandomAccessFile <: RemoteDataLite {
 
     /**
      * Offset pointer to the RandomAccessFile instance.
+     *
      */
     @!APILevel[
         since: "22",
@@ -66,6 +69,8 @@ public class RandomAccessFile <: RemoteDataLite {
 
     /**
      * Sets the file offset pointer.
+     *
+     * @param { Int64 } filePointer - The file offset pointer to set.
      */
     @!APILevel[
         since: "22",
@@ -78,6 +83,7 @@ public class RandomAccessFile <: RemoteDataLite {
 
     /**
      * Closes this RandomAccessFile instance.
+     *
      */
     @!APILevel[
         since: "22",
@@ -91,6 +97,9 @@ public class RandomAccessFile <: RemoteDataLite {
     /**
      * Write randomAccessFile.
      *
+     * @param { String } buffer - The data to write.
+     * @param { WriteOptions } options - The write options.
+     * @returns { Int64 } Returns the number of bytes written.
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900004 - Interrupted system call
      * @throws { BusinessException } 13900005 - I/O error
@@ -116,6 +125,9 @@ public class RandomAccessFile <: RemoteDataLite {
     /**
      * Write randomAccessFile.
      *
+     * @param { Array<Byte> } buffer - The data to write.
+     * @param { WriteOptions } options - The write options.
+     * @returns { Int64 } Returns the number of bytes written.
      * @throws { BusinessException } 13900001 - Operation not permitted
      * @throws { BusinessException } 13900004 - Interrupted system call
      * @throws { BusinessException } 13900005 - I/O error
@@ -155,6 +167,9 @@ public class RandomAccessFile <: RemoteDataLite {
     /**
      * Reads data from a file.
      *
+     * @param { Array<Byte> } buffer - The buffer to store the read data.
+     * @param { ReadOptions } options - The read options.
+     * @returns { Int64 } Returns the number of bytes read.
      * @throws { BusinessException } 13900004 - Interrupted system call
      * @throws { BusinessException } 13900005 - I/O error
      * @throws { BusinessException } 13900008 - Bad file descriptor
