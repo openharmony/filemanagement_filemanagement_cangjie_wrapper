@@ -180,7 +180,7 @@ public class FileUri <: Uri {
 /**
 * Get the uri from the path of file in app sandbox
 *
-* @throws { BusinessException } 401 - The input parameter is invalid.
+* @throws { BusinessException } 13900020 - Invalid argument.
 */
 @!APILevel[
     22,
@@ -189,7 +189,7 @@ public class FileUri <: Uri {
 public func getUriFromPath(path: String): String {
     if (path == "") {
         Hilog.error(0xD003900, "File-FileUir", "The input parameter is invalid")
-        throw BusinessException(ERR_PARAMETER_ERROR, "The input parameter is invalid")
+        throw BusinessException(13900020, "Invalid argument")
     }
     unsafe {
         let cPath = LibC.mallocCString(path)
