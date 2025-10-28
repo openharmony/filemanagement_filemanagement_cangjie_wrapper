@@ -17,9 +17,10 @@
 
 package ohos.file.fs
 
-import ohos.business_exception.*
-import ohos.ffi.*
-import ohos.hilog.*
+import ohos.business_exception.BusinessException
+import ohos.ffi.{RemoteDataLite, CArrString, RetDataCString, RetDataI64,
+    releaseFFIData, SUCCESS_CODE, toArrayCString, freeArrCString, safeMalloc}
+import ohos.hilog.HilogChannel
 import ohos.labels.APILevel
 
 let FS_LOG = HilogChannel(0, FILEIO_DOMAIN_ID, "CJ-fs")

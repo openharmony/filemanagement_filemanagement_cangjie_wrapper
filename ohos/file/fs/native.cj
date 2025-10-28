@@ -17,7 +17,7 @@
 
 package ohos.file.fs
 
-import ohos.ffi.*
+import ohos.ffi.{RetDataI64, RetDataCString, RetDataBool, RetCode}
 
 foreign {
     // Copy

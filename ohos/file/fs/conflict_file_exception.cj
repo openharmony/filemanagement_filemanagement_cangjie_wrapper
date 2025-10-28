@@ -17,9 +17,7 @@
 
 package ohos.file.fs
 
-import ohos.business_exception.*
-import ohos.labels.*
-import std.collection.*
+import std.collection.HashMap
 
 const FILEIO_DOMAIN_ID = 0xD004388u32
 const FILEIO_INVALID_ARGUMENT = 13900020i32
