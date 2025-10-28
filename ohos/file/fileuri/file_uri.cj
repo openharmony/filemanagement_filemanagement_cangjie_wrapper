@@ -51,6 +51,7 @@ public open class Uri <: RemoteDataLite & ToString {
 
     /**
      * Gets/Sets the path portion of the URI.
+     * @throws { BusinessException } 13900031 - The prop is not supported.
      */
     @!APILevel[
         22,
@@ -58,19 +59,20 @@ public open class Uri <: RemoteDataLite & ToString {
     ]
     public open prop path: String {
         get() {
-            throw IllegalArgumentException("The prop is not supported.")
+            throw BusinessException(13900031, "The prop is not supported.")
         }
     }
 
     /**
      * Converts this URI into an encoded string.
+     * @throws { BusinessException } 13900031 - The function is not supported.
      */
     @!APILevel[
         22,
         syscap: "SystemCapability.FileManagement.AppFileService"
     ]
     public open func toString(): String {
-        throw IllegalArgumentException("The function is not supported.")
+        throw BusinessException(13900031, "The function is not supported.")
     }
 }
 
