@@ -1024,6 +1024,7 @@ public class FileIo {
      * @throws { BusinessException } 13900038 - Value too large for defined data type
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
+     * @throws { BusinessException } 13900044 - Network is unreachable
      */
     @!APILevel[
         22,
