@@ -17,9 +17,10 @@
 
 package ohos.file.fs
 
-import ohos.business_exception.*
-import ohos.ffi.*
-import ohos.hilog.*
+import ohos.business_exception.BusinessException
+import ohos.ffi.{RemoteDataLite, CArrString, RetDataCString, RetDataI64,
+    releaseFFIData, SUCCESS_CODE, toArrayCString, freeArrCString, safeMalloc}
+import ohos.hilog.HilogChannel
 import ohos.labels.APILevel
 
 let FS_LOG = HilogChannel(0, FILEIO_DOMAIN_ID, "CJ-fs")
@@ -1024,6 +1025,7 @@ public class FileIo {
      * @throws { BusinessException } 13900038 - Value too large for defined data type
      * @throws { BusinessException } 13900041 - Quota exceeded
      * @throws { BusinessException } 13900042 - Unknown error
+     * @throws { BusinessException } 13900044 - Network is unreachable
      */
     @!APILevel[
         since: "22",

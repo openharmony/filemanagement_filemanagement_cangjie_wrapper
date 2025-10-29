@@ -17,8 +17,8 @@
 
 package ohos.file.fs
 
-import ohos.ffi.*
-import ohos.labels.*
+import ohos.ffi.{RemoteDataLite, releaseFFIData}
+import ohos.labels.APILevel
 
 /**
  * Represents detailed file information. Before calling any API of the Stat() class,

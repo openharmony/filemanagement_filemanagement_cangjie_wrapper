@@ -17,9 +17,9 @@
 
 package ohos.file.fs
 
-import ohos.ffi.*
-import ohos.business_exception.*
-import ohos.labels.*
+import ohos.ffi.{RemoteDataLite, releaseFFIData, RetDataCString, SUCCESS_CODE}
+import ohos.business_exception.BusinessException
+import ohos.labels.APILevel
 
 /**
  * File object.

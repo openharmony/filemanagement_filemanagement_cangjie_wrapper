@@ -17,9 +17,9 @@
 
 package ohos.file.fs
 
-import ohos.ffi.*
-import ohos.business_exception.*
-import ohos.labels.*
+import ohos.ffi.{RemoteDataLite, releaseFFIData, RetDataI64, SUCCESS_CODE, safeMalloc}
+import ohos.business_exception.BusinessException
+import ohos.labels.APILevel
 
 /**
  * Provides APIs for randomly reading and writing a stream. Before invoking any API of RandomAccessFile,

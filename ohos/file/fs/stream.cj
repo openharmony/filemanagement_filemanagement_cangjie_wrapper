@@ -17,10 +17,10 @@
 
 package ohos.file.fs
 
-import ohos.hilog.*
-import ohos.ffi.*
-import ohos.business_exception.*
-import ohos.labels.*
+import ohos.ffi.{RemoteDataLite, releaseFFIData, SUCCESS_CODE, safeMalloc}
+import ohos.hilog.Hilog
+import ohos.business_exception.BusinessException
+import ohos.labels.APILevel
 
 /**
  * Provides API for stream operations. Before calling any API of Stream,
