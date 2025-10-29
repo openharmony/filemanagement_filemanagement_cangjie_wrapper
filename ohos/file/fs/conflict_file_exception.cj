@@ -64,7 +64,8 @@ let ERROR_CODE_MAP: HashMap<Int32, String> = HashMap<Int32, String>(
     (13900039, "File descriptor in bad state"),
     (13900040, "Interrupted system call should be restarted"),
     (13900041, "Quota exceeded"),
-    (13900042, "Unknown error")
+    (13900042, "Unknown error"),
+    (13900044, "Network is unreachable")
 )
 
 func getErrorInfo(code: Int32): String {
