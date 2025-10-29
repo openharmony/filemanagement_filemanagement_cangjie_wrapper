@@ -17,10 +17,10 @@
 
 package ohos.file.fileuri
 
-import ohos.ffi.*
-import ohos.hilog.*
-import ohos.business_exception.*
-import ohos.labels.*
+import ohos.ffi.{RemoteDataLite, releaseFFIData}
+import ohos.hilog.Hilog
+import ohos.business_exception.BusinessException
+import ohos.labels.APILevel
 
 foreign func FfiOHOSFILEUriCreateUri(uriOrPath: CString): Int64
 
