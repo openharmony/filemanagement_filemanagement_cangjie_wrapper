@@ -61,7 +61,7 @@ class Test_fileUri {
             let uri_exception = getUriFromPath("")
             @Expect(false)
         } catch (e: BusinessException) {
-            @Expect(e.code, 401)
+            @Expect(e.code, 13900020)
         }
         Hilog.info(0, "test_fileUri", "${fUri.toString()}")
     }
