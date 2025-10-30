@@ -26,7 +26,7 @@ import ohos.labels.APILevel
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class File <: RemoteDataLite {
@@ -43,7 +43,7 @@ public class File <: RemoteDataLite {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop fd: Int32 {
@@ -57,7 +57,7 @@ public class File <: RemoteDataLite {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop path: String {
@@ -74,7 +74,7 @@ public class File <: RemoteDataLite {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop name: String {
@@ -98,7 +98,7 @@ public class File <: RemoteDataLite {
      * @throws { BusinessException } 13900043 - No record locks available
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func tryLock(exclusive!: Bool = false): Unit {
@@ -120,7 +120,7 @@ public class File <: RemoteDataLite {
      * @throws { BusinessException } 13900043 - No record locks available
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func unlock(): Unit {
@@ -140,7 +140,7 @@ public class File <: RemoteDataLite {
      * @throws { BusinessException } 14300002 - Invalid URI
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func getParent(): String {

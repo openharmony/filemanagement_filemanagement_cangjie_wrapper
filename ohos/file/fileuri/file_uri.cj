@@ -40,7 +40,7 @@ class UriImpl {
  * URI Represents a Uniform Resource Identifier (URI) reference.
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.AppFileService"
 ]
 public open class Uri <: RemoteDataLite & ToString {
@@ -54,7 +54,7 @@ public open class Uri <: RemoteDataLite & ToString {
      * @throws { BusinessException } 13900031 - The prop is not supported.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.AppFileService"
     ]
     public open prop path: String {
@@ -68,7 +68,7 @@ public open class Uri <: RemoteDataLite & ToString {
      * @throws { BusinessException } 13900031 - The function is not supported.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.AppFileService"
     ]
     public open func toString(): String {
@@ -80,7 +80,7 @@ public open class Uri <: RemoteDataLite & ToString {
 * FileUri represents the uri of the file.
 */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.AppFileService"
 ]
 public class FileUri <: Uri {
@@ -96,7 +96,7 @@ public class FileUri <: Uri {
      * @throws { BusinessException } 14300002 - Invalid uri
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.AppFileService"
     ]
     public init(uriOrPath: String) {
@@ -125,7 +125,7 @@ public class FileUri <: Uri {
      * Obtains the file path of uri.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.AppFileService"
     ]
     public override prop path: String {
@@ -146,7 +146,7 @@ public class FileUri <: Uri {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.AppFileService"
     ]
     public prop name: String {
@@ -166,7 +166,7 @@ public class FileUri <: Uri {
      * @returns { String } Return the file uri string
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.AppFileService"
     ]
     public override func toString(): String {
@@ -185,7 +185,7 @@ public class FileUri <: Uri {
 * @throws { BusinessException } 13900020 - Invalid argument.
 */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.AppFileService"
 ]
 public func getUriFromPath(path: String): String {

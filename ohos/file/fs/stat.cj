@@ -26,7 +26,7 @@ import ohos.labels.APILevel
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class Stat <: RemoteDataLite {
@@ -43,7 +43,7 @@ public class Stat <: RemoteDataLite {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop ino: Int64 {
@@ -69,7 +69,7 @@ public class Stat <: RemoteDataLite {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop mode: Int64 {
@@ -83,7 +83,7 @@ public class Stat <: RemoteDataLite {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop uid: Int64 {
@@ -97,7 +97,7 @@ public class Stat <: RemoteDataLite {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop gid: Int64 {
@@ -111,7 +111,7 @@ public class Stat <: RemoteDataLite {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop size: Int64 {
@@ -127,7 +127,7 @@ public class Stat <: RemoteDataLite {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop atime: Int64 {
@@ -142,7 +142,7 @@ public class Stat <: RemoteDataLite {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop mtime: Int64 {
@@ -157,7 +157,7 @@ public class Stat <: RemoteDataLite {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop ctime: Int64 {
@@ -173,7 +173,7 @@ public class Stat <: RemoteDataLite {
      * @returns { Bool } Returns true if the file is a block special file; returns false otherwise.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func isBlockDevice(): Bool {
@@ -187,7 +187,7 @@ public class Stat <: RemoteDataLite {
      * @returns { Bool } Returns true if the file is a character special file; returns false otherwise.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func isCharacterDevice(): Bool {
@@ -200,7 +200,7 @@ public class Stat <: RemoteDataLite {
      * @returns { Bool } Returns true if the file is a directory; returns false otherwise.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func isDirectory(): Bool {
@@ -213,7 +213,7 @@ public class Stat <: RemoteDataLite {
      * @returns { Bool } Returns true if the file is a named pipe; returns false otherwise.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func isFIFO(): Bool {
@@ -226,7 +226,7 @@ public class Stat <: RemoteDataLite {
      * @returns { Bool } Returns true if the file is a regular file; returns false otherwise.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func isFile(): Bool {
@@ -239,7 +239,7 @@ public class Stat <: RemoteDataLite {
      * @returns { Bool } Returns true if the file is a socket; returns false otherwise.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func isSocket(): Bool {
@@ -252,7 +252,7 @@ public class Stat <: RemoteDataLite {
      * @returns { Bool } Returns true if the file is a symbolic link; returns false otherwise.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func isSymbolicLink(): Bool {

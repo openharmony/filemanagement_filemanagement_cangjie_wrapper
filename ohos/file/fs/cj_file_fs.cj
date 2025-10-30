@@ -38,7 +38,7 @@ class ReadOptionsImpl {
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class RandomAccessFileOptions {
@@ -48,7 +48,7 @@ public class RandomAccessFileOptions {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var start: Option<Int64>
@@ -57,7 +57,7 @@ public class RandomAccessFileOptions {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var end: Option<Int64>
@@ -65,7 +65,7 @@ public class RandomAccessFileOptions {
      * RandomAccessFileOptions constructor.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public init(
@@ -82,7 +82,7 @@ public class RandomAccessFileOptions {
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class OpenMode {
@@ -93,7 +93,7 @@ public class OpenMode {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static const READ_ONLY: Int64 = 0o0
@@ -103,7 +103,7 @@ public class OpenMode {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static const WRITE_ONLY: Int64 = 0o1
@@ -113,7 +113,7 @@ public class OpenMode {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static const READ_WRITE: Int64 = 0o2
@@ -123,7 +123,7 @@ public class OpenMode {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static const CREATE: Int64 = 0o100
@@ -133,7 +133,7 @@ public class OpenMode {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static const TRUNC: Int64 = 0o1000
@@ -143,7 +143,7 @@ public class OpenMode {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static const APPEND: Int64 = 0o2000
@@ -153,7 +153,7 @@ public class OpenMode {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static const NONBLOCK: Int64 = 0o4000
@@ -163,7 +163,7 @@ public class OpenMode {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static const DIR: Int64 = 0o200000
@@ -173,7 +173,7 @@ public class OpenMode {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static const NOFOLLOW: Int64 = 0o400000
@@ -183,7 +183,7 @@ public class OpenMode {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static const SYNC: Int64 = 0o4010000
@@ -194,7 +194,7 @@ public class OpenMode {
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public open class Options {
@@ -203,7 +203,7 @@ public open class Options {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var encoding: String
@@ -213,7 +213,7 @@ public open class Options {
      * Options constructor.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public init(
@@ -228,7 +228,7 @@ public open class Options {
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class ReaderIterator <: RemoteDataLite {
@@ -249,7 +249,7 @@ public class ReaderIterator <: RemoteDataLite {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func next(): ReaderIteratorResult {
@@ -269,7 +269,7 @@ public class ReaderIterator <: RemoteDataLite {
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class ReaderIteratorResult {
@@ -279,7 +279,7 @@ public class ReaderIteratorResult {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var done: Bool
@@ -288,7 +288,7 @@ public class ReaderIteratorResult {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var value: String
@@ -316,7 +316,7 @@ struct RetReaderIteratorResult {
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class WriteOptions <: Options {
@@ -325,7 +325,7 @@ public class WriteOptions <: Options {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var length: Option<UIntNative>
@@ -334,7 +334,7 @@ public class WriteOptions <: Options {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var offset: Option<Int64>
@@ -343,7 +343,7 @@ public class WriteOptions <: Options {
      * WriteOptions constructor.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public init(
@@ -362,7 +362,7 @@ public class WriteOptions <: Options {
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public open class ReadOptions {
@@ -371,7 +371,7 @@ public open class ReadOptions {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var offset: Option<Int64>
@@ -380,7 +380,7 @@ public open class ReadOptions {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var length: Option<UIntNative>
@@ -389,7 +389,7 @@ public open class ReadOptions {
      * ReadOptions constructor.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public init(
@@ -406,7 +406,7 @@ public open class ReadOptions {
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class ReadTextOptions <: ReadOptions {
@@ -415,7 +415,7 @@ public class ReadTextOptions <: ReadOptions {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var encoding: String
@@ -424,7 +424,7 @@ public class ReadTextOptions <: ReadOptions {
      * ReadTextOptions constructor.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public init(
@@ -442,7 +442,7 @@ public class ReadTextOptions <: ReadOptions {
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public enum AccessModeType {
@@ -451,7 +451,7 @@ public enum AccessModeType {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     Exist
@@ -461,7 +461,7 @@ public enum AccessModeType {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     Write
@@ -471,7 +471,7 @@ public enum AccessModeType {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     Read
@@ -481,7 +481,7 @@ public enum AccessModeType {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     ReadWrite
@@ -503,7 +503,7 @@ public enum AccessModeType {
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public enum AccessFlagType {
@@ -512,7 +512,7 @@ public enum AccessFlagType {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     Local | ...
@@ -530,7 +530,7 @@ public enum AccessFlagType {
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public enum WhenceType {
@@ -539,7 +539,7 @@ public enum WhenceType {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     SeekSet
@@ -549,7 +549,7 @@ public enum WhenceType {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     SeekCur
@@ -559,7 +559,7 @@ public enum WhenceType {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     SeekEnd
@@ -582,7 +582,7 @@ public enum WhenceType {
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class ConflictFiles {
@@ -591,7 +591,7 @@ public class ConflictFiles {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var srcFile: String
@@ -600,7 +600,7 @@ public class ConflictFiles {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var destFile: String
@@ -678,7 +678,7 @@ struct RetDataCArrStringN {
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class Filter {
@@ -687,7 +687,7 @@ public class Filter {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var suffix: Array<String>
@@ -697,7 +697,7 @@ public class Filter {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var displayName: Array<String>
@@ -706,7 +706,7 @@ public class Filter {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var mimeType: Array<String>
@@ -715,7 +715,7 @@ public class Filter {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var fileSizeOver: ?Int64
@@ -724,7 +724,7 @@ public class Filter {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var lastModifiedAfter: ?Float64
@@ -734,7 +734,7 @@ public class Filter {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var excludeMedia: Bool
@@ -745,7 +745,7 @@ public class Filter {
      * @throws { BusinessException } 13900020 - Invalid argument
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public init(
@@ -817,7 +817,7 @@ struct CFilter {
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class ListFileOptions {
@@ -829,7 +829,7 @@ public class ListFileOptions {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var recursion: Bool
@@ -838,7 +838,7 @@ public class ListFileOptions {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var listNum: Int32
@@ -847,7 +847,7 @@ public class ListFileOptions {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var filter: Filter
@@ -856,7 +856,7 @@ public class ListFileOptions {
      * ListFileOptions constructor.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public init(
@@ -909,7 +909,7 @@ unsafe func getArrStringAndFree(cArr: CArrString): Array<String> {
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class FileIo {
@@ -935,7 +935,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func stat(file: Int32): Stat {
@@ -970,7 +970,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func stat(file: String): Stat {
@@ -1028,7 +1028,7 @@ public class FileIo {
      * @throws { BusinessException } 13900044 - Network is unreachable
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func createStream(path: String, mode: String): Stream {
@@ -1093,7 +1093,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func fdopenStream(fd: Int32, mode: String): Stream {
@@ -1128,7 +1128,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func lstat(path: String): Stat {
@@ -1168,7 +1168,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func access(path: String, mode!: AccessModeType = AccessModeType.Exist,
@@ -1221,7 +1221,7 @@ public class FileIo {
      * @throws { BusinessException } 13900044 - Network is unreachable
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func open(path: String, mode!: Int64 = OpenMode.READ_ONLY): File {
@@ -1251,7 +1251,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func dup(fd: Int32): File {
@@ -1284,7 +1284,7 @@ public class FileIo {
      * @throws { BusinessException } 13900044 - Network is unreachable
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func read(fd: Int32, buffer: Array<Byte>, options!: ReadOptions = ReadOptions()): Int64 {
@@ -1334,7 +1334,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func write(fd: Int32, buffer: Array<Byte>, options!: WriteOptions = WriteOptions()): Int64 {
@@ -1384,7 +1384,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func write(fd: Int32, buffer: String, options!: WriteOptions = WriteOptions()): Int64 {
@@ -1435,7 +1435,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func mkdir(path: String): Unit {
@@ -1471,7 +1471,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func mkdir(path: String, recursion: Bool): Unit {
@@ -1503,7 +1503,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func rmdir(path: String): Unit {
@@ -1561,7 +1561,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func moveDir(src: String, dest: String, mode!: Int32 = 0): Unit {
@@ -1609,7 +1609,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func rename(oldPath: String, newPath: String): Unit {
@@ -1648,7 +1648,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func unlink(path: String): Unit {
@@ -1699,7 +1699,7 @@ public class FileIo {
      * @throws { BusinessException } 13900044 - Network is unreachable
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func createRandomAccessFile(file: String, mode!: Int64 = OpenMode.READ_ONLY,
@@ -1759,7 +1759,7 @@ public class FileIo {
      * @throws { BusinessException } 13900044 - Network is unreachable
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func createRandomAccessFile(file: File, mode!: Int64 = OpenMode.READ_ONLY,
@@ -1818,7 +1818,7 @@ public class FileIo {
      * @throws { BusinessException } 13900044 - Network is unreachable
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func copyDir(src: String, dest: String, mode!: Int32 = 0): Unit {
@@ -1879,7 +1879,7 @@ public class FileIo {
      * @throws { BusinessException } 13900044 - Network is unreachable
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func copyFile(src: String, dest: String, mode!: Int32 = 0): Unit {
@@ -1925,7 +1925,7 @@ public class FileIo {
      * @throws { BusinessException } 13900044 - Network is unreachable
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func copyFile(src: String, dest: Int32, mode!: Int32 = 0): Unit {
@@ -1969,7 +1969,7 @@ public class FileIo {
      * @throws { BusinessException } 13900044 - Network is unreachable
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func copyFile(src: Int32, dest: String, mode!: Int32 = 0): Unit {
@@ -2013,7 +2013,7 @@ public class FileIo {
      * @throws { BusinessException } 13900044 - Network is unreachable
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func copyFile(src: Int32, dest: Int32, mode!: Int32 = 0): Unit {
@@ -2056,7 +2056,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func moveFile(src: String, dest: String, mode!: Int32 = 0): Unit {
@@ -2107,7 +2107,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func mkdtemp(prefix: String): String {
@@ -2149,7 +2149,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func truncate(file: String, len!: Int64 = 0): Unit {
@@ -2189,7 +2189,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func truncate(file: Int32, len!: Int64 = 0): Unit {
@@ -2213,7 +2213,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func close(file: Int32): Unit {
@@ -2237,7 +2237,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func close(file: File): Unit {
@@ -2280,7 +2280,7 @@ public class FileIo {
      * @throws { BusinessException } 13900044 - Network is unreachable
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func readLines(filePath: String, options!: Options = Options()): ReaderIterator {
@@ -2315,7 +2315,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func lseek(fd: Int32, offset: Int64, whence!: WhenceType = SeekSet): Int64 {
@@ -2343,7 +2343,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func fdatasync(fd: Int32): Unit {
@@ -2370,7 +2370,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func fsync(fd: Int32): Unit {
@@ -2397,7 +2397,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func listFile(path: String, options!: ListFileOptions = ListFileOptions()): Array<String> {
@@ -2439,7 +2439,7 @@ public class FileIo {
      * @throws { BusinessException } 13900044 - Network is unreachable
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func readText(filePath: String, options!: ReadTextOptions = ReadTextOptions()): String {
@@ -2485,7 +2485,7 @@ public class FileIo {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public static func utimes(path: String, mtime: Float64): Unit {

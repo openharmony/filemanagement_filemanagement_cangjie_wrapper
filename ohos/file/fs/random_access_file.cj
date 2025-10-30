@@ -27,7 +27,7 @@ import ohos.labels.APILevel
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class RandomAccessFile <: RemoteDataLite {
@@ -44,7 +44,7 @@ public class RandomAccessFile <: RemoteDataLite {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop fd: Int32 {
@@ -58,7 +58,7 @@ public class RandomAccessFile <: RemoteDataLite {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public prop filePointer: Int64 {
@@ -73,7 +73,7 @@ public class RandomAccessFile <: RemoteDataLite {
      * @param { Int64 } filePointer - The file offset pointer to set.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func setFilePointer(filePointer: Int64): Unit {
@@ -86,7 +86,7 @@ public class RandomAccessFile <: RemoteDataLite {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func close(): Unit {
@@ -114,7 +114,7 @@ public class RandomAccessFile <: RemoteDataLite {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func write(buffer: String, options!: WriteOptions = WriteOptions()): Int64 {
@@ -142,7 +142,7 @@ public class RandomAccessFile <: RemoteDataLite {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func write(buffer: Array<Byte>, options!: WriteOptions = WriteOptions()): Int64 {
@@ -182,7 +182,7 @@ public class RandomAccessFile <: RemoteDataLite {
      * @throws { BusinessException } 13900044 - Network is unreachable
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func read(buffer: Array<Byte>, options!: ReadOptions = ReadOptions()): Int64 {

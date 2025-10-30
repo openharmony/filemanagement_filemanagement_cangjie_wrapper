@@ -28,7 +28,7 @@ import ohos.labels.APILevel
  *
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.FileManagement.File.FileIO"
 ]
 public class Stream <: RemoteDataLite {
@@ -51,7 +51,7 @@ public class Stream <: RemoteDataLite {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func close(): Unit {
@@ -81,7 +81,7 @@ public class Stream <: RemoteDataLite {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func flush(): Unit {
@@ -113,7 +113,7 @@ public class Stream <: RemoteDataLite {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func write(buffer: String, options!: WriteOptions = WriteOptions()): Int64 {
@@ -164,7 +164,7 @@ public class Stream <: RemoteDataLite {
      * @throws { BusinessException } 13900042 - Unknown error
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func write(buffer: Array<Byte>, options!: WriteOptions = WriteOptions()): Int64 {
@@ -212,7 +212,7 @@ public class Stream <: RemoteDataLite {
      * @throws { BusinessException } 13900044 - Network is unreachable
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func read(buffer: Array<Byte>, options!: ReadOptions = ReadOptions()): Int64 {
