@@ -321,15 +321,6 @@ struct RetReaderIteratorResult {
 ]
 public class WriteOptions <: Options {
     /**
-     * Length of the data to write, in bytes.
-     *
-     */
-    @!APILevel[
-        since: "22",
-        syscap: "SystemCapability.FileManagement.File.FileIO"
-    ]
-    public var length: Option<UIntNative>
-    /**
      * Start position of the file to write (current filePointer plus offset), in bytes.
      *
      */
@@ -338,6 +329,16 @@ public class WriteOptions <: Options {
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public var offset: Option<Int64>
+
+    /**
+     * Length of the data to write, in bytes.
+     *
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
+    public var length: Option<UIntNative>
 
     /**
      * WriteOptions constructor.
