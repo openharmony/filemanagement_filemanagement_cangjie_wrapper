@@ -769,6 +769,9 @@ public class Filter {
         this.excludeMedia = excludeMedia
     }
 
+    /**
+    * @throws { BusinessException } 13900011 - Out of memory.
+    */
     func toCFilter(): CFilter {
         var cFilter = CFilter(
             CArrString(CPointer<CString>(), 0),
@@ -787,7 +790,7 @@ public class Filter {
             }
         } catch (e: Exception) {
             cFilter.free()
-            throw e
+            throw BusinessException(13900011, getErrorInfo(13900011))
         }
         return cFilter
     }
