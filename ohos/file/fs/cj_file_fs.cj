@@ -2123,7 +2123,7 @@ public class FileIo {
             throw BusinessException(cValue.code, getErrorInfo(cValue.code))
         }
         let ret = cValue.data.toString()
-        unsafe { LibC.free(cValue.data) }
+        unsafe { FfiOHOSFileFsReleaseCString(cValue.data) }
         return ret
     }
 

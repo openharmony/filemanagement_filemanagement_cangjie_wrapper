@@ -174,4 +174,6 @@ foreign {
     func FfiOHOSFileFsReadText(path: CString, offset: Int64, hasLen: Bool, len: Int64, encoding: CString): RetDataCString
 
     func FfiOHOSFileFsUtimes(path: CString, mtime: Float64): Int32
+
+    func FfiOHOSFileFsReleaseCString(str: CString): Unit
 }
