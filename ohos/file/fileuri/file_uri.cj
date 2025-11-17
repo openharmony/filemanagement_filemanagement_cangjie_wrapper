@@ -51,7 +51,6 @@ public open class Uri <: RemoteDataLite & ToString {
 
     /**
      * Gets/Sets the path portion of the URI.
-     * @throws { BusinessException } 13900031 - The prop is not supported.
      */
     @!APILevel[
         since: "22",
@@ -65,7 +64,8 @@ public open class Uri <: RemoteDataLite & ToString {
 
     /**
      * Converts this URI into an encoded string.
-     * @throws { BusinessException } 13900031 - The function is not supported.
+     *
+     * @returns { String } URI in a serialized string.
      */
     @!APILevel[
         since: "22",
@@ -131,8 +131,8 @@ public open class Uri <: RemoteDataLite & ToString {
 }
 
 /**
-* FileUri represents the uri of the file.
-*/
+ * FileUri represents the uri of the file.
+ */
 @!APILevel[
     since: "22",
     syscap: "SystemCapability.FileManagement.AppFileService"
@@ -144,14 +144,15 @@ public class FileUri <: Uri {
      *
      * @param { String } uriOrPath - Uri or Path.
      * @throws { BusinessException } 13900005 - I/O error
-     * @throws {BusinessException} 13900011 - Out of memory
+     * @throws { BusinessException } 13900011 - Out of memory
      * @throws { BusinessException } 13900020 - Invalid argument
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 14300002 - Invalid uri
      */
     @!APILevel[
         since: "22",
-        syscap: "SystemCapability.FileManagement.AppFileService"
+        syscap: "SystemCapability.FileManagement.AppFileService",
+        throwexception: true
     ]
     public init(uriOrPath: String) {
         super(
@@ -176,7 +177,7 @@ public class FileUri <: Uri {
     }
 
     /**
-     * Obtains the file path of uri.
+     * Gets/Sets the path portion of the URI.
      */
     @!APILevel[
         since: "22",
@@ -201,7 +202,8 @@ public class FileUri <: Uri {
      */
     @!APILevel[
         since: "22",
-        syscap: "SystemCapability.FileManagement.AppFileService"
+        syscap: "SystemCapability.FileManagement.AppFileService",
+        throwexception: true
     ]
     public prop name: String {
         get() {
@@ -215,7 +217,7 @@ public class FileUri <: Uri {
     }
 
     /**
-     * Get the uri string
+     * Converts this URI into an encoded string.
      *
      * @returns { String } Return the file uri string
      */
@@ -234,13 +236,16 @@ public class FileUri <: Uri {
 }
 
 /**
-* Get the uri from the path of file in app sandbox
-*
-* @throws { BusinessException } 13900020 - Invalid argument.
-*/
+ * Get the uri from the path of file in app sandbox
+ *
+ * @param { String } path - the path of file in app sandbox
+ * @returns { String } Return the file uri
+ * @throws { BusinessException } 13900020 - Invalid argument.
+ */
 @!APILevel[
     since: "22",
-    syscap: "SystemCapability.FileManagement.AppFileService"
+    syscap: "SystemCapability.FileManagement.AppFileService",
+    throwexception: true
 ]
 public func getUriFromPath(path: String): String {
     if (path == "") {

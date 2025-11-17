@@ -22,8 +22,7 @@ import ohos.business_exception.BusinessException
 import ohos.labels.APILevel
 
 /**
- * File object.
- *
+ * Represents a File object opened by open().
  */
 @!APILevel[
     since: "22",
@@ -40,7 +39,6 @@ public class File <: RemoteDataLite {
 
     /**
      * FD of the file.
-     *
      */
     @!APILevel[
         since: "22",
@@ -54,7 +52,6 @@ public class File <: RemoteDataLite {
 
     /**
      * Path of the file.
-     *
      */
     @!APILevel[
         since: "22",
@@ -71,7 +68,6 @@ public class File <: RemoteDataLite {
 
     /**
      * Name of the file.
-     *
      */
     @!APILevel[
         since: "22",
@@ -89,7 +85,8 @@ public class File <: RemoteDataLite {
     /**
      * Applies an exclusive lock or a shared lock on this file in non-blocking mode.
      *
-     * @param { Bool } exclusive - Indicates whether to apply an exclusive lock. Default is false (shared lock).
+     * @param { Bool } [exclusive] - Lock to apply. The value true means an exclusive lock,
+     * and the value false (default) means a shared lock.
      * @throws { BusinessException } 13900004 - Interrupted system call
      * @throws { BusinessException } 13900008 - Bad file descriptor
      * @throws { BusinessException } 13900020 - Invalid argument
@@ -99,7 +96,8 @@ public class File <: RemoteDataLite {
      */
     @!APILevel[
         since: "22",
-        syscap: "SystemCapability.FileManagement.File.FileIO"
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true
     ]
     public func tryLock(exclusive!: Bool = false): Unit {
         let code = unsafe { FfiOHOSFILEFsTryLock(getID(), exclusive) }
@@ -121,7 +119,8 @@ public class File <: RemoteDataLite {
      */
     @!APILevel[
         since: "22",
-        syscap: "SystemCapability.FileManagement.File.FileIO"
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true
     ]
     public func unlock(): Unit {
         let code = unsafe { FfiOHOSFILEFsUnLock(getID()) }
@@ -134,14 +133,15 @@ public class File <: RemoteDataLite {
     /**
      * Obtains the parent directory of this file object.
      *
-     * @returns { String } Returns the parent directory path of the file.
+     * @returns { String } Parent directory obtained.
      * @throws { BusinessException } 13900005 - I/O error
      * @throws { BusinessException } 13900042 - Unknown error
      * @throws { BusinessException } 14300002 - Invalid URI
      */
     @!APILevel[
         since: "22",
-        syscap: "SystemCapability.FileManagement.File.FileIO"
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true
     ]
     public func getParent(): String {
         let ret: RetDataCString
