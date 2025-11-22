@@ -1,0 +1,28 @@
+# Copyright (c) 2025 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/templates/cangjie/cjc.gni")
+
+filemanagement_cangjie_wrapper_packages_ohos = [
+    "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file:ohos.file",
+    "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file/fileuri:ohos.file.fileuri",
+    "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file/fs:ohos.file.fs"
+]
+filemanagement_cangjie_wrapper_packages_kit = [
+    "//foundation/filemanagement/filemanagement_cangjie_wrapper/kit/CoreFileKit:kit.CoreFileKit",
+]
+
+copy_ohos_cangjie_sdk_api_lib("copy_sdk_filemanagement_cangjie_libs") {
+  ohos_inputs = filemanagement_cangjie_wrapper_packages_ohos
+  kit_inputs = filemanagement_cangjie_wrapper_packages_kit
+}
