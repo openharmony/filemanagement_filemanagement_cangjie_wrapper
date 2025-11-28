@@ -12,10 +12,7 @@
     "component": {
         "name": "filemanagement_cangjie_wrapper",
         "subsystem": "filemanagement",
-        "syscap": [
-            "SystemCapability.FileManagement.File.FileIO",
-            "SystemCapability.FileManagement.AppFileService"
-        ],
+        "syscap": [],
         "features": [],
         "adapted_system_type": [
             "standard"
