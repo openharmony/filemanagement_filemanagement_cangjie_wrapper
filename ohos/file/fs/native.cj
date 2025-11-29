@@ -48,19 +48,19 @@ foreign {
 
     func FfiOHOSStatGetCtime(id: Int64): Int64
 
-    func FfiOHOSStatIsBlockDevice(id: Int64): Bool
+    func FfiOHOSStatIsBlockDeviceV2(id: Int64): RetDataBool
 
-    func FfiOHOSStatIsCharacterDevice(id: Int64): Bool
+    func FfiOHOSStatIsCharacterDeviceV2(id: Int64): RetDataBool
 
-    func FfiOHOSStatIsDirectory(id: Int64): Bool
+    func FfiOHOSStatIsDirectoryV2(id: Int64): RetDataBool
 
-    func FfiOHOSStatIsFIFO(id: Int64): Bool
+    func FfiOHOSStatIsFIFOV2(id: Int64): RetDataBool
 
-    func FfiOHOSStatIsFile(id: Int64): Bool
+    func FfiOHOSStatIsFileV2(id: Int64): RetDataBool
 
-    func FfiOHOSStatIsSocket(id: Int64): Bool
+    func FfiOHOSStatIsSocketV2(id: Int64): RetDataBool
 
-    func FfiOHOSStatIsSymbolicLink(id: Int64): Bool
+    func FfiOHOSStatIsSymbolicLinkV2(id: Int64): RetDataBool
 
     // Stream
     func FfiOHOSFileFsCreateStream(path: CString, mode: CString): RetDataI64

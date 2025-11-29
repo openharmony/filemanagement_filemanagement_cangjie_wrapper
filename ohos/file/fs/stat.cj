@@ -17,7 +17,7 @@
 
 package ohos.file.fs
 
-import ohos.ffi.{RemoteDataLite, releaseFFIData}
+import ohos.ffi.{RemoteDataLite, releaseFFIData, SUCCESS_CODE}
 import ohos.labels.APILevel
 
 /**
@@ -168,7 +168,12 @@ public class Stat <: RemoteDataLite {
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func isBlockDevice(): Bool {
-        unsafe { FfiOHOSStatIsBlockDevice(getID()) }
+        let ret = unsafe { FfiOHOSStatIsBlockDeviceV2(getID()) }
+        if (ret.code != SUCCESS_CODE) {
+            FS_LOG.error(getErrorInfo(ret.code))
+            return false
+        }
+        return ret.data
     }
 
     /**
@@ -182,7 +187,12 @@ public class Stat <: RemoteDataLite {
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func isCharacterDevice(): Bool {
-        unsafe { FfiOHOSStatIsCharacterDevice(getID()) }
+        let ret = unsafe { FfiOHOSStatIsCharacterDeviceV2(getID()) }
+        if (ret.code != SUCCESS_CODE) {
+            FS_LOG.error(getErrorInfo(ret.code))
+            return false
+        }
+        return ret.data
     }
 
     /**
@@ -195,7 +205,12 @@ public class Stat <: RemoteDataLite {
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func isDirectory(): Bool {
-        unsafe { FfiOHOSStatIsDirectory(getID()) }
+        let ret = unsafe { FfiOHOSStatIsDirectoryV2(getID()) }
+        if (ret.code != SUCCESS_CODE) {
+            FS_LOG.error(getErrorInfo(ret.code))
+            return false
+        }
+        return ret.data
     }
 
     /**
@@ -208,7 +223,12 @@ public class Stat <: RemoteDataLite {
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func isFifo(): Bool {
-        unsafe { FfiOHOSStatIsFIFO(getID()) }
+        let ret = unsafe { FfiOHOSStatIsFIFOV2(getID()) }
+        if (ret.code != SUCCESS_CODE) {
+            FS_LOG.error(getErrorInfo(ret.code))
+            return false
+        }
+        return ret.data
     }
 
     /**
@@ -221,7 +241,12 @@ public class Stat <: RemoteDataLite {
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func isFile(): Bool {
-        unsafe { FfiOHOSStatIsFile(getID()) }
+        let ret = unsafe { FfiOHOSStatIsFileV2(getID()) }
+        if (ret.code != SUCCESS_CODE) {
+            FS_LOG.error(getErrorInfo(ret.code))
+            return false
+        }
+        return ret.data
     }
 
     /**
@@ -234,7 +259,12 @@ public class Stat <: RemoteDataLite {
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func isSocket(): Bool {
-        unsafe { FfiOHOSStatIsSocket(getID()) }
+        let ret = unsafe { FfiOHOSStatIsSocketV2(getID()) }
+        if (ret.code != SUCCESS_CODE) {
+            FS_LOG.error(getErrorInfo(ret.code))
+            return false
+        }
+        return ret.data
     }
 
     /**
@@ -247,6 +277,11 @@ public class Stat <: RemoteDataLite {
         syscap: "SystemCapability.FileManagement.File.FileIO"
     ]
     public func isSymbolicLink(): Bool {
-        unsafe { FfiOHOSStatIsSymbolicLink(getID()) }
+        let ret = unsafe { FfiOHOSStatIsSymbolicLinkV2(getID()) }
+        if (ret.code != SUCCESS_CODE) {
+            FS_LOG.error(getErrorInfo(ret.code))
+            return false
+        }
+        return ret.data
     }
 }
