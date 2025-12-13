@@ -15,9 +15,21 @@
 
 // The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
 
-package kit.CoreFileKit
+package ohos.file.storage_statistics
 
-public import ohos.file.fs.*
-public import ohos.file.fileuri.*
-public import ohos.file.picker.*
-public import ohos.file.storage_statistics.*
+foreign {
+    func FfiFileStorStatsGetCurrentBundleStats(stats: CPointer<NativeBundleStats>, errCode: CPointer<Int32>): Unit
+}
+
+@C
+struct NativeBundleStats {
+    NativeBundleStats(
+        let appSize: Int64,
+        let cacheSize: Int64,
+        let dataSize: Int64
+    ) {}
+
+    func toObject(): BundleStats {
+        BundleStats(appSize, cacheSize, dataSize)
+    }
+}

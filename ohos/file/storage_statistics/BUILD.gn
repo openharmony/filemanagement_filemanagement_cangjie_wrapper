@@ -16,15 +16,21 @@
 import("//build/ohos.gni")
 import("//build/templates/cangjie/cjc.gni")
 
-ohos_cangjie_shared_library("kit.CoreFileKit") {
-  sources = [ "index.cj" ]
-
-  cj_deps = [
-    "../../ohos/file/fs:ohos.file.fs",
-    "../../ohos/file/fileuri:ohos.file.fileuri",
-    "../../ohos/file/picker:ohos.file.picker",
-    "../../ohos/file/storage_statistics:ohos.file.storage_statistics",
+ohos_cangjie_shared_library("ohos.file.storage_statistics") {
+  sources = [
+    "bundle_stats.cj",
+    "native.cj",
+    "storage_statistics.cj",
   ]
+
+  cj_external_deps = [
+    "cangjie_ark_interop:ohos.business_exception",
+    "cangjie_ark_interop:ohos.ffi",
+    "cangjie_ark_interop:ohos.labels",
+    "hiviewdfx_cangjie_wrapper:ohos.hilog",
+  ]
+
+  external_deps = [ "storage_service:cj_storage_manager_ffi" ]
 
   subsystem_name = "filemanagement"
   part_name = "filemanagement_cangjie_wrapper"

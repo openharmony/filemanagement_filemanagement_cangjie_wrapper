@@ -24,7 +24,8 @@
                 "app_file_service",
                 "cangjie_ark_interop",
                 "hiviewdfx_cangjie_wrapper",
-                "file_api"
+                "file_api",
+                "user_file_service"
             ]
         },
         "build": {
@@ -32,7 +33,9 @@
                 "//foundation/filemanagement/filemanagement_cangjie_wrapper/kit/CoreFileKit:kit.CoreFileKit",
                 "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file:ohos.file",
                 "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file/fileuri:ohos.file.fileuri",
-                "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file/fs:ohos.file.fs"
+                "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file/fs:ohos.file.fs",
+                "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file/picker:ohos.file.picker",
+                "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file/storage_statistics:ohos.file.storage_statistics"
             ],
             "inner_kits": [
                 {
