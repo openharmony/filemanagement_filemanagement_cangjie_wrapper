@@ -14,12 +14,14 @@
 import("//build/templates/cangjie/cjc.gni")
 
 filemanagement_cangjie_wrapper_packages_ohos = [
-    "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file:ohos.file",
-    "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file/fileuri:ohos.file.fileuri",
-    "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file/fs:ohos.file.fs"
+  "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file:ohos.file",
+  "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file/fileuri:ohos.file.fileuri",
+  "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file/fs:ohos.file.fs",
+  "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file/picker:ohos.file.picker",
+  "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file/storage_statistics:ohos.file.storage_statistics"
 ]
 filemanagement_cangjie_wrapper_packages_kit = [
-    "//foundation/filemanagement/filemanagement_cangjie_wrapper/kit/CoreFileKit:kit.CoreFileKit",
+  "//foundation/filemanagement/filemanagement_cangjie_wrapper/kit/CoreFileKit:kit.CoreFileKit",
 ]
 
 copy_ohos_cangjie_sdk_api_lib("copy_sdk_filemanagement_cangjie_libs") {
