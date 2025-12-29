@@ -25,21 +25,21 @@ const INVALID_ARGS_CODE: Int32 = 13900020
 const SELECT_ACTION = "ohos.want.action.OPEN_FILE"
 const SAVE_ACTION = "ohos.want.action.CREATE_FILE"
 
-@!Hide
+@!Hide[isChecked: true]
 protected enum MergeTypeMode {
-    @!Hide
+    @!Hide[isChecked: true]
     Default
     |
-    @!Hide
+    @!Hide[isChecked: true]
     Audio
     |
-    @!Hide
+    @!Hide[isChecked: true]
     Video
     |
-    @!Hide
+    @!Hide[isChecked: true]
     Document
     |
-    @!Hide
+    @!Hide[isChecked: true]
     Picture
     | ...
 }
@@ -184,7 +184,7 @@ public class DocumentSelectOptions {
      */
     @!APILevel[
         since: "24",
-        syscap: "SystemCapability.FileManagement.UserFileService"
+        syscap: "SystemCapability.FileManagement.UserFileService.FolderSelection"
     ]
     public var selectMode: DocumentSelectMode
 
@@ -195,20 +195,20 @@ public class DocumentSelectOptions {
      */
     @!APILevel[
         since: "24",
-        syscap: "SystemCapability.FileManagement.UserFileService"
+        syscap: "SystemCapability.FileManagement.UserFileService.FolderSelection"
     ]
     public var authMode: Bool
 
-    @!Hide
+    @!Hide[isChecked: true]
     protected var multiAuthMode: Bool = false
 
-    @!Hide
+    @!Hide[isChecked: true]
     protected var multiUriArray: Array<String> = Array<String>()
 
-    @!Hide
+    @!Hide[isChecked: true]
     protected var mergeMode: MergeTypeMode = MergeTypeMode.Default
 
-    @!Hide
+    @!Hide[isChecked: true]
     protected var isEncryptionSupported: Bool = false
 
     /**
