@@ -58,7 +58,7 @@ public class DocumentViewPicker {
      *
      * @param { DocumentSelectOptions } [ option ] - Options for selecting documents.
      * If this parameter is not specified, the documentPicker page is displayed by default.
-     * @return { Array<String> } - Returns the URIs of the documents selected.
+     * @return { Array<String> } Returns the URIs of the documents selected.
      */
     @!APILevel[
         since: "24",
@@ -114,7 +114,7 @@ public class DocumentViewPicker {
      *
      * @param { DocumentSaveOptions } [ option ] - Options for saving the documents. If this parameter is not specified,
      * a documentPicker page will be displayed for the user to enter the names of the documents to save.
-     * @return { Array<String> } - Returns the URIs of the documents saved.
+     * @return { Array<String> } Returns the URIs of the documents saved.
      * @throws { BusinessException } 13900030 - File name too long.
      */
     @!APILevel[
@@ -188,7 +188,7 @@ public class DocumentViewPicker {
      * the file suffix specified in DocumentSaveOptions.fileSuffixChoices.
      * If no file suffix is specified, getSelectedIndex() returns -1.
      *
-     * @return { Int32 } - Returns the index of the suffix array fileSuffixChoices
+     * @return { Int32 } Returns the index of the suffix array fileSuffixChoices
      * configured by the user in DocumentSaveOptions.
      */
     @!APILevel[
@@ -215,6 +215,9 @@ public class AudioViewPicker {
 
     /**
      * A constructor used to create an AudioViewPicker instance.
+     *
+     * @param { UIAbilityContext } abilityContext - Application context.
+     * For details about the application context of the stage model, see Context.
      */
     @!APILevel[
         since: "24",
@@ -229,7 +232,7 @@ public class AudioViewPicker {
      * You can pass in AudioSelectOptions to specify the URIs of the audio clips to select.
      *
      * @param { AudioSelectOptions } [ option ] - Options for selecting audio clips.
-     * @return { Array<String> } - Returns the URIs of the audio clips selected.
+     * @return { Array<String> } Returns the URIs of the audio clips selected.
      */
     @!APILevel[
         since: "24",
@@ -274,7 +277,7 @@ public class AudioViewPicker {
      *
      * @param { AudioSaveOptions } [ option ] - Options for saving audio clips.If this parameter is not specified,
      * an audioPicker page will be displayed for the user to enter the names of the files to save.
-     * @return { Array<String> } - Returns the URIs of the audio clips saved.
+     * @return { Array<String> } Returns the URIs of the audio clips saved.
      * @throws { BusinessException } 13900030 - File name too long.
      */
     @!APILevel[

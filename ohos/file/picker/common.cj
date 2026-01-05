@@ -214,11 +214,11 @@ public class DocumentSelectOptions {
     /**
      * Create DocumentSelectOptions instance.
      *
-     * @param {?String} [ defaultFilePathUri ] - Path of the document or directory to select.
-     * @param {Array<String>} [ fileSuffixFilters ] - Document suffix of the document to select.
-     * @param {Int64} [ maxSelectNumber ] - Maximum number of documents that can be selected.
-     * @param {DocumentSelectMode} [ selectMode ] - Selection mode.
-     * @param {Bool} [ authMode ] - Whether to start Picker.
+     * @param { ?String } [ defaultFilePathUri ] - Path of the document or directory to select.
+     * @param { Array<String> } [ fileSuffixFilters ] - Document suffix of the document to select.
+     * @param { Int64 } [ maxSelectNumber ] - Maximum number of documents that can be selected.
+     * @param { DocumentSelectMode } [ selectMode ] - Selection mode.
+     * @param { Bool } [ authMode ] - Whether to start Picker.
      * @throws { BusinessException } 13900020 - Invalid arguments.
      */
     @!APILevel[
