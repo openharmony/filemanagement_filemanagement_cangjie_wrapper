@@ -17,15 +17,24 @@ import("//build/ohos.gni")
 import("//build/templates/cangjie/cjc.gni")
 
 ohos_cangjie_shared_library("ohos.file.fs") {
-  sources = [
-    "cj_file_fs.cj",
-    "conflict_file_exception.cj",
-    "file.cj",
-    "native.cj",
-    "random_access_file.cj",
-    "stat.cj",
-    "stream.cj",
-  ]
+
+  if (is_mingw || is_mac){
+    sources = [
+      "../../../mock/ohos.file.fs.cj",
+      "conflict_file_exception.cj",
+      "native.cj"
+    ]
+  } else {
+    sources = [
+      "cj_file_fs.cj",
+      "conflict_file_exception.cj",
+      "file.cj",
+      "native.cj",
+      "random_access_file.cj",
+      "stat.cj",
+      "stream.cj",
+    ]
+  }
 
   cj_external_deps = [
     "cangjie_ark_interop:ohos.business_exception",
