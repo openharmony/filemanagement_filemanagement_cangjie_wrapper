@@ -20,7 +20,7 @@ package ohos.file.fileuri
 import ohos.ffi.{RemoteDataLite, releaseFFIData}
 import ohos.hilog.Hilog
 import ohos.business_exception.BusinessException
-import ohos.labels.{APILevel, Hide}
+import ohos.labels.APILevel
 
 foreign func FfiOHOSFILEUriCreateUri(uriOrPath: CString): Int64
 
@@ -43,7 +43,7 @@ class UriImpl {
     since: "22",
     syscap: "SystemCapability.FileManagement.AppFileService"
 ]
-public open class Uri <: RemoteDataLite & ToString {
+protected abstract class Uri <: RemoteDataLite & ToString {
     private let impl_: UriImpl = UriImpl()
     init(id: Int64) {
         super(id)
@@ -74,60 +74,6 @@ public open class Uri <: RemoteDataLite & ToString {
     public open func toString(): String {
         throw BusinessException(13900031, "The function is not supported.")
     }
-
-    @!Hide[isChecked: true]
-    public open func equals(other: Uri): Bool { throw Exception() }
-
-    @!Hide[isChecked: true]
-    public open func equalsTo(other: Uri): Bool { throw Exception() }
-
-    @!Hide[isChecked: true]
-    public open func checkIsAbsolute(): Bool { throw Exception() }
-
-    @!Hide[isChecked: true]
-    public open func normalize(): Uri { throw Exception() }
-
-    @!Hide[isChecked: true]
-    public open func getQueryValue(key: String): String { throw Exception() }
-
-    @!Hide[isChecked: true]
-    public open func addQueryValue(key: String, value: String): Uri { throw Exception() }
-
-    @!Hide[isChecked: true]
-    public open func getQueryNames(): Array<String> { throw Exception() }
-
-    @!Hide[isChecked: true]
-    public open func getQueryValues(key: String): Array<String> { throw Exception() }
-
-    @!Hide[isChecked: true]
-    public open func getBooleanQueryValue(key: String, defaultValue: Bool): Bool { throw Exception() }
-
-    @!Hide[isChecked: true]
-    public open func clearQuery(): Uri { throw Exception() }
-
-    @!Hide[isChecked: true]
-    public open func getLastSegment(): String { throw Exception() }
-
-    @!Hide[isChecked: true]
-    public open func getSegment(): Array<String> { throw Exception() }
-
-    @!Hide[isChecked: true]
-    public open func addSegment(pathSegment: String): Uri { throw Exception() }
-
-    @!Hide[isChecked: true]
-    public open func addEncodedSegment(pathSegment: String): Uri { throw Exception() }
-
-    @!Hide[isChecked: true]
-    public open func checkHierarchical(): Bool { throw Exception() }
-
-    @!Hide[isChecked: true]
-    public open func checkOpaque(): Bool { throw Exception() }
-
-    @!Hide[isChecked: true]
-    public open func checkRelative(): Bool { throw Exception() }
-
-    @!Hide[isChecked: true]
-    public static func createFromParts(scheme: String, ssp: String, fragment: String): Uri { throw Exception() }
 }
 
 /**
