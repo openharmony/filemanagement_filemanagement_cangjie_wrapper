@@ -53,14 +53,24 @@ public open class Uri <: RemoteDataLite & ToString {
 
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.FileManagement.AppFileService"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.FileManagement.AppFileService"
+]
 public class FileUri <: Uri {
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.AppFileService", throwexception: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.AppFileService",
+        throwexception: true
+    ]
     public init(uriOrPath: String) {
         super()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.AppFileService"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.AppFileService"
+    ]
     public override prop path: String {
         
         get() {
@@ -68,7 +78,11 @@ public class FileUri <: Uri {
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.AppFileService", throwexception: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.AppFileService",
+        throwexception: true
+    ]
     public prop name: String {
         
         get() {
@@ -76,13 +90,20 @@ public class FileUri <: Uri {
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.AppFileService"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.AppFileService"
+    ]
     public override func toString(): String {
         return String()
     }
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.FileManagement.AppFileService", throwexception: true]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.FileManagement.AppFileService",
+    throwexception: true
+]
 public func getUriFromPath(path: String): String {
     return String()
 }

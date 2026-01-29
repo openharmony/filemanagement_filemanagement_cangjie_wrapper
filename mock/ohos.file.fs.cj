@@ -92,15 +92,27 @@ struct RetReaderIteratorResult {
     ) {}
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.FileManagement.File.FileIO"
+]
 public class RandomAccessFileOptions {
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public var start: Option<Int64>
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public var end: Option<Int64>
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public init(
         start!: Option<Int64> = None,
         end!: Option<Int64> = None
@@ -111,36 +123,69 @@ public class RandomAccessFileOptions {
     }
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.FileManagement.File.FileIO"
+]
 public class OpenMode {
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public static const READ_ONLY: Int64 = 0o0
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public static const WRITE_ONLY: Int64 = 0o1
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public static const READ_WRITE: Int64 = 0o2
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public static const CREATE: Int64 = 0o100
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public static const TRUNC: Int64 = 0o1000
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public static const APPEND: Int64 = 0o2000
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public static const NONBLOCK: Int64 = 0o4000
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public static const DIR: Int64 = 0o200000
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public static const NOFOLLOW: Int64 = 0o400000
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public static const SYNC: Int64 = 0o4010000
     
     public init() {
@@ -148,21 +193,37 @@ public class OpenMode {
     }
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.FileManagement.File.FileIO"
+]
 public open class Options {
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public var encoding: String
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public init(encoding!: String = "utf-8") {
         super()
         this.encoding = String()
     }
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.FileManagement.File.FileIO"
+]
 public class ReaderIterator {
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true
+    ]
     public func next(): ReaderIteratorResult {
         return ReaderIteratorResult()
     }
@@ -172,12 +233,21 @@ public class ReaderIterator {
     }
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.FileManagement.File.FileIO"
+]
 public class ReaderIteratorResult {
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public var done: Bool
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public var value: String
     
     public init() {
@@ -187,15 +257,27 @@ public class ReaderIteratorResult {
     }
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.FileManagement.File.FileIO"
+]
 public class WriteOptions <: Options {
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public var length: Option<UIntNative>
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public var offset: Option<Int64>
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public init(
         length!: Option<UIntNative> = None,
         offset!: Option<Int64> = None,
@@ -207,15 +289,27 @@ public class WriteOptions <: Options {
     }
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.FileManagement.File.FileIO"
+]
 public open class ReadOptions {
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public var offset: Option<Int64>
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public var length: Option<UIntNative>
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public init(
         offset!: Option<Int64> = None,
         length!: Option<UIntNative> = None
@@ -226,12 +320,21 @@ public open class ReadOptions {
     }
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.FileManagement.File.FileIO"
+]
 public class ReadTextOptions <: ReadOptions {
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public var encoding: String
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public init(
         offset!: Option<Int64> = None,
         length!: Option<UIntNative> = None,
@@ -245,42 +348,89 @@ public class ReadTextOptions <: ReadOptions {
     }
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.FileManagement.File.FileIO"
+]
 public enum AccessModeType {
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     Exist
-    | @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     Write
-    | @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     Read
-    | @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     ReadWrite
     | ...
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.FileManagement.File.FileIO"
+]
 public enum AccessFlagType {
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     Local | ...
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.FileManagement.File.FileIO"
+]
 public enum WhenceType {
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     SeekSet
-    | @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     SeekCur
-    | @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     SeekEnd
     | ...
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.FileManagement.File.FileIO"
+]
 public class ConflictFiles {
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public var srcFile: String
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public var destFile: String
     
     public init() {
@@ -290,27 +440,52 @@ public class ConflictFiles {
     }
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.FileManagement.File.FileIO"
+]
 public class Filter {
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public var suffix: Array<String>
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public var displayName: Array<String>
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public var mimeType: Array<String>
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public var fileSizeOver: ?Int64
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public var lastModifiedAfter: ?Float64
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public var excludeMedia: Bool
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true
+    ]
     public init(
         suffix!: Array<String> = Array<String>(),
         displayName!: Array<String> = Array<String>(),
@@ -329,18 +504,33 @@ public class Filter {
     }
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.FileManagement.File.FileIO"
+]
 public class ListFileOptions {
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public var recursion: Bool
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public var listNum: Int32
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public var filter: Filter
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public init(
         recursion!: Bool = false,
         listNum!: Int32 = 0,
@@ -360,15 +550,28 @@ public class ListFileOptions {
     }
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.FileManagement.File.FileIO"
+]
 public class FileIo {
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func access(path: String, mode!: AccessModeType = AccessModeType.Exist,
         flag!: AccessFlagType = AccessFlagType.Local): Bool {
         return true
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func close(file: Int32): Unit {
         let code = unsafe { FfiOHOSFileFsCloseByFd(file) }
         if (code != SUCCESS_CODE) {
@@ -378,7 +581,12 @@ public class FileIo {
         return
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func close(file: File): Unit {
         try {
             let code = unsafe { FfiOHOSFileFsClose(file.getID()) }
@@ -398,54 +606,103 @@ public class FileIo {
         return
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func copyDir(src: String, dest: String, mode!: Int32 = 0): Unit {
         return ()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func copyFile(src: String, dest: String, mode!: Int32 = 0): Unit {
         return ()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func copyFile(src: String, dest: Int32, mode!: Int32 = 0): Unit {
         return ()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func copyFile(src: Int32, dest: String, mode!: Int32 = 0): Unit {
         return ()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func copyFile(src: Int32, dest: Int32, mode!: Int32 = 0): Unit {
         return ()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func createStream(path: String, mode: String): Stream {
         return Stream()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func createRandomAccessFile(file: String, mode!: Int64 = OpenMode.READ_ONLY,
         options!: RandomAccessFileOptions = RandomAccessFileOptions()): RandomAccessFile {
         return RandomAccessFile()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func createRandomAccessFile(file: File, mode!: Int64 = OpenMode.READ_ONLY,
         options!: RandomAccessFileOptions = RandomAccessFileOptions()): RandomAccessFile {
         return RandomAccessFile()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true
+    ]
     public static func dup(fd: Int32): File {
         return File()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func fdatasync(fd: Int32): Unit {
         let ret: Int32
         unsafe {
@@ -457,32 +714,61 @@ public class FileIo {
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func fdopenStream(fd: Int32, mode: String): Stream {
         return Stream()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func fsync(fd: Int32): Unit {
         return ()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func listFile(path: String, options!: ListFileOptions = ListFileOptions()): Array<String> {
         return Array()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true
+    ]
     public static func lseek(fd: Int32, offset: Int64, whence!: WhenceType = SeekSet): Int64 {
         return 0
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func lstat(path: String): Stat {
         return Stat()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func mkdir(path: String): Unit {
         let pathString = unsafe { LibC.mallocCString(path) }
         let code = unsafe { FfiOHOSFileFsMkdir(pathString, false, false) }
@@ -494,7 +780,12 @@ public class FileIo {
         return
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func mkdir(path: String, recursion: Bool): Unit {
         let pathString = unsafe { LibC.mallocCString(path) }
         let code = unsafe { FfiOHOSFileFsMkdir(pathString, recursion, true) }
@@ -506,7 +797,12 @@ public class FileIo {
         return
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func mkdtemp(prefix: String): String {
         let cValue: RetDataCString
         unsafe {
@@ -523,17 +819,32 @@ public class FileIo {
         return ret
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func moveDir(src: String, dest: String, mode!: Int32 = 0): Unit {
         return ()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func moveFile(src: String, dest: String, mode!: Int32 = 0): Unit {
         return ()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func open(path: String, mode!: Int64 = OpenMode.READ_ONLY): File {
         let pathCString = unsafe { LibC.mallocCString(path) }
         let cValue = unsafe { FfiOHOSFileFsOpen(pathCString, mode) }
@@ -547,7 +858,12 @@ public class FileIo {
         return File(cValue.data)
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func read(fd: Int32, buffer: Array<Byte>, options!: ReadOptions = ReadOptions()): Int64 {
         if (buffer.size == 0) {
             return 0
@@ -574,17 +890,32 @@ public class FileIo {
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func readLines(filePath: String, options!: Options = Options()): ReaderIterator {
         return ReaderIterator()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func readText(filePath: String, options!: ReadTextOptions = ReadTextOptions()): String {
         return String()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func rename(oldPath: String, newPath: String): Unit {
         unsafe {
             try (
@@ -600,7 +931,12 @@ public class FileIo {
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func rmdir(path: String): Unit {
         let pathString = unsafe { LibC.mallocCString(path) }
         let code = unsafe { FfiOHOSFileFsRmdir(pathString) }
@@ -612,7 +948,12 @@ public class FileIo {
         return
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func stat(file: String): Stat {
         let cString = unsafe { LibC.mallocCString(file) }
         let cValue = unsafe { FfiOHOSFileFsStatByString(cString) }
@@ -624,7 +965,12 @@ public class FileIo {
         return Stat(cValue.data)
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func stat(file: Int32): Stat {
         let cValue = unsafe { FfiOHOSFileFsStatByID(file) }
         match {
@@ -637,7 +983,12 @@ public class FileIo {
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func truncate(file: String, len!: Int64 = 0): Unit {
         let code: Int32
         unsafe {
@@ -652,7 +1003,12 @@ public class FileIo {
         return
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func truncate(file: Int32, len!: Int64 = 0): Unit {
         let code = unsafe { FfiOHOSFileFsTruncateByFd(file, len) }
         if (code != SUCCESS_CODE) {
@@ -662,7 +1018,12 @@ public class FileIo {
         return
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func unlink(path: String): Unit {
         let str = unsafe { LibC.mallocCString(path) }
         let code = unsafe { FfiOHOSFileFsUnlink(str) }
@@ -674,12 +1035,21 @@ public class FileIo {
         return
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true
+    ]
     public static func utimes(path: String, mtime: Float64): Unit {
         return ()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func write(fd: Int32, buffer: Array<Byte>, options!: WriteOptions = WriteOptions()): Int64 {
         var writeBytes = 0
         let len = options.length ?? UIntNative(buffer.size)
@@ -706,7 +1076,12 @@ public class FileIo {
         return writeBytes
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public static func write(fd: Int32, buffer: String, options!: WriteOptions = WriteOptions()): Int64 {
         var writeBytes = 0
         let len = options.length ?? UIntNative(buffer.size)
@@ -739,16 +1114,25 @@ public class FileIo {
     }
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.FileManagement.File.FileIO"
+]
 public class File <: RemoteDataLite {
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public prop fd: Int32 {
         get() {
             unsafe { FfiOHOSFILEFsGetFD(getID()) }
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public prop path: String {
         
         get() {
@@ -756,7 +1140,10 @@ public class File <: RemoteDataLite {
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public prop name: String {
         
         get() {
@@ -764,17 +1151,29 @@ public class File <: RemoteDataLite {
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true
+    ]
     public func getParent(): String {
         return String()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true
+    ]
     public func unlock(): Unit {
         return ()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true
+    ]
     public func tryLock(exclusive!: Bool = false): Unit {
         return ()
     }
@@ -792,9 +1191,15 @@ public class File <: RemoteDataLite {
     }
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.FileManagement.File.FileIO"
+]
 public class RandomAccessFile {
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public prop fd: Int32 {
         
         get() {
@@ -802,7 +1207,10 @@ public class RandomAccessFile {
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public prop filePointer: Int64 {
         
         get() {
@@ -810,27 +1218,49 @@ public class RandomAccessFile {
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public func setFilePointer(filePointer: Int64): Unit {
         return ()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        workerthread: true
+    ]
     public func close(): Unit {
         return ()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public func write(buffer: String, options!: WriteOptions = WriteOptions()): Int64 {
         return 0
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public func write(buffer: Array<Byte>, options!: WriteOptions = WriteOptions()): Int64 {
         return 0
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public func read(buffer: Array<Byte>, options!: ReadOptions = ReadOptions()): Int64 {
         return 0
     }
@@ -840,65 +1270,95 @@ public class RandomAccessFile {
     }
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.FileManagement.File.FileIO"
+]
 public class Stat <: RemoteDataLite {
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public prop ino: Int64 {
         get() {
             unsafe { Int64(FfiOHOSStatGetIno(getID())) }
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public prop mode: Int64 {
         get() {
             unsafe { Int64(FfiOHOSStatGetMode(getID())) }
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public prop uid: Int64 {
         get() {
             unsafe { Int64(FfiOHOSStatGetUid(getID())) }
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public prop gid: Int64 {
         get() {
             unsafe { Int64(FfiOHOSStatGetGid(getID())) }
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public prop size: Int64 {
         get() {
             unsafe { Int64(FfiOHOSStatGetSize(getID())) }
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public prop atime: Int64 {
         get() {
             unsafe { Int64(FfiOHOSStatGetAtime(getID())) }
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public prop mtime: Int64 {
         get() {
             unsafe { Int64(FfiOHOSStatGetMtime(getID())) }
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public prop ctime: Int64 {
         get() {
             unsafe { Int64(FfiOHOSStatGetCtime(getID())) }
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public func isBlockDevice(): Bool {
         let ret = unsafe { FfiOHOSStatIsBlockDeviceV2(getID()) }
         if (ret.code != SUCCESS_CODE) {
@@ -908,7 +1368,10 @@ public class Stat <: RemoteDataLite {
         return ret.data
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public func isCharacterDevice(): Bool {
         let ret = unsafe { FfiOHOSStatIsCharacterDeviceV2(getID()) }
         if (ret.code != SUCCESS_CODE) {
@@ -918,7 +1381,10 @@ public class Stat <: RemoteDataLite {
         return ret.data
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public func isDirectory(): Bool {
         let ret = unsafe { FfiOHOSStatIsDirectoryV2(getID()) }
         if (ret.code != SUCCESS_CODE) {
@@ -928,7 +1394,10 @@ public class Stat <: RemoteDataLite {
         return ret.data
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public func isFifo(): Bool {
         let ret = unsafe { FfiOHOSStatIsFIFOV2(getID()) }
         if (ret.code != SUCCESS_CODE) {
@@ -938,7 +1407,10 @@ public class Stat <: RemoteDataLite {
         return ret.data
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public func isFile(): Bool {
         let ret = unsafe { FfiOHOSStatIsFileV2(getID()) }
         if (ret.code != SUCCESS_CODE) {
@@ -948,7 +1420,10 @@ public class Stat <: RemoteDataLite {
         return ret.data
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public func isSocket(): Bool {
         let ret = unsafe { FfiOHOSStatIsSocketV2(getID()) }
         if (ret.code != SUCCESS_CODE) {
@@ -958,7 +1433,10 @@ public class Stat <: RemoteDataLite {
         return ret.data
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO"
+    ]
     public func isSymbolicLink(): Bool {
         let ret = unsafe { FfiOHOSStatIsSymbolicLinkV2(getID()) }
         if (ret.code != SUCCESS_CODE) {
@@ -981,29 +1459,57 @@ public class Stat <: RemoteDataLite {
     }
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.FileManagement.File.FileIO"
+]
 public class Stream {
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public func close(): Unit {
         return ()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public func flush(): Unit {
         return ()
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public func write(buffer: String, options!: WriteOptions = WriteOptions()): Int64 {
         return 0
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public func write(buffer: Array<Byte>, options!: WriteOptions = WriteOptions()): Int64 {
         return 0
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.FileManagement.File.FileIO", throwexception: true, workerthread: true]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.FileManagement.File.FileIO",
+        throwexception: true,
+        workerthread: true
+    ]
     public func read(buffer: Array<Byte>, options!: ReadOptions = ReadOptions()): Int64 {
         return 0
     }
