@@ -731,7 +731,14 @@ public class FileIo {
         workerthread: true
     ]
     public static func fsync(fd: Int32): Unit {
-        return ()
+        let ret: Int32
+        unsafe {
+            ret = FfiOHOSFileFsFsync(fd)
+        }
+        if (ret != SUCCESS_CODE) {
+            FS_LOG.error(getErrorInfo(ret))
+            throw BusinessException(ret, getErrorInfo(ret))
+        }
     }
 
     @!APILevel[
