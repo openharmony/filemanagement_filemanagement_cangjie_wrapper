@@ -17,12 +17,18 @@ import("//build/ohos.gni")
 import("//build/templates/cangjie/cjc.gni")
 
 ohos_cangjie_shared_library("ohos.file.picker") {
-  sources = [
-    "cj_picker.cj",
-    "cj_picker_error.cj",
-    "cj_picker_ffi.cj",
-    "common.cj",
-  ]
+  if (is_mingw || is_mac){
+    sources = [
+      "../../../mock/ohos.file.picker.cj"
+    ]
+  } else {
+    sources = [
+      "cj_picker.cj",
+      "cj_picker_error.cj",
+      "cj_picker_ffi.cj",
+      "common.cj",
+    ]
+  }
 
   cj_external_deps = [
     "ability_cangjie_wrapper:ohos.app.ability.ui_ability",

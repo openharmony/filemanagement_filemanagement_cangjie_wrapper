@@ -17,9 +17,14 @@ import("//build/ohos.gni")
 import("//build/templates/cangjie/cjc.gni")
 
 ohos_cangjie_shared_library("ohos.file") {
-  sources = [
-    "file_package.cj",
-  ]
+  
+  if (is_mingw || is_mac){
+    sources = [ "../../mock/ohos.file.cj" ]
+  } else {
+    sources = [
+      "file_package.cj",
+    ]
+  }
 
   subsystem_name = "filemanagement"
   part_name = "filemanagement_cangjie_wrapper"
