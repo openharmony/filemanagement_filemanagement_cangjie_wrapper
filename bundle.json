@@ -39,6 +39,9 @@
             ],
             "inner_kits": [
                 {
+                    "name": "//foundation/filemanagement/filemanagement_cangjie_wrapper/ohos/file/fs:ohos.file.fs"
+                },
+                {
                     "name": "//foundation/filemanagement/filemanagement_cangjie_wrapper:copy_sdk_filemanagement_cangjie_libs"
                 },
                 {
