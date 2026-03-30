@@ -1074,4 +1074,19 @@ class Test_filemanagement {
             @Expect(e.code, 13900020)
         }
     }
+
+    @TestCase
+    @Tag[APILevel22, TestLevel0]
+    func test_Fileprop_error() {
+        let filePath = "/data/storage/el2/base/test_fileprop_error.txt"
+        let file = FileIo.open(
+            filePath,
+            mode: (OpenMode.CREATE | OpenMode.READ_WRITE)
+        )
+        @Expect(file.path, filePath)
+        @Expect(file.name, "test_fileprop_error.txt")
+        FileIo.close(file)
+        @Expect(file.path, "error")
+        @Expect(file.name, "error")
+    }
 }
