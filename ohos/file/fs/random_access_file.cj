@@ -207,14 +207,12 @@ public class RandomAccessFile <: RemoteDataLite {
             return 0
         }
         let cBuffer = safeMalloc<Byte>(count: buffer.size)
-        if (options.length.isNone()) {
-            cValue = unsafe {
-                FfiOHOSRandomAccessFileRead(getID(), cBuffer, UIntNative(buffer.size), options.offset ?? 0)
-            }
-        } else {
-            cValue = unsafe {
-                FfiOHOSRandomAccessFileRead(getID(), cBuffer, options.length.getOrThrow(), options.offset ?? 0)
-            }
+        let readLen: UIntNative = options.length ?? UIntNative(buffer.size)
+        if (readLen > UIntNative(buffer.size)) {
+            throw BusinessException(INVALID_ARGS_CODE, "Invalid argument")
+        }
+        cValue = unsafe {
+            FfiOHOSRandomAccessFileRead(getID(), cBuffer, readLen, options.offset ?? 0)
         }
         for (index in 0..cValue.data) {
             let ch = unsafe { cBuffer.read(index) }
